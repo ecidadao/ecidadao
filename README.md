@@ -14,7 +14,7 @@ O [desenho da passagem ao portal A Minha Rua](docs/entrega-ao-portal-oficial.md)
 
 ## Desenvolvimento local
 
-Requer Elixir 1.20 e Erlang/OTP 29.
+Requer Elixir 1.20, Erlang/OTP 29 e Node.js para os testes de comportamento da interface.
 
 ```sh
 mix deps.get

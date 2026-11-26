@@ -2,6 +2,8 @@
 
 Verificação: 26 de novembro de 2026. Investigação só de leitura; não foram enviados dados pessoais nem pedidos de adesão. Nenhuma das integrações propostas abaixo foi ativada.
 
+Atualização de implementação: o percurso assistido Livro Amarelo foi acrescentado ao site em `/livro-amarelo`, com rascunhos de reclamação, elogio e sugestão e encaminhamento para gov.pt. Não submete participações. A ferramenta `prepare_public_service_feedback` está apenas no MCP experimental `/mcp`; o catálogo público dos plugins mantém as seis ferramentas existentes. A [investigação adicional](service-discovery-research.md) verificou pesquisa anónima de serviços e locais no gov.pt, incluindo Rio Tinto; o [pedido de acesso CUSP](cusp-access-request.md) está preparado e não foi enviado.
+
 ## Resultado
 
 O [ia.gov.pt](https://ia.gov.pt/) apresenta iniciativas e recursos de IA; o [AMALIA no Mosaico](https://mosaico.gov.pt/plataformas-comuns/amalia) é um recurso para construir soluções de IA. Não encontrei nesse portal um catálogo de operações transacionais pronto a ligar ao eCidadão.
