@@ -29,6 +29,7 @@ defmodule EcidadaoWeb.Page do
           <article class="service-card service-financas"><div class="service-top"><span class="service-number">02</span><span class="service-status">#{t("Rascunho", locale)}</span></div><p class="service-label">#{t("Autoridade Tributária", locale)}</p><h3>#{t("Finanças", locale)}</h3><p>#{t("Encontre o ponto de entrada para IRS, IMI, pagamentos ou certidões e prepare uma questão para o e-balcão.", locale)}</p><ul><li>#{t("Orientação para o portal", locale)}</li><li>#{t("Assunto e mensagem para rever", locale)}</li><li>#{t("Envio pela pessoa na AT", locale)}</li></ul><div class="service-actions"><a class="official" href="/financas">#{t("Abrir Finanças ↗", locale)}</a></div></article>
           <article class="service-card service-rua"><div class="service-top"><span class="service-number">03</span><span class="service-status">#{t("Consulta e rascunho", locale)}</span></div><p class="service-label">#{t("Espaço público", locale)}</p><h3>A Minha Rua</h3><p>#{t("Consulte ocorrências públicas recentes e prepare um reporte de problemas na sua rua.", locale)}</p><ul><li>#{t("Entradas recentes do portal ARTE", locale)}</li><li>#{t("Campos organizados para copiar", locale)}</li><li>#{t("Envio e reCAPTCHA no portal oficial", locale)}</li></ul><div class="service-actions"><a class="official" href="/a-minha-rua">#{t("Abrir A Minha Rua ↗", locale)}</a></div></article>
           <article class="service-card service-reclamacoes"><div class="service-top"><span class="service-number">04</span><span class="service-status">#{t("Rascunho", locale)}</span></div><p class="service-label">#{t("Direitos de consumo", locale)}</p><h3>#{t("Reclamações", locale)}</h3><p>#{t("Organize os factos e a solução pretendida antes de apresentar a reclamação no Livro de Reclamações Eletrónico.", locale)}</p><ul><li>#{t("Texto claro e revisto por si", locale)}</li><li>#{t("Sem conta e sem guardar o rascunho", locale)}</li><li>#{t("Comprovativo emitido no portal oficial", locale)}</li></ul><div class="service-actions"><a class="official" href="/reclamacoes">#{t("Preparar reclamação ↗", locale)}</a></div></article>
+          <article class="service-card"><div class="service-top"><span class="service-number">05</span><span class="service-status">#{t("Rascunho", locale)}</span></div><p class="service-label">#{t("Serviços públicos", locale)}</p><h3>Livro Amarelo</h3><p>#{t("Prepare uma reclamação, um elogio ou uma sugestão para uma entidade pública.", locale)}</p><ul><li>#{t("Texto claro e revisto por si", locale)}</li><li>#{t("Sem conta e sem guardar o rascunho", locale)}</li></ul><div class="service-actions"><a class="official" href="/livro-amarelo">#{t("Abrir Livro Amarelo ↗", locale)}</a></div></article>
         </div>
       </section>
 
@@ -49,12 +50,120 @@ defmodule EcidadaoWeb.Page do
     )
   end
 
+  def public_feedback(locale \\ "pt") do
+    layout(
+      """
+      <section class="hero">
+        <p class="eyebrow">Livro Amarelo · #{t("Serviços públicos", locale)}</p>
+        <h1>#{t("Ajude a melhorar os serviços públicos.", locale)}</h1>
+        <p class="lead">#{t("Prepare uma reclamação, um elogio ou uma sugestão para uma entidade pública.", locale)}</p>
+        <p class="notice">#{t("O eCidadão é independente. Este rascunho não é enviado. A identificação, autenticação e submissão são feitas apenas no gov.pt.", locale)}</p>
+        <p>#{t("O assunto é uma compra ou um serviço de uma empresa?", locale)} <a href="/reclamacoes">#{t("Preparar reclamação de consumo ↗", locale)}</a></p>
+      </section>
+      <section class="card" aria-labelledby="feedback-form-title">
+        <div class="section-heading"><span>#{t("01 / Preparar", locale)}</span><h2 id="feedback-form-title">#{t("Conte-nos a sua experiência", locale)}</h2></div>
+        <p id="feedback-help">#{t("Os campos com * são obrigatórios. Não inclua documentos de identificação, palavras-passe ou dados pessoais desnecessários.", locale)}</p>
+        <form id="feedback-form" aria-describedby="feedback-help">
+          <div class="grid">
+            <label>#{t("Tipo de participação", locale)} *<select name="type" required><option value="complaint">#{t("Reclamação", locale)}</option><option value="compliment">#{t("Elogio", locale)}</option><option value="suggestion">#{t("Sugestão", locale)}</option></select></label>
+            <label>#{t("Entidade pública", locale)} *<input name="organisation" maxlength="200" required autocomplete="organization"></label>
+            <label>#{t("Local de atendimento", locale)} (#{t("Opcional", locale)})<input name="location" maxlength="200"></label>
+            <label>#{t("Data da ocorrência", locale)} (#{t("Opcional", locale)})<input name="incident_date" type="date"></label>
+          </div>
+          <label>#{t("Assunto", locale)} *<input name="subject" maxlength="200" required></label>
+          <label>#{t("Descrição", locale)} *<textarea name="description" maxlength="5000" rows="6" required></textarea></label>
+          <label>#{t("Resultado ou melhoria pretendida", locale)} (#{t("Opcional", locale)})<textarea name="requested_resolution" maxlength="1500" rows="3"></textarea></label>
+          <div class="form-actions"><button type="submit" id="feedback-prepare">#{t("Preparar rascunho", locale)}</button><small>#{t("Os dados enviados são processados em memória e não são guardados por este serviço.", locale)}</small></div>
+        </form>
+        <p id="feedback-message" role="status" aria-live="polite" aria-atomic="true"></p>
+      </section>
+      <section id="feedback-result" class="card result" hidden aria-labelledby="feedback-result-title">
+        <div class="section-heading"><span>#{t("02 / Rever", locale)}</span><h2 id="feedback-result-title">#{t("Rascunho — não submetido", locale)}</h2></div>
+        <p>#{t("Reveja o texto. Pode copiá-lo ou descarregá-lo para continuar no portal oficial.", locale)}</p>
+        <p class="help-note">#{t("Os modelos de rascunho mantêm os cabeçalhos em português para os portais oficiais; o texto que escrever não é traduzido.", locale)}</p>
+        <pre id="feedback-draft" tabindex="0" aria-label="#{t("O seu rascunho", locale)}"></pre>
+        <div class="result-actions"><button type="button" id="feedback-copy">#{t("Copiar texto", locale)}</button><button type="button" id="feedback-download" class="secondary">#{t("Descarregar .txt", locale)}</button><a id="feedback-portal" class="official" target="_blank" rel="noopener noreferrer">#{t("Continuar no gov.pt ↗", locale)}</a></div>
+        <p class="notice">#{t("No gov.pt, confirme a entidade e o serviço, autentique-se e reveja o texto antes de enviar. Guarde o comprovativo oficial.", locale)}</p>
+      </section>
+      <script>
+      (() => {
+        const form = document.getElementById('feedback-form');
+        const result = document.getElementById('feedback-result');
+        const draft = document.getElementById('feedback-draft');
+        const portal = document.getElementById('feedback-portal');
+        const message = document.getElementById('feedback-message');
+        const prepare = document.getElementById('feedback-prepare');
+        const fields = {type: #{tj("Tipo de participação", locale)}, organisation: #{tj("Entidade pública", locale)}, location: #{tj("Local de atendimento", locale)}, incident_date: #{tj("Data da ocorrência", locale)}, subject: #{tj("Assunto", locale)}, description: #{tj("Descrição", locale)}, requested_resolution: #{tj("Resultado ou melhoria pretendida", locale)}, input: #{tj("Dados do pedido", locale)}};
+        let revision = 0, controller;
+        function invalidate() {
+          revision++; if (controller) controller.abort();
+          result.hidden = true; draft.textContent = ''; portal.removeAttribute('href');
+          form.removeAttribute('aria-busy'); prepare.disabled = false;
+          message.textContent = #{tj("Prepare um novo rascunho depois de alterar os dados.", locale)};
+        }
+        form.addEventListener('input', invalidate);
+        form.addEventListener('change', invalidate);
+        form.addEventListener('submit', async event => {
+          event.preventDefault(); invalidate();
+          const current = revision;
+          controller = new AbortController();
+          const data = Object.fromEntries(new FormData(form));
+          form.setAttribute('aria-busy', 'true'); prepare.disabled = true;
+          message.textContent = #{tj("A preparar…", locale)};
+          try {
+            const response = await fetch('/api/public-feedback/prepare', {method:'POST', headers:{'content-type':'application/json'}, body:JSON.stringify(data), signal:controller.signal});
+            const payload = await response.json();
+            if (current !== revision) return;
+            if (!response.ok) {
+              message.textContent = (payload.errors || []).map(e => (fields[e.field] || fields.input) + ': ' + ui(e.message)).join(' · ') || #{tj("Não foi possível preparar o rascunho.", locale)};
+              return;
+            }
+            const official = new URL(payload.official_portal);
+            if (typeof payload.draft !== 'string' || !payload.draft || official.origin !== 'https://www.gov.pt' || !official.pathname.startsWith('/servicos/')) throw new Error('Invalid draft');
+            draft.textContent = payload.draft; portal.href = official.href;
+            result.hidden = false; message.textContent = #{tj("Rascunho preparado. Ainda não foi enviado.", locale)};
+          } catch (_) {
+            if (current === revision) message.textContent = #{tj("Não foi possível preparar o rascunho. Tente novamente.", locale)};
+          } finally {
+            if (current === revision) { form.removeAttribute('aria-busy'); prepare.disabled = false; }
+          }
+        });
+        document.getElementById('feedback-copy').addEventListener('click', async () => {
+          if (result.hidden) return;
+          const current = revision;
+          try {
+            await navigator.clipboard.writeText(draft.textContent);
+            if (current === revision) message.textContent = #{tj("Texto copiado.", locale)};
+          } catch (_) {
+            if (current !== revision) return;
+            draft.focus();
+            const selection = window.getSelection();
+            if (selection) { const range = document.createRange(); range.selectNodeContents(draft); selection.removeAllRanges(); selection.addRange(range); }
+            message.textContent = #{tj("Não foi possível copiar automaticamente. Selecione o rascunho e use Copiar, ou descarregue o ficheiro .txt.", locale)};
+          }
+        });
+        document.getElementById('feedback-download').addEventListener('click', () => {
+          if (result.hidden) return;
+          const link = document.createElement('a');
+          const url = URL.createObjectURL(new Blob([draft.textContent], {type:'text/plain;charset=utf-8'}));
+          link.href = url; link.download = 'livro-amarelo-rascunho.txt';
+          document.body.appendChild(link); link.click(); link.remove();
+          setTimeout(() => URL.revokeObjectURL(url), 1000);
+        });
+      })();
+      </script>
+      """,
+      locale
+    )
+  end
+
   def complaints(locale \\ "pt") do
     layout(
       """
       <section class="hero">
         <p class="eyebrow">#{t("Um projeto independente e gratuito", locale)}</p>
         <h1>#{t("Uma reclamação clara começa por um bom rascunho.", locale)}</h1>
+        <p>#{t("O assunto é o atendimento de uma entidade pública?", locale)} <a href="/livro-amarelo">#{t("Abrir Livro Amarelo ↗", locale)}</a></p>
         <p class="lead">#{t("Organize os factos, defina a solução pretendida e leve o texto ao Livro de Reclamações Eletrónico.", locale)}</p>
         <p class="notice"><strong>#{t("O eCidadão não é um serviço do Estado.", locale)}</strong> #{t("Preparar aqui um rascunho não apresenta uma reclamação. A submissão acontece apenas no portal oficial.", locale)}</p>
       </section>
@@ -281,6 +390,7 @@ defmodule EcidadaoWeb.Page do
       """
       <section class="document"><p class="eyebrow">#{t("Transparência", locale)}</p><h1>#{t("Privacidade", locale)}</h1>
         <p>#{t("Responsável pelo tratamento: Código Inadiável — Programação Informática, Lda., NIF 515500780, Rua Alfredo Cunha 362, 4450-021 Matosinhos, Portugal. Contacto:", locale)} <a href="mailto:hello@codeperf.io">hello@codeperf.io</a>.</p>
+        <p>#{t("Para o Livro Amarelo, tratamos o tipo de participação, entidade pública, assunto e descrição e, se os indicar, local de atendimento, data e resultado pretendido. Usamos estes dados apenas para preparar o rascunho em memória, sem os guardar numa base de dados ou enviar ao gov.pt. Não pedimos identidade nem credenciais; a identificação e autenticação decorrem apenas no portal oficial.", locale)}</p>
         <h2>#{t("Dados e finalidades", locale)}</h2><p>#{t("Quando pede um rascunho de reclamação no site ou no MCP, tratamos os dados que fornecer: entidade reclamada, descrição dos factos, solução pretendida e, se os indicar, nome, email, referência e data. Para preparar uma ocorrência A Minha Rua, tratamos distrito, município, freguesia, morada, categoria, assunto e descrição. Para o e-balcão, tratamos o assunto e a mensagem que escrever. Para comparar filas SIGA, tratamos distrito, entidade, tipo de senha, raio e coordenadas fornecidas ou autorizadas. Usamo-los apenas para gerar a resposta pedida. Não criamos conta nem guardamos estes conteúdos numa base de dados. O navegador conserva o formulário enquanto a página estiver aberta; os ficheiros que descarregar ficam no seu dispositivo.", locale)}</p>
         <p>#{t("Tratamos os dados técnicos necessários à ligação e segurança do serviço, como endereço IP, data, URL e código de resposta. A base do tratamento do pedido é a prestação do serviço solicitado; a segurança e o diagnóstico técnico assentam no nosso interesse legítimo em manter o serviço disponível e protegido. Não usamos os dados da reclamação para publicidade, definição de perfis ou decisões automatizadas.", locale)}</p>
         <h2>#{t("Destinatários e conservação", locale)}</h2><p>#{t("A Cloudflare fornece DNS, proteção e entrega de tráfego. O fornecedor do alojamento processa os pedidos para executar a aplicação. Estes prestadores podem tratar dados técnicos para prestar e proteger o serviço, incluindo em infraestrutura fora do Espaço Económico Europeu, sujeitos às garantias contratuais aplicáveis. Não enviamos rascunhos ao Livro de Reclamações Eletrónico, à ARTE ou às autarquias.", locale)}</p>
@@ -301,6 +411,7 @@ defmodule EcidadaoWeb.Page do
       <section class="document"><p class="eyebrow">#{t("Utilização", locale)}</p><h1>#{t("Termos de utilização", locale)}</h1>
         <p>#{t("O eCidadão é disponibilizado gratuitamente por Código Inadiável — Programação Informática, Lda., NIF 515500780, Rua Alfredo Cunha 362, 4450-021 Matosinhos, Portugal. Contacto:", locale)} <a href="mailto:hello@codeperf.io">hello@codeperf.io</a>.</p>
         <h2>#{t("O que o serviço faz", locale)}</h2><p>#{t("O serviço ajuda a organizar rascunhos de reclamações de consumo, ocorrências sobre espaço público e questões para o e-balcão; consulta ocorrências públicas recentes de A Minha Rua e filas públicas SIGA; e fornece orientação geral. É independente: não representa o Estado, a ARTE, autarquias, a Direção-Geral do Consumidor, a AT, o SIGA ou o Livro de Reclamações Eletrónico. Não apresenta reclamações ou ocorrências, não consulta processos privados, não emite senhas ou comprovativos e não presta aconselhamento jurídico ou fiscal.", locale)}</p>
+        <p>#{t("O Livro Amarelo permite preparar reclamações, elogios e sugestões sobre serviços públicos. O eCidadão não representa o Livro Amarelo nem submete estas participações. Reveja o rascunho e siga a ligação para o serviço correspondente no gov.pt, onde deve confirmar a entidade, identificar-se, autenticar-se e concluir a submissão. Guarde o comprovativo oficial. Para conflitos de consumo com empresas, use o percurso Reclamações.", locale)}</p>
         <h2>#{t("Responsabilidade do utilizador", locale)}</h2><p>#{t("Reveja e corrija o texto antes de o usar. Envie apenas informação que tenha o direito de partilhar e evite documentos de identificação ou dados de terceiros desnecessários. Para apresentar uma reclamação, siga os passos no", locale)} <a href="https://www.livroreclamacoes.pt/Inicio/" target="_blank" rel="noopener noreferrer">Livro de Reclamações Eletrónico</a>#{t(". Para comunicar uma ocorrência, use o", locale)} <a href="https://servicos.arte.gov.pt/Portal/AMR/situationReport.aspx" target="_blank" rel="noopener noreferrer">#{t("portal A Minha Rua", locale)}</a>#{t(". Guarde o comprovativo ou número emitido pelo portal respetivo.", locale)}</p>
         <h2>#{t("Disponibilidade e contacto", locale)}</h2><p>#{t("Procuramos manter o serviço disponível e correto, mas podem ocorrer interrupções ou erros. Podemos corrigir ou alterar funcionalidades; alterações relevantes destes termos serão publicadas nesta página. Para apoio ou questões sobre o serviço, escreva para", locale)} <a href="mailto:hello@codeperf.io">hello@codeperf.io</a>.</p>
         <p>#{t("Última atualização: 13 de novembro de 2026.", locale)}</p>
@@ -373,7 +484,7 @@ defmodule EcidadaoWeb.Page do
       }
       return value;
     }
-    </script><meta name="color-scheme" content="light dark"><style>#{theme_css()}</style></head><body><header><div class="inner"><a class="brand" href="/" aria-label="#{t("eCidadão — início", locale)}"><img src="/marca/ecidadao-logo.svg" alt="eCidadão" width="1000" height="256"></a><nav><a href="/siga">SIGA / IRN</a><a href="/financas">#{t("Finanças", locale)}</a><a href="/a-minha-rua">A Minha Rua</a><a href="/reclamacoes">#{t("Reclamações", locale)}</a><a href="/como-usar">#{t("Como usar", locale)}</a></nav><div class="language-switch" role="group" aria-label="#{t("Idioma", locale)}"><a href="?lang=pt" lang="pt" hreflang="pt" aria-current="#{if locale == "pt", do: "true", else: "false"}">PT</a><a href="?lang=en" lang="en" hreflang="en" aria-current="#{if locale == "en", do: "true", else: "false"}">EN</a></div></div></header><main>#{body}</main><footer><div class="inner"><span>#{t("eCidadão · Projeto independente e gratuito", locale)}</span><div class="footer-links"><a href="https://github.com/ecidadao/ecidadao">#{t("Código aberto", locale)}</a><a href="https://github.com/ecidadao/plugins">Plugins</a><a href="https://github.com/ecidadao/ecidadao/blob/main/CONTRIBUTING.md">#{t("Contribuir", locale)}</a><a href="/apoio">#{t("Apoio", locale)}</a><a href="/privacidade">#{t("Privacidade", locale)}</a><a href="/termos">#{t("Termos", locale)}</a></div></div></footer><script>
+    </script><meta name="color-scheme" content="light dark"><style>#{theme_css()}</style></head><body><header><div class="inner"><a class="brand" href="/" aria-label="#{t("eCidadão — início", locale)}"><img src="/marca/ecidadao-logo.svg" alt="eCidadão" width="1000" height="256"></a><nav><a href="/siga">SIGA / IRN</a><a href="/financas">#{t("Finanças", locale)}</a><a href="/a-minha-rua">A Minha Rua</a><a href="/reclamacoes">#{t("Reclamações", locale)}</a><a href="/livro-amarelo">Livro Amarelo</a><a href="/como-usar">#{t("Como usar", locale)}</a></nav><div class="language-switch" role="group" aria-label="#{t("Idioma", locale)}"><a href="?lang=pt" lang="pt" hreflang="pt" aria-current="#{if locale == "pt", do: "true", else: "false"}">PT</a><a href="?lang=en" lang="en" hreflang="en" aria-current="#{if locale == "en", do: "true", else: "false"}">EN</a></div></div></header><main>#{body}</main><footer><div class="inner"><span>#{t("eCidadão · Projeto independente e gratuito", locale)}</span><div class="footer-links"><a href="https://github.com/ecidadao/ecidadao">#{t("Código aberto", locale)}</a><a href="https://github.com/ecidadao/plugins">Plugins</a><a href="https://github.com/ecidadao/ecidadao/blob/main/CONTRIBUTING.md">#{t("Contribuir", locale)}</a><a href="/apoio">#{t("Apoio", locale)}</a><a href="/privacidade">#{t("Privacidade", locale)}</a><a href="/termos">#{t("Termos", locale)}</a></div></div></footer><script>
     for (const link of document.querySelectorAll('.language-switch a')) {
       const url = new URL(location.href); url.searchParams.set('lang', link.lang); link.href = url.href;
     }
