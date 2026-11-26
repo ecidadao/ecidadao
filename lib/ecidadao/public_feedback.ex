@@ -19,29 +19,40 @@ defmodule Ecidadao.PublicFeedback do
   def types, do: ~w(complaint compliment suggestion)
 
   def prepare(input) when is_map(input) do
-    fields = Map.new(@limits, fn {key, _} -> {key, clean(input[key])} end)
-    type = clean(input["type"])
+    fields = Map.new(@limits, fn {key, _} -> {key, clean(Map.get(input, key))} end)
+    type = clean(Map.get(input, "type"))
 
     errors =
-      for {key, max} <- @limits,
-          (key in @required and fields[key] == "") or String.length(fields[key]) > max do
-        %{
-          field: key,
-          message:
-            if(fields[key] == "", do: "Campo obrigatório.", else: "Máximo de #{max} caracteres.")
-        }
-      end
+      Enum.flat_map(@limits, fn {key, max} ->
+        value = Map.get(input, key)
+
+        cond do
+          not is_nil(value) and not is_binary(value) ->
+            [%{field: key, message: "Use texto neste campo."}]
+
+          is_binary(value) and not String.valid?(value) ->
+            [%{field: key, message: "Use texto UTF-8 válido."}]
+
+          key in @required and fields[key] == "" ->
+            [%{field: key, message: "Campo obrigatório."}]
+
+          String.length(fields[key]) > max ->
+            [%{field: key, message: "Máximo de #{max} caracteres."}]
+
+          key == "incident_date" and fields[key] != "" and
+              (not Regex.match?(~r/^[0-9]{4}-[0-9]{2}-[0-9]{2}$/, fields[key]) or
+                 not match?({:ok, _}, Date.from_iso8601(fields[key]))) ->
+            [%{field: key, message: "Use uma data válida AAAA-MM-DD."}]
+
+          true ->
+            []
+        end
+      end)
 
     errors =
       if Map.has_key?(@types, type),
         do: errors,
         else: [%{field: "type", message: "Escolha reclamação, elogio ou sugestão."} | errors]
-
-    errors =
-      if fields["incident_date"] != "" and
-           match?({:error, _}, Date.from_iso8601(fields["incident_date"])),
-         do: [%{field: "incident_date", message: "Use a data AAAA-MM-DD."} | errors],
-         else: errors
 
     if errors == [] do
       {label, path} = Map.fetch!(@types, type)
@@ -56,7 +67,7 @@ defmodule Ecidadao.PublicFeedback do
           optional("Data", fields["incident_date"]),
           "Assunto: #{fields["subject"]}",
           "Descrição:\n#{fields["description"]}",
-          optional("Resultado ou melhoria pretendida", fields["requested_resolution"]),
+          optional(resolution_label(type), fields["requested_resolution"]),
           "Reveja e conclua no portal oficial: #{portal}",
           "Este rascunho não foi enviado. Guarde o comprovativo emitido pelo portal após a submissão."
         ]
@@ -72,7 +83,7 @@ defmodule Ecidadao.PublicFeedback do
          official_portal: portal,
          authentication_required: true,
          next_step:
-           "Abra o gov.pt, confirme a entidade e o serviço, autentique-se e reveja o texto antes de enviar. Guarde o comprovativo oficial."
+           "Abra o gov.pt, confirme a entidade e o serviço, autentique-se e reveja o texto antes de enviar. Preencha a identificação apenas no portal oficial e guarde o comprovativo que este emitir."
        }}
     else
       {:error, errors}
@@ -80,7 +91,14 @@ defmodule Ecidadao.PublicFeedback do
   end
 
   def prepare(_), do: {:error, [%{field: "input", message: "Envie os dados do pedido."}]}
-  defp clean(value) when is_binary(value), do: String.trim(value)
+  defp resolution_label("complaint"), do: "Resultado pretendido"
+  defp resolution_label("compliment"), do: "Reconhecimento pretendido"
+  defp resolution_label("suggestion"), do: "Melhoria pretendida"
+
+  defp clean(value) when is_binary(value) do
+    if String.valid?(value), do: String.trim(value), else: ""
+  end
+
   defp clean(_), do: ""
   defp optional(_, ""), do: nil
   defp optional(label, value), do: "#{label}: #{value}"
