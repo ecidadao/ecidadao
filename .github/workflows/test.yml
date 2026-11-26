@@ -23,6 +23,7 @@ jobs:
       - run: mix test
       - run: bash -n deploy/deploy.sh
       - run: python3 -m py_compile scripts/smoke.py
+      - run: python3 -m unittest discover -s test -p "*_test.py"
   deploy:
     if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
     needs: test
