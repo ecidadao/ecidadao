@@ -23,7 +23,7 @@ cleanup() {
   rm -rf "$work"
 }
 rollback_on_error() {
-  status=$?
+  local status=${1:-$?}
   trap - ERR
   if [[ $switch_started == 1 ]]; then
     echo "Deployment failed; restoring $previous_revision" >&2
@@ -65,7 +65,9 @@ for attempt in $(seq 1 30); do
   fi
   sleep 2
 done
-[[ $ready == 1 ]]
+if [[ $ready != 1 ]]; then
+  rollback_on_error 1
+fi
 docker rm -f "$candidate" >/dev/null
 switch_started=1
 ECIDADAO_IMAGE="$image" RELEASE_SHA="$revision" \
@@ -79,7 +81,9 @@ for attempt in $(seq 1 30); do
   fi
   sleep 2
 done
-[[ $ready == 1 ]]
+if [[ $ready != 1 ]]; then
+  rollback_on_error 1
+fi
 printf '%s\n' "$previous_revision" > "$base/deploy/previous-revision"
 printf '%s\n' "$revision" > "$base/deploy/revision"
 switch_started=0
