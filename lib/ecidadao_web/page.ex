@@ -63,7 +63,8 @@ defmodule EcidadaoWeb.Page do
       <section class="card" aria-labelledby="feedback-form-title">
         <div class="section-heading"><span>#{t("01 / Preparar", locale)}</span><h2 id="feedback-form-title">#{t("Conte-nos a sua experiência", locale)}</h2></div>
         <p id="feedback-help">#{t("Os campos com * são obrigatórios. Não inclua documentos de identificação, palavras-passe ou dados pessoais desnecessários.", locale)}</p>
-        <form id="feedback-form" aria-describedby="feedback-help">
+        <noscript><div class="notice"><p>#{t("Para preparar o rascunho nesta página, ative o JavaScript. Em alternativa, continue diretamente no gov.pt:", locale)}</p><ul><li><a href="https://www.gov.pt/servicos/fazer-reclamacao-de-um-servico-publico">#{t("Reclamação", locale)}</a></li><li><a href="https://www.gov.pt/servicos/fazer-elogio-a-um-servico-publico">#{t("Elogio", locale)}</a></li><li><a href="https://www.gov.pt/servicos/fazer-sugestao-a-um-servico-publico">#{t("Sugestão", locale)}</a></li></ul></div></noscript>
+        <form id="feedback-form" method="post" action="/api/public-feedback/prepare" aria-describedby="feedback-help">
           <div class="grid">
             <label>#{t("Tipo de participação", locale)} *<select name="type" required><option value="complaint">#{t("Reclamação", locale)}</option><option value="compliment">#{t("Elogio", locale)}</option><option value="suggestion">#{t("Sugestão", locale)}</option></select></label>
             <label>#{t("Entidade pública", locale)} *<input name="organisation" maxlength="200" required autocomplete="organization"></label>
@@ -414,7 +415,7 @@ defmodule EcidadaoWeb.Page do
         <p>#{t("O Livro Amarelo permite preparar reclamações, elogios e sugestões sobre serviços públicos. O eCidadão não representa o Livro Amarelo nem submete estas participações. Reveja o rascunho e siga a ligação para o serviço correspondente no gov.pt, onde deve confirmar a entidade, identificar-se, autenticar-se e concluir a submissão. Guarde o comprovativo oficial. Para conflitos de consumo com empresas, use o percurso Reclamações.", locale)}</p>
         <h2>#{t("Responsabilidade do utilizador", locale)}</h2><p>#{t("Reveja e corrija o texto antes de o usar. Envie apenas informação que tenha o direito de partilhar e evite documentos de identificação ou dados de terceiros desnecessários. Para apresentar uma reclamação, siga os passos no", locale)} <a href="https://www.livroreclamacoes.pt/Inicio/" target="_blank" rel="noopener noreferrer">Livro de Reclamações Eletrónico</a>#{t(". Para comunicar uma ocorrência, use o", locale)} <a href="https://servicos.arte.gov.pt/Portal/AMR/situationReport.aspx" target="_blank" rel="noopener noreferrer">#{t("portal A Minha Rua", locale)}</a>#{t(". Guarde o comprovativo ou número emitido pelo portal respetivo.", locale)}</p>
         <h2>#{t("Disponibilidade e contacto", locale)}</h2><p>#{t("Procuramos manter o serviço disponível e correto, mas podem ocorrer interrupções ou erros. Podemos corrigir ou alterar funcionalidades; alterações relevantes destes termos serão publicadas nesta página. Para apoio ou questões sobre o serviço, escreva para", locale)} <a href="mailto:hello@codeperf.io">hello@codeperf.io</a>.</p>
-        <p>#{t("Última atualização: 13 de novembro de 2026.", locale)}</p>
+        <p>#{t("Última atualização: 26 de novembro de 2026.", locale)}</p>
       </section>
       """,
       locale

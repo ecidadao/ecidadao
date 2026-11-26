@@ -163,4 +163,31 @@ defmodule EcidadaoWeb.LocaleTest do
     {output, status} = System.cmd("node", ["-e", harness, script], stderr_to_stdout: true)
     assert status == 0, output
   end
+
+  test "feedback without JavaScript posts privately and offers official alternatives" do
+    for locale <- ["pt", "en"] do
+      body = page("/livro-amarelo?lang=" <> locale).resp_body
+      [form] = Regex.run(~r/<form\b[^>]*id="feedback-form"[^>]*>/, body)
+      assert form =~ ~s(method="post")
+      assert form =~ ~s(action="/api/public-feedback/prepare")
+      [_, fallback] = Regex.run(~r/<noscript>(.*?)<\/noscript>/s, body)
+
+      for type <- Ecidadao.PublicFeedback.types() do
+        {:ok, feedback} =
+          Ecidadao.PublicFeedback.prepare(%{
+            "type" => type,
+            "organisation" => "Test",
+            "subject" => "Test",
+            "description" => "Test"
+          })
+
+        assert fallback =~ ~s(href="#{feedback.official_portal}")
+      end
+    end
+
+    assert page("/livro-amarelo?lang=en").resp_body =~
+             "Alternatively, continue directly on gov.pt:"
+
+    assert page("/termos?lang=en").resp_body =~ "Last updated: 26 November 2026."
+  end
 end
