@@ -23,6 +23,18 @@ defmodule EcidadaoWeb.Locale do
     do:
       script_json(
         Map.take(@english, [
+          "Escolha reclamação, elogio ou sugestão.",
+          "Máximo de 200 caracteres.",
+          "Máximo de 10 caracteres.",
+          "Máximo de 5000 caracteres.",
+          "Máximo de 1500 caracteres.",
+          "Envie os dados do pedido.",
+          "Use texto neste campo.",
+          "Use texto UTF-8 válido.",
+          "Use uma data válida AAAA-MM-DD.",
+          "type",
+          "organisation",
+          "location",
           "Campo obrigatório.",
           "Endereço de email inválido.",
           "Use a data AAAA-MM-DD.",

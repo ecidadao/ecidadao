@@ -15,6 +15,7 @@ defmodule Ecidadao.MCPTest do
              "open_report_camera",
              "preview_photo_report",
              "prepare_complaint",
+             "prepare_public_service_feedback",
              "official_submission_guidance",
              "prepare_street_report",
              "list_recent_street_reports",
@@ -37,6 +38,11 @@ defmodule Ecidadao.MCPTest do
              "financas_service_guidance",
              "prepare_financas_ebalcao"
            ]
+
+    public_list =
+      mcp_post("/mcp/public", %{"jsonrpc" => "2.0", "id" => 10, "method" => "tools/list"})
+
+    assert Enum.map(public_list["result"]["tools"], & &1["name"]) == Enum.map(tools, & &1.name)
 
     assert {:reply, %{error: %{code: -32602}}} =
              MCP.public_handle(%{
@@ -140,5 +146,76 @@ defmodule Ecidadao.MCPTest do
     assert result.structuredContent.status == "rascunho_nao_submetido"
     assert result.structuredContent.official_portal =~ "situationReport.aspx"
     assert result.content |> hd() |> Map.fetch!(:text) =~ "NÃO SUBMETIDO"
+  end
+
+  test "experimental feedback tool has bounded schema and local-only annotations" do
+    tool = Enum.find(MCP.tools(), &(&1.name == "prepare_public_service_feedback"))
+    assert tool.inputSchema.properties.type.enum == ~w(complaint compliment suggestion)
+    assert tool.inputSchema.required == ~w(type organisation subject description)
+    refute tool.inputSchema.additionalProperties
+    assert tool.inputSchema.properties.description.maxLength == 5000
+
+    assert tool.annotations == %{
+             readOnlyHint: true,
+             destructiveHint: false,
+             idempotentHint: true,
+             openWorldHint: false
+           }
+  end
+
+  test "full HTTP MCP prepares each feedback type but public MCP refuses the tool" do
+    for type <- ~w(complaint compliment suggestion) do
+      request = %{
+        "jsonrpc" => "2.0",
+        "id" => 42,
+        "method" => "tools/call",
+        "params" => %{
+          "name" => "prepare_public_service_feedback",
+          "arguments" => %{
+            "type" => type,
+            "organisation" => "Município",
+            "subject" => "Atendimento",
+            "description" => "Factos observados",
+            "nif" => "SECRET-IDENTITY"
+          }
+        }
+      }
+
+      full = mcp_post("/mcp", request)
+      assert full["id"] == 42
+      result = full["result"]
+      assert result["structuredContent"]["status"] == "rascunho_nao_submetido"
+      assert result["structuredContent"]["type"] == type
+      assert hd(result["content"])["text"] == result["structuredContent"]["draft"]
+      refute Jason.encode!(result) =~ "SECRET-IDENTITY"
+      assert mcp_post("/mcp/public", request)["error"]["code"] == -32602
+    end
+  end
+
+  test "feedback MCP errors stay structured for invalid arguments" do
+    for args <- [%{}, [], nil, %{"type" => "other"}] do
+      request = %{
+        "jsonrpc" => "2.0",
+        "id" => 43,
+        "method" => "tools/call",
+        "params" => %{"name" => "prepare_public_service_feedback", "arguments" => args}
+      }
+
+      assert {:reply, %{result: result}} = MCP.handle(request)
+      assert result.isError
+      assert is_list(result.structuredContent.errors)
+    end
+  end
+
+  defp mcp_post(path, request) do
+    conn =
+      Plug.Test.conn(:post, path, Jason.encode!(request))
+      |> Plug.Conn.put_req_header("content-type", "application/json")
+      |> Plug.Conn.put_req_header("accept", "application/json")
+      |> EcidadaoWeb.Endpoint.call([])
+
+    assert conn.status == 200
+    assert Plug.Conn.get_resp_header(conn, "cache-control") == ["no-store"]
+    Jason.decode!(conn.resp_body)
   end
 end

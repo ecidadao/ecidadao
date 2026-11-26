@@ -6,13 +6,15 @@ Aplicação independente e gratuita para comparar filas públicas SIGA, preparar
 
 O código está sob Apache-2.0. A página `/siga` consulta tempos públicos de espera por distrito, entidade e tipo de senha, filtra por raio em linha reta e ordena os balcões abertos pelo tempo observado. A consulta usa endpoints internos do site SIGA, sujeitos a alterações; não garante cobertura de distritos vizinhos nem calcula viagem. A página `/financas` ajuda a encontrar o portal oficial e prepara um rascunho para o e-balcão sem autenticação. A página `/a-minha-rua` consulta ocorrências públicas recentes com cache de dois minutos e prepara um reporte. O envio oficial, a identificação, o consentimento e o reCAPTCHA ficam nos portais oficiais.
 
+A página `/livro-amarelo` prepara reclamações, elogios e sugestões sobre serviços públicos através de `POST /api/public-feedback/prepare`. A preparação é local e sem persistência: não contacta portais, não submete pedidos nem emite comprovativos. A identificação e a autenticação são preenchidas apenas no portal oficial.
+
 O [percurso principal pretendido](docs/photo-first-flow.md) começa com uma fotografia no ChatGPT, pede a confirmação do local e mostra uma prévia antes de qualquer envio. As ferramentas `open_report_camera` e `preview_photo_report` fornecem um protótipo local do cartão de captura e da primeira prévia. A interface ainda precisa de testes no ChatGPT móvel real; o envio oficial depende de integração autorizada.
 
 O [desenho da passagem ao portal A Minha Rua](docs/entrega-ao-portal-oficial.md) mostra os ecrãs, os dados a entregar e o requisito de uma integração da ARTE para abrir o formulário oficial já preenchido.
 
 ## Desenvolvimento local
 
-Requer Elixir 1.20 e Erlang/OTP 29.
+Requer Elixir 1.20, Erlang/OTP 29 e Node.js para os testes de comportamento da interface.
 
 ```sh
 mix deps.get
@@ -37,7 +39,7 @@ As ferramentas expostas incluem `siga_visit_guidance`, `compare_siga_queues`, `f
 
 Este repositório contém a aplicação e o servidor MCP. Os pacotes instaláveis, skills e catálogos para Codex e Claude Code são mantidos em [ecidadao/plugins](https://github.com/ecidadao/plugins).
 
-O endpoint recomendado para clientes é `https://ecidadao.pt/mcp/public`: seis ferramentas de orientação e preparação de rascunhos, sem autenticação. O endpoint `/mcp` inclui ferramentas experimentais e consultas a fontes externas; não é o catálogo público distribuído pelos plugins.
+O endpoint recomendado para clientes é `https://ecidadao.pt/mcp/public`: seis ferramentas de orientação e preparação de rascunhos, sem autenticação. A ferramenta `prepare_public_service_feedback` para o Livro Amarelo está disponível apenas no endpoint experimental `/mcp`, não em `/mcp/public`; o catálogo público mantém as seis ferramentas e os plugins têm distribuição independente. O endpoint `/mcp` inclui ferramentas experimentais e consultas a fontes externas; não é o catálogo público distribuído pelos plugins.
 
 Consulte [o guia MCP e de alojamento próprio](docs/mcp.md). Contribuições são bem-vindas: [CONTRIBUTING.md](CONTRIBUTING.md). Para vulnerabilidades, veja [SECURITY.md](SECURITY.md).
 

@@ -1,6 +1,6 @@
 defmodule Ecidadao.MCP do
   @moduledoc "Minimal, stateless MCP Streamable HTTP JSON-RPC handler."
-  alias Ecidadao.{Complaint, Financas, MinhaRua, Observation, Siga}
+  alias Ecidadao.{Complaint, Financas, MinhaRua, Observation, PublicFeedback, Siga}
 
   @version "2025-11-25"
   @public_tools ~w(
@@ -104,6 +104,16 @@ defmodule Ecidadao.MCP do
          }
        ]
      })}
+  end
+
+  def handle(%{
+        "jsonrpc" => "2.0",
+        "method" => "tools/call",
+        "id" => id,
+        "params" => %{"name" => "prepare_public_service_feedback", "arguments" => args}
+      }) do
+    {:reply,
+     result(id, prepared(PublicFeedback.prepare(args), "Dados incompletos ou inválidos."))}
   end
 
   def handle(%{
@@ -378,6 +388,54 @@ defmodule Ecidadao.MCP do
           additionalProperties: false
         },
         annotations: %{readOnlyHint: true, destructiveHint: false, openWorldHint: false}
+      },
+      %{
+        name: "prepare_public_service_feedback",
+        title: "Preparar reclamação, elogio ou sugestão para um serviço público",
+        description:
+          "Experimental: prepara localmente um rascunho para o Livro Amarelo e indica o percurso gov.pt adequado. Não contacta portais, não submete nem emite comprovativos. Peça apenas factos necessários, sem identidade, NIF, credenciais ou códigos; identificação e autenticação apenas no portal oficial.",
+        inputSchema: %{
+          type: "object",
+          properties: %{
+            type: %{type: "string", enum: PublicFeedback.types()},
+            organisation: %{
+              type: "string",
+              minLength: 1,
+              maxLength: 200,
+              description: "Entidade pública"
+            },
+            location: %{
+              type: "string",
+              maxLength: 200,
+              description: "Local de atendimento, se conhecido"
+            },
+            incident_date: %{
+              type: "string",
+              maxLength: 10,
+              description: "Data válida AAAA-MM-DD, se conhecida; omita se desconhecida"
+            },
+            subject: %{type: "string", minLength: 1, maxLength: 200},
+            description: %{
+              type: "string",
+              minLength: 1,
+              maxLength: 5000,
+              description: "Factos, reconhecimento ou proposta, sem dados pessoais"
+            },
+            requested_resolution: %{
+              type: "string",
+              maxLength: 1500,
+              description: "Resultado, reconhecimento ou melhoria pretendida, se aplicável"
+            }
+          },
+          required: ~w(type organisation subject description),
+          additionalProperties: false
+        },
+        annotations: %{
+          readOnlyHint: true,
+          destructiveHint: false,
+          idempotentHint: true,
+          openWorldHint: false
+        }
       },
       %{
         name: "official_submission_guidance",
