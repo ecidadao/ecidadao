@@ -1,7 +1,7 @@
 defmodule EcidadaoWeb.Router do
   use Plug.Router
   import Plug.Conn
-  alias Ecidadao.{Complaint, Financas, MCP, MinhaRua, Siga}
+  alias Ecidadao.{Complaint, Financas, MCP, MinhaRua, PublicFeedback, Siga}
 
   plug(:match)
   plug(:dispatch)
@@ -12,6 +12,10 @@ defmodule EcidadaoWeb.Router do
 
   get "/reclamacoes" do
     html(conn, &EcidadaoWeb.Page.complaints/1)
+  end
+
+  get "/livro-amarelo" do
+    html(conn, &EcidadaoWeb.Page.public_feedback/1)
   end
 
   get "/a-minha-rua" do
@@ -58,6 +62,13 @@ defmodule EcidadaoWeb.Router do
 
   post "/api/complaints/prepare" do
     case Complaint.prepare(conn.body_params) do
+      {:ok, draft} -> json(conn, 200, draft)
+      {:error, errors} -> json(conn, 422, %{errors: errors})
+    end
+  end
+
+  post "/api/public-feedback/prepare" do
+    case PublicFeedback.prepare(conn.body_params) do
       {:ok, draft} -> json(conn, 200, draft)
       {:error, errors} -> json(conn, 422, %{errors: errors})
     end
