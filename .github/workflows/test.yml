@@ -20,6 +20,7 @@ jobs:
           otp-version: "29"
       - run: mix local.hex --force && mix local.rebar --force
       - run: mix deps.get
+      - run: mix hex.audit
       - run: mix test
       - run: bash -n deploy/deploy.sh
       - run: python3 -m py_compile scripts/smoke.py
