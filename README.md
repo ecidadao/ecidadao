@@ -1,5 +1,7 @@
 # eCidadão
 
+![eCidadão](priv/static/brand/ecidadao-logo.svg)
+
 Aplicação independente e gratuita para comparar filas públicas SIGA, preparar questões para o e-balcão das Finanças e organizar rascunhos de reclamações de consumo e de ocorrências no espaço público em Portugal. Não está associada ao Estado, ao SIGA, à Autoridade Tributária, ao Livro de Reclamações Eletrónico nem à ARTE. **Não emite senhas, não cria marcações e não submete pedidos oficiais**: a pessoa conclui cada ação no portal respetivo.
 
 O código está sob Apache-2.0. A página `/siga` consulta tempos públicos de espera por distrito, entidade e tipo de senha, filtra por raio em linha reta e ordena os balcões abertos pelo tempo observado. A consulta usa endpoints internos do site SIGA, sujeitos a alterações; não garante cobertura de distritos vizinhos nem calcula viagem. A página `/financas` ajuda a encontrar o portal oficial e prepara um rascunho para o e-balcão sem autenticação. A página `/a-minha-rua` consulta ocorrências públicas recentes com cache de dois minutos e prepara um reporte. O envio oficial, a identificação, o consentimento e o reCAPTCHA ficam nos portais oficiais.
@@ -57,3 +59,7 @@ A [submissão 0.3.1](docs/plugin-submission-0.3.1.md) foi registada como “In r
 - `lib/ecidadao_web/`: site, API e endpoint HTTP.
 - [ecidadao/plugins](https://github.com/ecidadao/plugins): pacotes e catálogos de instalação.
 - `test/`: testes dos comportamentos críticos.
+
+## Identidade visual
+
+O [logótipo e símbolo](priv/static/brand/) estão disponíveis em SVG e PNG transparente, sob Apache-2.0. Pode [descarregar o pacote completo](https://ecidadao.pt/marca/ecidadao-identidade.zip). O símbolo é partilhado com os plugins.

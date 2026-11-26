@@ -20,7 +20,7 @@ health = json.loads(request("/health"))
 assert health["status"] == "ok"
 if args.revision and args.revision != "legacy":
     assert health["revision"] == args.revision, health
-for path in ("/", "/como-usar", "/siga", "/financas", "/a-minha-rua", "/reclamacoes", "/privacidade", "/termos", "/apoio", "/imagens/siga-passo.png"):
+for path in ("/", "/como-usar", "/siga", "/financas", "/a-minha-rua", "/reclamacoes", "/privacidade", "/termos", "/apoio", "/imagens/siga-passo.png", "/marca/ecidadao-logo.svg", "/marca/ecidadao-logo.png", "/marca/ecidadao-identidade.zip"):
     assert request(path), path
 result = json.loads(request("/mcp/public", {"jsonrpc":"2.0","id":1,"method":"tools/list"}))
 assert {t["name"] for t in result["result"]["tools"]} == {
