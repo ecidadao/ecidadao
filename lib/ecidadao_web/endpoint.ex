@@ -1,6 +1,12 @@
 defmodule EcidadaoWeb.Endpoint do
   use Phoenix.Endpoint, otp_app: :ecidadao
 
+  plug(Plug.Static,
+    at: "/marca",
+    from: {:ecidadao, "priv/static/brand"},
+    only: ~w(ecidadao-logo.svg ecidadao-logo.png ecidadao-simbolo.svg ecidadao-simbolo.png ecidadao-identidade.zip README.txt)
+  )
+
   plug(Plug.RequestId)
   plug(Plug.Telemetry, event_prefix: [:ecidadao, :endpoint])
 
