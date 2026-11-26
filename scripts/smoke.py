@@ -23,7 +23,7 @@ if args.revision and args.revision != "legacy":
     assert health["revision"] == args.revision, health
 paths = ["/", "/como-usar", "/siga", "/financas", "/a-minha-rua", "/reclamacoes", "/privacidade", "/termos", "/apoio", "/imagens/siga-passo.png"]
 if args.brand:
-    paths += ["/marca/ecidadao-logo.svg", "/marca/ecidadao-logo.png", "/marca/ecidadao-identidade.zip"]
+    paths += ["/marca/ecidadao-logo.svg", "/marca/ecidadao-logo.png", "/marca/ecidadao-github.svg", "/marca/ecidadao-github.png", "/marca/ecidadao-identidade.zip"]
 for path in paths:
     assert request(path), path
 result = json.loads(request("/mcp/public", {"jsonrpc":"2.0","id":1,"method":"tools/list"}))
