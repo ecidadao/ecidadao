@@ -1,0 +1,386 @@
+{
+  "checked_at": "2026-11-26T20:21:17.876551+00:00",
+  "source": "https://api.iap.gov.pt/publicapi/api/Service/GetByFilter",
+  "scope": "Catalogue metadata only; access to transactional services is not established.",
+  "total": 63,
+  "services": [
+    {
+      "id": 1,
+      "name": "Consulta de Informação Beneficiário",
+      "provider": "Instituto de Proteção e Assistência na Doença, I.P.",
+      "catalogue_url": "https://www.iap.gov.pt/web/iap/details?id=1"
+    },
+    {
+      "id": 2,
+      "name": "Comprovativo IRS",
+      "provider": "Autoridade Tributária e Aduaneira",
+      "catalogue_url": "https://www.iap.gov.pt/web/iap/details?id=2"
+    },
+    {
+      "id": 3,
+      "name": "Validação de faturas",
+      "provider": "Autoridade Tributária e Aduaneira",
+      "catalogue_url": "https://www.iap.gov.pt/web/iap/details?id=3"
+    },
+    {
+      "id": 4,
+      "name": "Existência de dívida às Finanças",
+      "provider": "Autoridade Tributária e Aduaneira",
+      "catalogue_url": "https://www.iap.gov.pt/web/iap/details?id=4"
+    },
+    {
+      "id": 5,
+      "name": "Obter informação do contribuinte",
+      "provider": "Autoridade Tributária e Aduaneira",
+      "catalogue_url": "https://www.iap.gov.pt/web/iap/details?id=5"
+    },
+    {
+      "id": 6,
+      "name": "Consulta Informação Património",
+      "provider": "Autoridade Tributária e Aduaneira",
+      "catalogue_url": "https://www.iap.gov.pt/web/iap/details?id=6"
+    },
+    {
+      "id": 7,
+      "name": "Resumo Fiscal",
+      "provider": "Autoridade Tributária e Aduaneira",
+      "catalogue_url": "https://www.iap.gov.pt/web/iap/details?id=7"
+    },
+    {
+      "id": 8,
+      "name": "Obtenção Dados Situação Profissional",
+      "provider": "Caixa Geral de Aposentações",
+      "catalogue_url": "https://www.iap.gov.pt/web/iap/details?id=8"
+    },
+    {
+      "id": 9,
+      "name": "Listagem SIOE",
+      "provider": "Direção-Geral da Administração e do Emprego Público",
+      "catalogue_url": "https://www.iap.gov.pt/web/iap/details?id=9"
+    },
+    {
+      "id": 10,
+      "name": "Obter dados da Carta de Condução",
+      "provider": "Instituto da Mobilidade e dos Transportes, I.P.",
+      "catalogue_url": "https://www.iap.gov.pt/web/iap/details?id=10"
+    },
+    {
+      "id": 11,
+      "name": "Publicação / Consulta Portal Base",
+      "provider": "Instituto dos Mercados Públicos  do Imobiliário e da Construção",
+      "catalogue_url": "https://www.iap.gov.pt/web/iap/details?id=11"
+    },
+    {
+      "id": 12,
+      "name": "Validação Morada",
+      "provider": "Instituto dos Registos e do Notariado, I.P.",
+      "catalogue_url": "https://www.iap.gov.pt/web/iap/details?id=12"
+    },
+    {
+      "id": 13,
+      "name": "Obtenção de informação do Cartão de Cidadão",
+      "provider": "Instituto dos Registos e do Notariado, I.P.",
+      "catalogue_url": "https://www.iap.gov.pt/web/iap/details?id=13"
+    },
+    {
+      "id": 14,
+      "name": "Comunicação de Óbito",
+      "provider": "Instituto dos Registos e do Notariado, I.P.",
+      "catalogue_url": "https://www.iap.gov.pt/web/iap/details?id=14"
+    },
+    {
+      "id": 15,
+      "name": "Validar Autorização de Residência",
+      "provider": "Agência para a Integração, Migrações e Asilo",
+      "catalogue_url": "https://www.iap.gov.pt/web/iap/details?id=15"
+    },
+    {
+      "id": 16,
+      "name": "Obter Dados de Beneficiário",
+      "provider": "Instituto da Segurança Social, I.P.",
+      "catalogue_url": "https://www.iap.gov.pt/web/iap/details?id=16"
+    },
+    {
+      "id": 17,
+      "name": "Consulta de Informação de Dados de Rendimentos",
+      "provider": "Instituto da Segurança Social, I.P.",
+      "catalogue_url": "https://www.iap.gov.pt/web/iap/details?id=17"
+    },
+    {
+      "id": 18,
+      "name": "Situação Contributiva",
+      "provider": "Instituto da Segurança Social, I.P.",
+      "catalogue_url": "https://www.iap.gov.pt/web/iap/details?id=18"
+    },
+    {
+      "id": 19,
+      "name": "Obter Escalão Abono Família",
+      "provider": "Instituto da Segurança Social, I.P.",
+      "catalogue_url": "https://www.iap.gov.pt/web/iap/details?id=19"
+    },
+    {
+      "id": 20,
+      "name": "Situação Prestacional",
+      "provider": "Instituto da Segurança Social, I.P.",
+      "catalogue_url": "https://www.iap.gov.pt/web/iap/details?id=20"
+    },
+    {
+      "id": 21,
+      "name": "Prova Escolar Académica",
+      "provider": "Agência para a Gestão do Sistema Educativo, I. P.",
+      "catalogue_url": "https://www.iap.gov.pt/web/iap/details?id=21"
+    },
+    {
+      "id": 24,
+      "name": "Atestados Médicos",
+      "provider": "Serviços Partilhados do Ministério da Saúde, E.P.E.",
+      "catalogue_url": "https://www.iap.gov.pt/web/iap/details?id=24"
+    },
+    {
+      "id": 25,
+      "name": "Boletim de Vacinas Eletrónico",
+      "provider": "Serviços Partilhados do Ministério da Saúde, E.P.E.",
+      "catalogue_url": "https://www.iap.gov.pt/web/iap/details?id=25"
+    },
+    {
+      "id": 26,
+      "name": "Certificados de Incapacidade Temporária",
+      "provider": "Serviços Partilhados do Ministério da Saúde, E.P.E.",
+      "catalogue_url": "https://www.iap.gov.pt/web/iap/details?id=26"
+    },
+    {
+      "id": 27,
+      "name": "Atestados Multiusos",
+      "provider": "Serviços Partilhados do Ministério da Saúde, E.P.E.",
+      "catalogue_url": "https://www.iap.gov.pt/web/iap/details?id=27"
+    },
+    {
+      "id": 28,
+      "name": "Obter guia de tratamento",
+      "provider": "Serviços Partilhados do Ministério da Saúde, E.P.E.",
+      "catalogue_url": "https://www.iap.gov.pt/web/iap/details?id=28"
+    },
+    {
+      "id": 29,
+      "name": "Obter Prescrição Eletrónica de Medicamentos",
+      "provider": "Serviços Partilhados do Ministério da Saúde, E.P.E.",
+      "catalogue_url": "https://www.iap.gov.pt/web/iap/details?id=29"
+    },
+    {
+      "id": 30,
+      "name": "Serviço de Pagamentos",
+      "provider": "Agência para a Reforma Tecnológica do Estado",
+      "catalogue_url": "https://www.iap.gov.pt/web/iap/details?id=30"
+    },
+    {
+      "id": 31,
+      "name": "Serviço de Mensagens",
+      "provider": "Agência para a Reforma Tecnológica do Estado",
+      "catalogue_url": "https://www.iap.gov.pt/web/iap/details?id=31"
+    },
+    {
+      "id": 32,
+      "name": "Envio de documentos para o cidadão",
+      "provider": "Agência para a Reforma Tecnológica do Estado",
+      "catalogue_url": "https://www.iap.gov.pt/web/iap/details?id=32"
+    },
+    {
+      "id": 33,
+      "name": "Envio de formulários do Balcão do Empreendedor",
+      "provider": "Agência para a Reforma Tecnológica do Estado",
+      "catalogue_url": "https://www.iap.gov.pt/web/iap/details?id=33"
+    },
+    {
+      "id": 34,
+      "name": "Novo fornecedor de Certificação de Atributos Profissionais",
+      "provider": "Agência para a Reforma Tecnológica do Estado",
+      "catalogue_url": "https://www.iap.gov.pt/web/iap/details?id=34"
+    },
+    {
+      "id": 35,
+      "name": "Novo fornecedor de atributos ID.GOV",
+      "provider": "Agência para a Reforma Tecnológica do Estado",
+      "catalogue_url": "https://www.iap.gov.pt/web/iap/details?id=35"
+    },
+    {
+      "id": 37,
+      "name": "Nova entidade consumidora do Catálogo de Entidades e Serviços",
+      "provider": "Agência para a Reforma Tecnológica do Estado",
+      "catalogue_url": "https://www.iap.gov.pt/web/iap/details?id=37"
+    },
+    {
+      "id": 38,
+      "name": "Novo fornecedor de dados Catálogo de Entidades e Serviços",
+      "provider": "Agência para a Reforma Tecnológica do Estado",
+      "catalogue_url": "https://www.iap.gov.pt/web/iap/details?id=38"
+    },
+    {
+      "id": 39,
+      "name": "Nova entidade aderente Plataforma de Notificações Eletrónicas",
+      "provider": "Agência para a Reforma Tecnológica do Estado",
+      "catalogue_url": "https://www.iap.gov.pt/web/iap/details?id=39"
+    },
+    {
+      "id": 40,
+      "name": "Consulta contraordenações",
+      "provider": "Autoridade Nacional de Segurança Rodoviária",
+      "catalogue_url": "https://www.iap.gov.pt/web/iap/details?id=40"
+    },
+    {
+      "id": 41,
+      "name": "Informação sobre o local de voto em período de eleições",
+      "provider": "Secretaria-Geral do Ministério da Administração Interna",
+      "catalogue_url": "https://www.iap.gov.pt/web/iap/details?id=41"
+    },
+    {
+      "id": 42,
+      "name": "Consulta de informação do RNAL",
+      "provider": "Turismo de Portugal, I.P.",
+      "catalogue_url": "https://www.iap.gov.pt/web/iap/details?id=42"
+    },
+    {
+      "id": 43,
+      "name": "Registo Profissional Artista",
+      "provider": "Inspeção-Geral das Atividades Culturais",
+      "catalogue_url": "https://www.iap.gov.pt/web/iap/details?id=43"
+    },
+    {
+      "id": 44,
+      "name": "Lista de Fundações",
+      "provider": "Secretaria-Geral da Presidência de Conselho de Ministros",
+      "catalogue_url": "https://www.iap.gov.pt/web/iap/details?id=44"
+    },
+    {
+      "id": 45,
+      "name": "Consulta dos anos de liquidação do IUC",
+      "provider": "Autoridade Tributária e Aduaneira",
+      "catalogue_url": "https://www.iap.gov.pt/web/iap/details?id=45"
+    },
+    {
+      "id": 46,
+      "name": "Obtém informação da filiação",
+      "provider": "Instituto dos Registos e do Notariado, I.P.",
+      "catalogue_url": "https://www.iap.gov.pt/web/iap/details?id=46"
+    },
+    {
+      "id": 48,
+      "name": "Consulta de representante Legal",
+      "provider": "Instituto dos Registos e do Notariado, I.P.",
+      "catalogue_url": "https://www.iap.gov.pt/web/iap/details?id=48"
+    },
+    {
+      "id": 51,
+      "name": "Consulta de Dados de Equipamento",
+      "provider": "Instituto Português da Qualidade, I.P. ",
+      "catalogue_url": "https://www.iap.gov.pt/web/iap/details?id=51"
+    },
+    {
+      "id": 52,
+      "name": "Consulta Informação sobre instrumentos de medição",
+      "provider": "Instituto Português da Qualidade, I.P. ",
+      "catalogue_url": "https://www.iap.gov.pt/web/iap/details?id=52"
+    },
+    {
+      "id": 53,
+      "name": "Alteração de Morada - Notificação de alteração de Morada de Cidadão",
+      "provider": "Agência para a Reforma Tecnológica do Estado",
+      "catalogue_url": "https://www.iap.gov.pt/web/iap/details?id=53"
+    },
+    {
+      "id": 57,
+      "name": "Consulta de pontos da Carta de Condução",
+      "provider": "Autoridade Nacional de Segurança Rodoviária",
+      "catalogue_url": "https://www.iap.gov.pt/web/iap/details?id=57"
+    },
+    {
+      "id": 58,
+      "name": "Informação do dador de Sangue",
+      "provider": "Instituto Português do Sangue e da Transplantação",
+      "catalogue_url": "https://www.iap.gov.pt/web/iap/details?id=58"
+    },
+    {
+      "id": 59,
+      "name": "Informação sobre automóveis rebocados nas áreas metropolitanas de Lisboa e do Porto",
+      "provider": "Secretaria-Geral do Ministério da Administração Interna",
+      "catalogue_url": "https://www.iap.gov.pt/web/iap/details?id=59"
+    },
+    {
+      "id": 60,
+      "name": "Profissionais da Cultura",
+      "provider": "Inspeção-Geral das Atividades Culturais",
+      "catalogue_url": "https://www.iap.gov.pt/web/iap/details?id=60"
+    },
+    {
+      "id": 61,
+      "name": "Verificação de área de contenção Alojamento Local",
+      "provider": "Turismo de Portugal, I.P.",
+      "catalogue_url": "https://www.iap.gov.pt/web/iap/details?id=61"
+    },
+    {
+      "id": 62,
+      "name": "Consulta Dados seguro ASF",
+      "provider": "Autoridade de Supervisão de Seguros e Fundos de Pensões",
+      "catalogue_url": "https://www.iap.gov.pt/web/iap/details?id=62"
+    },
+    {
+      "id": 63,
+      "name": "Consulta Dados Seguros ADM",
+      "provider": "Instituto de Ação Social das Forças Armadas",
+      "catalogue_url": "https://www.iap.gov.pt/web/iap/details?id=63"
+    },
+    {
+      "id": 64,
+      "name": "Chave Móvel Digital (autenticação e/ou assinatura)",
+      "provider": "Agência para a Reforma Tecnológica do Estado",
+      "catalogue_url": "https://www.iap.gov.pt/web/iap/details?id=64"
+    },
+    {
+      "id": 65,
+      "name": "Consulta dados JUL",
+      "provider": "Associação de Portos de Portugal",
+      "catalogue_url": "https://www.iap.gov.pt/web/iap/details?id=65"
+    },
+    {
+      "id": 66,
+      "name": "Receção de Fatura Eletrónica na Administração Pública – FE-AP inbound",
+      "provider": "Entidade de Serviços Partilhados da Administração Pública, I.P.",
+      "catalogue_url": "https://www.iap.gov.pt/web/iap/details?id=66"
+    },
+    {
+      "id": 68,
+      "name": "Informação de espera no atendimento nas Lojas do Cidadão",
+      "provider": "Instituto da Segurança Social, I.P.",
+      "catalogue_url": "https://www.iap.gov.pt/web/iap/details?id=68"
+    },
+    {
+      "id": 69,
+      "name": "Serviços de Agendamento no atendimento",
+      "provider": "Instituto da Segurança Social, I.P.",
+      "catalogue_url": "https://www.iap.gov.pt/web/iap/details?id=69"
+    },
+    {
+      "id": 76,
+      "name": "Interoperabilidade Documental",
+      "provider": "Agência para a Reforma Tecnológica do Estado",
+      "catalogue_url": "https://www.iap.gov.pt/web/iap/details?id=76"
+    },
+    {
+      "id": 77,
+      "name": "Emissão de Fatura Eletrónica na Administração Pública – FE-AP outbound",
+      "provider": "Entidade de Serviços Partilhados da Administração Pública, I.P.",
+      "catalogue_url": "https://www.iap.gov.pt/web/iap/details?id=77"
+    },
+    {
+      "id": 78,
+      "name": "Registo Central do Beneficiário Efetivo (RCBE)",
+      "provider": "Instituto dos Registos e do Notariado, I.P.",
+      "catalogue_url": "https://www.iap.gov.pt/web/iap/details?id=78"
+    },
+    {
+      "id": 79,
+      "name": "Informação agentes de execução",
+      "provider": "Autoridade Tributária e Aduaneira",
+      "catalogue_url": "https://www.iap.gov.pt/web/iap/details?id=79"
+    }
+  ]
+}

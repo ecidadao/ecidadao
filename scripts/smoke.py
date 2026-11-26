@@ -7,6 +7,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument("base")
 parser.add_argument("--revision")
 parser.add_argument("--brand", action="store_true", help="Also check the optional brand assets")
+parser.add_argument("--locales", action="store_true", help="Check English pages and automatic colour scheme")
 args = parser.parse_args()
 
 def request(path, payload=None):
@@ -26,6 +27,14 @@ if args.brand:
     paths += ["/marca/ecidadao-logo.svg", "/marca/ecidadao-logo.png", "/marca/ecidadao-github.svg", "/marca/ecidadao-github.png", "/marca/ecidadao-identidade.zip"]
 for path in paths:
     assert request(path), path
+if args.locales:
+    for path in paths:
+        if "." not in path:
+            page = request(path + "?lang=en").decode()
+            assert '<html lang="en">' in page, path
+            assert 'prefers-color-scheme:dark' in page, path
+            assert 'Help with public services' in page, path
+    assert 'O próximo passo fica mais simples.' in request("/?lang=pt").decode()
 result = json.loads(request("/mcp/public", {"jsonrpc":"2.0","id":1,"method":"tools/list"}))
 assert {t["name"] for t in result["result"]["tools"]} == {
     "prepare_complaint", "official_submission_guidance", "prepare_street_report",
