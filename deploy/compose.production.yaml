@@ -1,0 +1,15 @@
+name: ecidadao
+services:
+  app:
+    image: ${ECIDADAO_IMAGE:?Set ECIDADAO_IMAGE}
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:8091:4000"
+    env_file:
+      - /opt/ecidadao/shared/.env
+    environment:
+      PORT: "4000"
+      RELEASE_SHA: ${RELEASE_SHA:?Set RELEASE_SHA}
+      MCP_ALLOWED_ORIGINS: https://ecidadao.codeperf.io,https://ecidadao.pt,https://chatgpt.com,https://claude.ai,https://claude.com
+    logging:
+      driver: none

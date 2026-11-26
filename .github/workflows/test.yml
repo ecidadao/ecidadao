@@ -1,5 +1,12 @@
-name: Test
-on: [push, pull_request]
+name: Test and deploy
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+concurrency:
+  group: ecidadao-${{ github.ref }}
+  cancel-in-progress: false
 permissions:
   contents: read
 jobs:
@@ -14,3 +21,27 @@ jobs:
       - run: mix local.hex --force && mix local.rebar --force
       - run: mix deps.get
       - run: mix test
+      - run: bash -n deploy/deploy.sh
+      - run: python3 -m py_compile scripts/smoke.py
+  deploy:
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    needs: test
+    runs-on: ubuntu-latest
+    environment:
+      name: production
+      url: https://ecidadao.pt
+    timeout-minutes: 25
+    steps:
+      - name: Configure deployment SSH key
+        env:
+          DEPLOY_KEY: ${{ secrets.DEPLOY_SSH_KEY }}
+          KNOWN_HOSTS: ${{ secrets.DEPLOY_KNOWN_HOSTS }}
+        run: |
+          install -m 700 -d ~/.ssh
+          printf '%s\n' "$DEPLOY_KEY" > ~/.ssh/ecidadao_deploy
+          chmod 600 ~/.ssh/ecidadao_deploy
+          printf '%s\n' "$KNOWN_HOSTS" > ~/.ssh/known_hosts
+      - name: Deploy tested commit and verify website and MCP
+        env:
+          DEPLOY_HOST: ${{ secrets.DEPLOY_HOST }}
+        run: ssh -o BatchMode=yes -o IdentitiesOnly=yes -o StrictHostKeyChecking=yes -o ServerAliveInterval=30 -i ~/.ssh/ecidadao_deploy "ecidadao-deploy@$DEPLOY_HOST" "deploy $GITHUB_SHA"

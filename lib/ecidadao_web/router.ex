@@ -59,7 +59,7 @@ defmodule EcidadaoWeb.Router do
   end
 
   get "/health" do
-    json(conn, 200, %{status: "ok"})
+    json(conn, 200, %{status: "ok", revision: System.get_env("RELEASE_SHA", "development")})
   end
 
   get "/.well-known/openai-apps-challenge" do

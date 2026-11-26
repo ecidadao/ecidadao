@@ -41,7 +41,7 @@ Consulte [o guia MCP e de alojamento próprio](docs/mcp.md). Contribuições sã
 
 ## Colocar no ar
 
-O serviço público está em [https://ecidadao.pt](https://ecidadao.pt). Pode executar a mesma aplicação em infraestrutura própria com Docker. O guia em [docs/mcp.md](docs/mcp.md) explica a configuração local e os requisitos para HTTPS.
+O serviço público está em [https://ecidadao.pt](https://ecidadao.pt). Cada push para `main` publica o website e o MCP após os testes passarem; veja [deploy e recuperação de versões](docs/deployment.md). Pode executar a mesma aplicação em infraestrutura própria com Docker. O guia em [docs/mcp.md](docs/mcp.md) explica a configuração local e os requisitos para HTTPS.
 
 ## Candidatura ao directório
 

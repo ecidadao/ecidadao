@@ -30,3 +30,5 @@ ecidadao-*.tar
 /ecidadao-plugin-*.zip
 /docs/review-video/
 /docs/cloudflare-deployment.md
+
+__pycache__/
