@@ -6,6 +6,7 @@ import urllib.request
 parser = argparse.ArgumentParser()
 parser.add_argument("base")
 parser.add_argument("--revision")
+parser.add_argument("--brand", action="store_true", help="Also check the optional brand assets")
 args = parser.parse_args()
 
 def request(path, payload=None):
@@ -20,7 +21,10 @@ health = json.loads(request("/health"))
 assert health["status"] == "ok"
 if args.revision and args.revision != "legacy":
     assert health["revision"] == args.revision, health
-for path in ("/", "/como-usar", "/siga", "/financas", "/a-minha-rua", "/reclamacoes", "/privacidade", "/termos", "/apoio", "/imagens/siga-passo.png", "/marca/ecidadao-logo.svg", "/marca/ecidadao-logo.png", "/marca/ecidadao-identidade.zip"):
+paths = ["/", "/como-usar", "/siga", "/financas", "/a-minha-rua", "/reclamacoes", "/privacidade", "/termos", "/apoio", "/imagens/siga-passo.png"]
+if args.brand:
+    paths += ["/marca/ecidadao-logo.svg", "/marca/ecidadao-logo.png", "/marca/ecidadao-identidade.zip"]
+for path in paths:
     assert request(path), path
 result = json.loads(request("/mcp/public", {"jsonrpc":"2.0","id":1,"method":"tools/list"}))
 assert {t["name"] for t in result["result"]["tools"]} == {
