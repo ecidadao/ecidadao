@@ -1,0 +1,8 @@
+_build
+deps
+.git
+.env
+test
+plugin
+README.md
+*.zip

@@ -1,0 +1,25 @@
+{
+  log {
+    output file /var/log/caddy/runtime.log {
+      roll_at 00:00
+      roll_keep 8
+      roll_keep_for 168h
+    }
+  }
+}
+
+ecidadao.pt {
+  encode zstd gzip
+  log {
+    output file /var/log/caddy/access.log {
+      roll_at 00:00
+      roll_keep 8
+      roll_keep_for 168h
+    }
+  }
+  reverse_proxy app:4000
+}
+
+www.ecidadao.pt {
+  redir https://ecidadao.pt{uri} permanent
+}

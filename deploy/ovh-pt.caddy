@@ -1,0 +1,19 @@
+ecidadao.pt {
+  encode gzip
+  header {
+    Strict-Transport-Security "max-age=31536000"
+    -Server
+  }
+  log {
+    output file /var/log/caddy/ecidadao-pt-access.log {
+      roll_at 00:00
+      roll_keep 8
+      roll_keep_for 168h
+    }
+  }
+  reverse_proxy 127.0.0.1:8091
+}
+
+www.ecidadao.pt {
+  redir https://ecidadao.pt{uri} permanent
+}

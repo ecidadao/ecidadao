@@ -1,0 +1,32 @@
+services:
+  app:
+    build: .
+    restart: unless-stopped
+    logging:
+      driver: none
+    environment:
+      SECRET_KEY_BASE: ${SECRET_KEY_BASE:?Set SECRET_KEY_BASE in .env}
+      MCP_ALLOWED_ORIGINS: https://ecidadao.pt,https://chatgpt.com
+      PORT: "4000"
+    networks: [internal]
+  caddy:
+    image: caddy:2.10-alpine
+    restart: unless-stopped
+    logging:
+      driver: none
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+      - caddy_logs:/var/log/caddy
+    networks: [internal]
+    depends_on: [app]
+networks:
+  internal: {}
+volumes:
+  caddy_data: {}
+  caddy_config: {}
+  caddy_logs: {}

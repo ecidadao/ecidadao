@@ -1,0 +1,15 @@
+name: ecidadao
+
+services:
+  app:
+    build: .
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:8091:4000"
+    environment:
+      SECRET_KEY_BASE: ${SECRET_KEY_BASE:?Set SECRET_KEY_BASE in .env}
+      MCP_ALLOWED_ORIGINS: https://ecidadao.codeperf.io,https://ecidadao.pt,https://chatgpt.com,https://claude.ai,https://claude.com
+      OPENAI_APPS_CHALLENGE: ${OPENAI_APPS_CHALLENGE:-}
+      PORT: "4000"
+    logging:
+      driver: none
