@@ -4,7 +4,7 @@ defmodule EcidadaoWeb.Endpoint do
   plug(Plug.Static,
     at: "/marca",
     from: {:ecidadao, "priv/static/brand"},
-    only: ~w(ecidadao-logo.svg ecidadao-logo.png ecidadao-simbolo.svg ecidadao-simbolo.png ecidadao-identidade.zip README.txt)
+    only: ~w(ecidadao-logo.svg ecidadao-logo.png ecidadao-simbolo.svg ecidadao-simbolo.png ecidadao-github.svg ecidadao-github.png ecidadao-identidade.zip README.txt)
   )
 
   plug(Plug.RequestId)
