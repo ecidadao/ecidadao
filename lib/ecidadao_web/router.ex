@@ -7,55 +7,39 @@ defmodule EcidadaoWeb.Router do
   plug(:dispatch)
 
   get "/" do
-    conn
-    |> put_resp_content_type("text/html", "utf-8")
-    |> send_resp(200, EcidadaoWeb.Page.landing())
+    html(conn, &EcidadaoWeb.Page.landing/1)
   end
 
   get "/reclamacoes" do
-    conn
-    |> put_resp_content_type("text/html", "utf-8")
-    |> send_resp(200, EcidadaoWeb.Page.complaints())
+    html(conn, &EcidadaoWeb.Page.complaints/1)
   end
 
   get "/a-minha-rua" do
-    conn
-    |> put_resp_content_type("text/html", "utf-8")
-    |> send_resp(200, EcidadaoWeb.Page.minha_rua())
+    html(conn, &EcidadaoWeb.Page.minha_rua/1)
   end
 
   get "/siga" do
-    conn |> put_resp_content_type("text/html", "utf-8") |> send_resp(200, EcidadaoWeb.Page.siga())
+    html(conn, &EcidadaoWeb.Page.siga/1)
   end
 
   get "/financas" do
-    conn
-    |> put_resp_content_type("text/html", "utf-8")
-    |> send_resp(200, EcidadaoWeb.Page.financas())
+    html(conn, &EcidadaoWeb.Page.financas/1)
   end
 
   get "/como-usar" do
-    conn
-    |> put_resp_content_type("text/html", "utf-8")
-    |> send_resp(200, EcidadaoWeb.Page.how_to_use())
+    html(conn, &EcidadaoWeb.Page.how_to_use/1)
   end
 
   get "/privacidade" do
-    conn
-    |> put_resp_content_type("text/html", "utf-8")
-    |> send_resp(200, EcidadaoWeb.Page.privacy())
+    html(conn, &EcidadaoWeb.Page.privacy/1)
   end
 
   get "/termos" do
-    conn
-    |> put_resp_content_type("text/html", "utf-8")
-    |> send_resp(200, EcidadaoWeb.Page.terms())
+    html(conn, &EcidadaoWeb.Page.terms/1)
   end
 
   get "/apoio" do
-    conn
-    |> put_resp_content_type("text/html", "utf-8")
-    |> send_resp(200, EcidadaoWeb.Page.support())
+    html(conn, &EcidadaoWeb.Page.support/1)
   end
 
   get "/health" do
@@ -159,5 +143,10 @@ defmodule EcidadaoWeb.Router do
     |> put_resp_content_type("application/json", "utf-8")
     |> put_resp_header("cache-control", "no-store")
     |> send_resp(status, Jason.encode!(value))
+  end
+
+  defp html(conn, page) do
+    {conn, locale} = EcidadaoWeb.Locale.select(conn)
+    conn |> put_resp_content_type("text/html", "utf-8") |> send_resp(200, page.(locale))
   end
 end
