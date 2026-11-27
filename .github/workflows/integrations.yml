@@ -1,0 +1,36 @@
+name: Live integrations
+on:
+  schedule:
+    - cron: '23 8 * * *'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: live-integrations
+  cancel-in-progress: false
+jobs:
+  external:
+    name: Live ${{ matrix.integration }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    strategy:
+      fail-fast: false
+      matrix:
+        integration: [municipal, siga, street]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - if: matrix.integration == 'municipal'
+        run: |
+          python -m pip install --require-hashes -r scripts/requirements-ci.txt
+          python scripts/check_mcp.py https://ecidadao.pt/mcp/public --live --report integration-report.json
+      - if: matrix.integration != 'municipal'
+        run: python scripts/check_external.py '${{ matrix.integration }}'
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: live-${{ matrix.integration }}
+          path: integration-report.json
+          retention-days: 14

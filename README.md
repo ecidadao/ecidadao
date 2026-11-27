@@ -14,6 +14,8 @@ O [desenho da passagem ao portal A Minha Rua](docs/entrega-ao-portal-oficial.md)
 
 ## Desenvolvimento local
 
+A [matriz de CI e integrações](docs/integration-ci.md) descreve os checks MCP por SDK, testes de publicação e verificações diárias das fontes oficiais.
+
 Requer Elixir 1.20, Erlang/OTP 29 e Node.js para os testes de comportamento da interface.
 
 ```sh

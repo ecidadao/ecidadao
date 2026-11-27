@@ -36,3 +36,6 @@ __pycache__/
 /node_modules/
 /playwright-report/
 /test-results/
+/mcp-report.json
+/mcp-server.log
+/integration-report.json
