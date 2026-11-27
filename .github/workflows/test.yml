@@ -25,6 +25,20 @@ jobs:
       - run: bash -n deploy/deploy.sh
       - run: python3 -m py_compile scripts/smoke.py
       - run: python3 -m unittest discover -s test -p "*_test.py"
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install --require-hashes -r scripts/requirements-ci.txt
+      - name: Public MCP contract through official SDK
+        run: python scripts/check_mcp_local.py
+      - name: Preserve MCP contract evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: mcp-contract
+          path: |
+            mcp-report.json
+            mcp-server.log
       - uses: actions/setup-node@v4
         with:
           node-version: "22"
@@ -64,3 +78,20 @@ jobs:
         env:
           DEPLOY_HOST: ${{ secrets.DEPLOY_HOST }}
         run: ssh -o BatchMode=yes -o IdentitiesOnly=yes -o StrictHostKeyChecking=yes -o ServerAliveInterval=30 -i ~/.ssh/ecidadao_deploy "ecidadao-deploy@$DEPLOY_HOST" "deploy $GITHUB_SHA"
+  production-contract:
+    needs: deploy
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install --require-hashes -r scripts/requirements-ci.txt
+      - run: python scripts/smoke.py https://ecidadao.pt --revision "$GITHUB_SHA" --municipal --locales --sns24 --services
+      - run: python scripts/check_mcp.py https://ecidadao.pt/mcp/public
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: production-contract
+          path: mcp-report.json
