@@ -24,6 +24,10 @@ mix run --no-halt
 
 Abra <http://localhost:4000>. A entrada é uma landing page com os serviços por ordem: SIGA/IRN, Finanças, A Minha Rua e Reclamações; o formulário de reclamações está em `/reclamacoes`. Usa `POST /api/complaints/prepare`; A Minha Rua usa `POST /api/street-reports/prepare` e `GET /api/street-reports/recent`; SIGA usa `POST /api/siga/queues/compare`; Finanças usa `POST /api/financas/ebalcao/prepare`. O servidor MCP usa `POST /mcp` com JSON-RPC 2.0 e transporte Streamable HTTP. O endpoint é sem sessões e sem autenticação porque as ferramentas atuais são de preparação, orientação e leitura de dados públicos. Não há base de dados de rascunhos.
 
+Em `/servicos`, a pesquisa por necessidade filtra nove percursos selecionados em português e inglês. Funciona no navegador, sem transmitir o texto pesquisado, e mantém todos os percursos acessíveis sem JavaScript. As ligações encaminham para preparação/consulta no eCidadão ou para páginas oficiais; não é uma pesquisa em tempo real no catálogo CUSP.
+
+Os [testes automáticos de navegador](docs/browser-tests.md) verificam pesquisa, formulários, idiomas, modo escuro, downloads e navegação em Chromium. Execute `npm ci`, `npx playwright install chromium` e `npm run test:browser`. O CI executa a suíte antes de permitir o deploy; os testes iniciam um servidor local isolado e não submetem pedidos a serviços oficiais.
+
 ### Exemplo MCP
 
 ```sh
