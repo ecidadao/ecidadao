@@ -12,7 +12,7 @@ defmodule Ecidadao.MunicipalCoverage do
   @external_resource @support
   @municipalities @coordinates |> File.read!() |> Jason.decode!(keys: :atoms)
   @reviewed_on "2026-11-27"
-  @revision "coverage-v1-2026-11-27-" <>
+  @revision "coverage-v2-2026-11-27-" <>
               (:crypto.hash(
                  :sha256,
                  File.read!(@coordinates) <> File.read!(@catalogue) <> File.read!(@support)
@@ -26,6 +26,8 @@ defmodule Ecidadao.MunicipalCoverage do
 
   def snapshot(locale) do
     municipalities = Enum.map(@municipalities, &municipality(&1, locale))
+    total_service_count = Enum.sum(Enum.map(municipalities, & &1.service_count))
+    national = national_services(locale)
 
     %{
       schema_version: 1,
@@ -38,16 +40,33 @@ defmodule Ecidadao.MunicipalCoverage do
       availability_checked: false,
       submitted: false,
       municipalities: municipalities,
+      municipality_count: length(municipalities),
+      total_service_count: total_service_count,
+      national_capabilities:
+        Enum.map(national, fn capability ->
+          %{
+            id: capability.scope,
+            title: capability.label,
+            description:
+              text(
+                "Orientação nacional; não representa acesso a serviços municipais nem submissão de pedidos.",
+                "National guidance; does not represent municipal service access or submission of requests.",
+                locale
+              ),
+            tools: [capability.tool],
+            url: capability.path
+          }
+        end),
       totals: %{
         municipality_count: length(municipalities),
-        service_count: Enum.sum(Enum.map(municipalities, & &1.service_count)),
+        service_count: total_service_count,
         live_lookup_municipality_count:
           Enum.count(
             municipalities,
             &Enum.any?(&1.capabilities, fn c -> c.status == "live_lookup" end)
           )
       },
-      national_services: national_services(locale),
+      national_services: national,
       labels: %{
         title: text("Cobertura municipal", "Municipal coverage", locale),
         catalogue: text("Catálogo de serviços", "Service catalogue", locale),
@@ -117,6 +136,35 @@ defmodule Ecidadao.MunicipalCoverage do
     capabilities = [search | extra]
 
     Map.merge(entry, %{
+      code: entry.administrative_code,
+      latitude: entry.center.latitude,
+      longitude: entry.center.longitude,
+      availability_lookup: Enum.any?(capabilities, &(&1.status == "live_lookup")),
+      coverage: text("Catálogo municipal integrado", "Municipal catalogue integrated", locale),
+      limitations: [
+        text(
+          "Catálogo datado; não verifica processos nem disponibilidade atual.",
+          "Dated catalogue; does not check case status or current availability.",
+          locale
+        ),
+        text(
+          "Marcador aproximado calculado a partir dos limites municipais oficiais.",
+          "Approximate marker calculated from official municipal boundaries.",
+          locale
+        )
+      ],
+      links: Enum.map(capabilities, &%{label: &1.label, url: &1.path}),
+      sources: [
+        %{
+          label: text("Catálogo municipal oficial", "Official municipal catalogue", locale),
+          url:
+            if(entry.id == "gondomar",
+              do: "https://servicosonline.cm-gondomar.pt/",
+              else: catalogue.sources[entry.id]
+            )
+        },
+        %{label: "DGT — CAOP2025", url: entry.coordinate_source}
+      ],
       service_count: catalogue.total,
       verified_on: catalogue.verified_on,
       reviewed_on: @reviewed_on,

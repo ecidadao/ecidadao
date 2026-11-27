@@ -11,6 +11,16 @@ Ecidadao.MunicipalCoverage.snapshot("en")
 
 Devolve diretamente um mapa serializável por Jason, com chaves atom em Elixir e strings em JSON; sem tuplo `{:ok, ...}`. O idioma predefinido é `pt`; outros valores fazem fallback para `pt`. O integrador pode validar `lang=pt|en` na rota prevista `GET /api/municipal/coverage?lang=pt`. Não recebe localização, identificadores pessoais ou coordenadas do visitante.
 
+### Campos acordados com o frontend
+
+O contrato inclui os campos diretos abaixo; os objetos detalhados `center`, `totals`, `national_services` e a proveniência original são conservados como metadados adicionais:
+
+- Topo: `language`, `generated_at`, `revision`, `verified_on`, `municipality_count`, `total_service_count`, `municipalities`, `national_capabilities`, `notice`.
+- Município: `id`, `code`, `name`, `latitude`, `longitude`, `service_count`, `tools`, `coverage` (texto localizado), `limitations` (lista de textos localizados), `links: [{label, url}]`, `sources: [{label, url}]`, `availability_lookup` (booleano).
+- Capacidade nacional: `id`, `title`, `description`, `tools` (lista de nomes MCP), `url`. IDs estáveis: `national_support`, `national_health`, `national_tax`, `national_public_service_visits`.
+
+`availability_lookup=true` apenas em Ponte de Lima e significa capacidade de consulta, não vaga atual. `code` é alias de `administrative_code`; `latitude`/`longitude` correspondem a `center`. As contagens diretas correspondem às de `totals`. Links internos incluem apenas o parâmetro de idioma suportado `lang`; não presumem suporte a um filtro municipal no URL. `sources` fornece destinos humanos oficiais (portal de Gondomar, não menu JSON) e a fonte DGT; `source` mantém a proveniência técnica original.
+
 | Campo | Significado |
 |---|---|
 | `schema_version` | `1`, versão do formato |

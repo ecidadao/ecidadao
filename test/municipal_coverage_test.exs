@@ -2,6 +2,45 @@ defmodule Ecidadao.MunicipalCoverageTest do
   use ExUnit.Case, async: true
   alias Ecidadao.{MunicipalCoverage, MunicipalDirectory, PublicSupport}
 
+  test "agreed flattened frontend contract matches the detailed metadata in both languages" do
+    for locale <- ["pt", "en"] do
+      coverage = MunicipalCoverage.snapshot(locale)
+      assert coverage.municipality_count == coverage.totals.municipality_count
+      assert coverage.total_service_count == coverage.totals.service_count
+
+      for entry <- coverage.municipalities do
+        assert entry.code == entry.administrative_code
+        assert entry.latitude == entry.center.latitude
+        assert entry.longitude == entry.center.longitude
+        assert entry.availability_lookup == (entry.id == "ponte_de_lima")
+        assert is_binary(entry.coverage)
+        assert length(entry.limitations) > 0
+        assert entry.links == Enum.map(entry.capabilities, &%{label: &1.label, url: &1.path})
+
+        for source <- entry.sources do
+          assert is_binary(source.label)
+          uri = URI.parse(source.url)
+          assert uri.scheme == "https"
+
+          assert uri.host in ~w(servicosonline.cm-gondomar.pt diretorio.cm-maia.pt www.cm-pontedelima.pt ogcapi.dgterritorio.gov.pt)
+
+          assert uri.userinfo == nil
+        end
+      end
+
+      assert length(coverage.national_capabilities) == 4
+
+      for {capability, detail} <-
+            Enum.zip(coverage.national_capabilities, coverage.national_services) do
+        assert capability.id == detail.scope
+        assert capability.title == detail.label
+        assert capability.tools == [detail.tool]
+        assert capability.url == detail.path
+        assert is_binary(capability.description)
+      end
+    end
+  end
+
   test "coverage and counts track the actual catalogue without national inflation" do
     coverage = MunicipalCoverage.snapshot()
     assert Enum.map(coverage.municipalities, & &1.id) == ~w(gondomar maia ponte_de_lima)
