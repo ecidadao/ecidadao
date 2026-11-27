@@ -43,7 +43,7 @@ As ferramentas expostas incluem `siga_visit_guidance`, `compare_siga_queues`, `f
 
 Este repositório contém a aplicação e o servidor MCP. Os pacotes instaláveis, skills e catálogos para Codex e Claude Code são mantidos em [ecidadao/plugins](https://github.com/ecidadao/plugins).
 
-O endpoint recomendado para clientes é `https://ecidadao.pt/mcp/public`: seis ferramentas de orientação e preparação de rascunhos, sem autenticação. A ferramenta `prepare_public_service_feedback` para o Livro Amarelo está disponível apenas no endpoint experimental `/mcp`, não em `/mcp/public`; o catálogo público mantém as seis ferramentas e os plugins têm distribuição independente. O endpoint `/mcp` inclui ferramentas experimentais e consultas a fontes externas; não é o catálogo público distribuído pelos plugins.
+O endpoint recomendado para clientes é `https://ecidadao.pt/mcp/public`: sete ferramentas de orientação e preparação de rascunhos, sem autenticação. A ferramenta `prepare_public_service_feedback` para o Livro Amarelo está disponível apenas no endpoint experimental `/mcp`, não em `/mcp/public`; o catálogo público mantém as sete ferramentas e os plugins têm distribuição independente. O endpoint `/mcp` inclui ferramentas experimentais e consultas a fontes externas; não é o catálogo público distribuído pelos plugins.
 
 Consulte [o guia MCP e de alojamento próprio](docs/mcp.md). Contribuições são bem-vindas: [CONTRIBUTING.md](CONTRIBUTING.md). Para vulnerabilidades, veja [SECURITY.md](SECURITY.md).
 
@@ -69,3 +69,5 @@ A [submissão 0.3.1](docs/plugin-submission-0.3.1.md) foi registada como “In r
 ## Identidade visual
 
 O [logótipo e símbolo](priv/static/brand/) estão disponíveis em SVG e PNG transparente, sob Apache-2.0. Pode [descarregar o pacote completo](https://ecidadao.pt/marca/ecidadao-identidade.zip). O símbolo é partilhado com os plugins.
+
+SNS 24: `/saude` e a ferramenta pública `sns24_service_guidance` orientam consultas, exames, medicação habitual e referenciações em PT/EN. Não acedem a contas, vagas ou dados clínicos e não enviam pedidos.

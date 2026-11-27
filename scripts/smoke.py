@@ -10,6 +10,7 @@ parser.add_argument("--brand", action="store_true", help="Also check the optiona
 parser.add_argument("--locales", action="store_true", help="Check English pages and automatic colour scheme")
 parser.add_argument("--feedback", action="store_true", help="Check Livro Amarelo drafts and official handoff links")
 parser.add_argument("--services", action="store_true", help="Check the curated service finder")
+parser.add_argument("--sns24", action="store_true", help="Require SNS 24 pages and public guidance")
 args = parser.parse_args()
 
 def request(path, payload=None):
@@ -61,9 +62,27 @@ if args.feedback:
         assert draft["official_portal"] == "https://www.gov.pt/servicos/" + service, draft
         assert "NÃO SUBMETIDO" in draft["draft"], draft
 result = json.loads(request("/mcp/public", {"jsonrpc":"2.0","id":1,"method":"tools/list"}))
-assert {t["name"] for t in result["result"]["tools"]} == {
+public_names = {t["name"] for t in result["result"]["tools"]}
+legacy_names = {
     "prepare_complaint", "official_submission_guidance", "prepare_street_report",
     "siga_visit_guidance", "financas_service_guidance", "prepare_financas_ebalcao"}
+# Keep the previous release verifiable during rollback; no other tools are allowed.
+assert public_names in (legacy_names, legacy_names | {"sns24_service_guidance"})
+if args.sns24:
+    assert "sns24_service_guidance" in public_names
+if "sns24_service_guidance" in public_names:
+    for language in ("pt", "en"):
+        page = request("/saude?lang=" + language).decode()
+        assert '<html lang="' + language + '"' in page
+        assert 'id="exams"' in page
+        for service in ("appointments", "exams", "medication", "referrals"):
+            response = json.loads(request("/mcp/public", {"jsonrpc":"2.0", "id":3,
+                "method":"tools/call", "params":{"name":"sns24_service_guidance",
+                "arguments":{"service":service,"language":language,"channel":"app"}}}))
+            assert not response["result"].get("isError"), response
+            guidance = response["result"]["structuredContent"]
+            assert guidance["status"] == "guidance_only" and guidance["submitted"] is False
+            assert guidance["language"] == language and guidance["channel"] == "app"
 result = json.loads(request("/mcp/public", {"jsonrpc":"2.0","id":2,"method":"tools/call", "params":{"name":"siga_visit_guidance","arguments":{"purpose":"appointment"}}}))
 assert "result" in result and not result["result"].get("isError"), result
 print("Website and MCP healthy:", health)

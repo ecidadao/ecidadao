@@ -6,14 +6,14 @@ Atualizado em 27 de novembro de 2026. Este plano separa funcionalidades entregue
 
 | Capacidade | O que permite | Limite |
 |---|---|---|
-| Pesquisa por necessidade (`/servicos`) | Encontrar nove percursos selecionados em português e inglês | Catálogo curado; não é pesquisa nacional em tempo real no CUSP |
+| Pesquisa por necessidade (`/servicos`) | Encontrar dez percursos selecionados em português e inglês | Catálogo curado; não é pesquisa nacional em tempo real no CUSP |
 | SIGA assistido | Consultar informação pública de filas dentro da cobertura do adaptador e seguir para canais oficiais | Não confirma uma marcação nem garante o balcão mais próximo de todos |
 | Finanças, rua e reclamações | Orientar e preparar os percursos assistidos existentes | Preparação não equivale a submissão oficial |
 | Livro Amarelo | Preparar reclamação, elogio ou sugestão e abrir o canal oficial | Sem submissão por API; ferramenta apenas no MCP experimental |
 | Acessibilidade de utilização | PT/EN, modo escuro automático e apresentação mobile | Testes de browser não equivalem a certificação de acessibilidade |
 | Verificação de publicação | Testes de browser antes de deploy e smoke checks da publicação | Testes locais não concluem operações administrativas reais |
 
-O catálogo público MCP mantém seis ferramentas. Uma capacidade do website ou do MCP experimental não fica automaticamente disponível nos plugins públicos.
+O catálogo público MCP passa a sete ferramentas em 0.3.3, incluindo orientação SNS 24 em PT/EN. Uma capacidade do website ou do MCP experimental não fica automaticamente disponível nos plugins públicos.
 
 ## Sequência proposta
 
@@ -29,7 +29,7 @@ As etapas 3–5 são condicionais: documentação pública não demonstra que um
 
 ## Saúde
 
-A pedido do responsável do projeto, saúde passa a ter uma linha própria: percursos assistidos SNS 24 e informação pública de espera primeiro; filas de cuidados primários e marcações delegadas depois de confirmar acesso e cobertura com SPMS/ULS. O [plano de saúde no repositório dos plugins](https://github.com/ecidadao/plugins/blob/main/docs/health-options.md) documenta fontes, evidência técnica e dependências. Ainda não existe integração SNS ativa. Tempos agregados de consultas/cirurgias não equivalem a vagas ou previsão pessoal; a comparação de urgências não substitui triagem clínica.
+A pedido do responsável do projeto, saúde passa a ter uma linha própria: percursos assistidos SNS 24 e informação pública de espera primeiro; filas de cuidados primários e marcações delegadas depois de confirmar acesso e cobertura com SPMS/ULS. O [plano de saúde no repositório dos plugins](https://github.com/ecidadao/plugins/blob/main/docs/health-options.md) documenta fontes, evidência técnica e dependências. A orientação SNS 24 está implementada em `/saude` e `sns24_service_guidance`; não existe acesso a contas, vagas ou submissões SNS. Tempos agregados de consultas/cirurgias não equivalem a vagas ou previsão pessoal; a comparação de urgências não substitui triagem clínica.
 
 ## Próximo trabalho independente de adesões
 

@@ -6,6 +6,16 @@ defmodule Ecidadao.ServiceDirectory do
   """
   @services [
     %{
+      id: "health",
+      title: "Consultas, exames e serviços SNS 24",
+      description:
+        "Veja como pedir consultas, exames e renovação de medicação ou acompanhar referenciações. Os pedidos são feitos nos canais oficiais.",
+      aliases:
+        "saude sns sns24 consulta consultas centro hospital exames exame analises medicamento medicamentos medicacao renovar renovacao receita receitas referencias referenciacoes health healthcare appointment appointments tests exams prescription prescriptions medication referral referrals",
+      url: "/saude",
+      official: false
+    },
+    %{
       id: "cc-renewal",
       title: "Renovar o Cartão de Cidadão",
       description: "Veja no gov.pt as opções de renovação e os requisitos atuais.",

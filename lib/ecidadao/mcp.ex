@@ -12,6 +12,7 @@ defmodule Ecidadao.MCP do
     prepare_street_report
     prepare_complaint
     official_submission_guidance
+    sns24_service_guidance
   )
 
   def public_handle(%{"jsonrpc" => "2.0", "method" => "initialize", "id" => id} = request) do
@@ -21,7 +22,7 @@ defmodule Ecidadao.MCP do
        capabilities: %{tools: %{listChanged: false}},
        serverInfo: %{name: "ecidadao-public", version: @server_version},
        instructions:
-         "Ajuda a encontrar os portais oficiais SIGA e Finanças e a preparar rascunhos de e-balcão, A Minha Rua e reclamações. Serviço independente; não acede a contas, consulta filas, cria senhas ou marcações, nem submete pedidos. Não solicite credenciais ou identificadores governamentais."
+         "Orienta para SIGA, Finanças e SNS 24 e prepara rascunhos de e-balcão, A Minha Rua e reclamações. Serviço independente; não acede a contas, consulta filas ou vagas, cria senhas ou marcações, nem submete pedidos. Não solicite credenciais, identificadores governamentais ou dados clínicos para orientação SNS 24."
      })}
   end
 
@@ -311,6 +312,15 @@ defmodule Ecidadao.MCP do
      result(id, prepared(Financas.prepare_ebalcao(args), "Dados incompletos ou inválidos."))}
   end
 
+  def handle(%{
+        "jsonrpc" => "2.0",
+        "method" => "tools/call",
+        "id" => id,
+        "params" => %{"name" => "sns24_service_guidance", "arguments" => args}
+      }) do
+    {:reply, result(id, prepared(Ecidadao.Sns24.guide(args), "Percurso SNS 24 inválido."))}
+  end
+
   def handle(%{"jsonrpc" => "2.0", "method" => "tools/call", "id" => id}),
     do: {:reply, error(id, -32602, "Ferramenta ou argumentos inválidos.")}
 
@@ -321,6 +331,23 @@ defmodule Ecidadao.MCP do
 
   def tools do
     [
+      %{
+        name: "sns24_service_guidance",
+        title: "Orientar serviços SNS 24",
+        description:
+          "Explica percursos oficiais para consultas, exames, renovação de medicação habitual e referenciações no Portal/App SNS 24, em PT ou EN. Não consulta contas, vagas ou dados clínicos; não faz triagem nem submete pedidos. Não envie dados pessoais.",
+        inputSchema: %{
+          type: "object",
+          properties: %{
+            service: %{type: "string", enum: Ecidadao.Sns24.services()},
+            language: %{type: "string", enum: ["pt", "en"], default: "pt"},
+            channel: %{type: "string", enum: ["portal", "app", "both"], default: "both"}
+          },
+          required: ["service"],
+          additionalProperties: false
+        },
+        annotations: %{readOnlyHint: true, destructiveHint: false, openWorldHint: false}
+      },
       %{
         name: "open_report_camera",
         title: "Tirar fotografia para reportar",

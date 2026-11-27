@@ -12,6 +12,7 @@ defmodule Ecidadao.MCPTest do
              MCP.handle(%{"jsonrpc" => "2.0", "id" => 2, "method" => "tools/list"})
 
     assert Enum.map(tools, & &1.name) == [
+             "sns24_service_guidance",
              "open_report_camera",
              "preview_photo_report",
              "prepare_complaint",
@@ -51,6 +52,7 @@ defmodule Ecidadao.MCPTest do
              MCP.public_handle(%{"jsonrpc" => "2.0", "id" => 1, "method" => "tools/list"})
 
     assert Enum.map(tools, & &1.name) == [
+             "sns24_service_guidance",
              "prepare_complaint",
              "official_submission_guidance",
              "prepare_street_report",
