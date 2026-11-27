@@ -70,7 +70,7 @@ defmodule EcidadaoWeb.Page do
     layout(
       """
       <section class="hero">
-        <p class="eyebrow">#{t("Catálogo selecionado · Sem pesquisa externa", locale)}</p>
+        <p class="eyebrow">#{t("Percursos selecionados", locale)}</p>
         <h1>#{t("De que precisa?", locale)}</h1>
         <p class="lead">#{t("Encontre o próximo passo para tratar do seu assunto.", locale)}</p>
         <p class="notice">#{t("O eCidadão é independente: ajuda a preparar e consultar. Os pedidos, marcações e submissões são concluídos nos portais oficiais. Confirme aí os requisitos atuais e a disponibilidade.", locale)}</p>
@@ -78,7 +78,7 @@ defmodule EcidadaoWeb.Page do
       <section aria-label="#{t("Procurar serviços", locale)}">
         <label for="service-search">#{t("O que pretende fazer?", locale)}</label>
         <input id="service-search" type="search" autocomplete="off" spellcheck="false" aria-describedby="service-search-help" placeholder="#{t("Por exemplo: renovar cartão, alterar morada, reclamar", locale)}">
-        <p id="service-search-help" class="help-note">#{t("Filtra palavras e termos equivalentes em português e inglês neste catálogo. O que escreve fica apenas nesta página: não é enviado, guardado ou colocado no endereço.", locale)}</p>
+        <p id="service-search-help" class="help-note">#{t("Pesquise pelo assunto que pretende resolver. O que escreve fica apenas nesta página: não é enviado, guardado ou colocado no endereço.", locale)}</p>
         <noscript><p class="notice">#{t("Sem JavaScript, pode consultar todos os serviços abaixo e abrir as ligações.", locale)}</p></noscript>
         <p id="service-search-status" role="status" aria-live="polite" aria-atomic="true">#{length(Ecidadao.ServiceDirectory.all())} #{t("serviços encontrados", locale)}</p>
         <p id="service-empty" class="notice" hidden>#{t("Não encontrámos serviços. Tente palavras como cartão, morada, finanças ou reclamar, ou apague a pesquisa para ver todos.", locale)}</p>
@@ -91,7 +91,11 @@ defmodule EcidadaoWeb.Page do
         const status = document.getElementById('service-search-status');
         const empty = document.getElementById('service-empty');
         const words = value => value.normalize('NFD').replace(/[\\u0300-\\u036f]/g, '').toLowerCase().match(/[a-z0-9]+/g) || [];
-        const ignored = new Set(['a', 'o', 'as', 'os', 'de', 'do', 'da', 'dos', 'das', 'um', 'uma', 'the', 'a', 'an', 'of', 'my', 'your', 'to']);
+        const ignored = new Set([
+          'a', 'o', 'as', 'os', 'de', 'do', 'da', 'dos', 'das', 'um', 'uma',
+          'eu', 'quero', 'preciso', 'gostaria', 'meu', 'minha', 'meus', 'minhas', 'por', 'favor', 'como', 'posso',
+          'the', 'an', 'of', 'my', 'your', 'to', 'i', 'need', 'want', 'would', 'like', 'please', 'how', 'can'
+        ]);
         const index = cards.map(card => new Set(words(card.dataset.search + ' ' + card.querySelector('h2').textContent)));
         function filter() {
           const query = words(input.value).filter(word => !ignored.has(word));

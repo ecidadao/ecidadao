@@ -40,6 +40,18 @@ defmodule Ecidadao.ServiceDirectoryTest do
       response = page(locale)
       assert response.status == 200
       body = response.resp_body
+      assert body =~ Locale.text("Percursos selecionados", locale)
+
+      assert body =~
+               Locale.text(
+                 "Pesquise pelo assunto que pretende resolver. O que escreve fica apenas nesta página: não é enviado, guardado ou colocado no endereço.",
+                 locale
+               )
+
+      refute body =~ "Sem pesquisa externa"
+      refute body =~ "No external search"
+      refute body =~ "Filtra palavras"
+      refute body =~ "Filters words"
       assert body =~ ~s(<label for="service-search">)
       assert body =~ ~s(id="service-search" type="search")
       assert body =~ ~s(id="service-search-status" role="status")
@@ -100,11 +112,22 @@ defmodule Ecidadao.ServiceDirectoryTest do
       search('renovar cartao', ['cc-renewal']);
       search('renew citizen card', ['cc-renewal']);
       search('renew my citizen card', ['cc-renewal']);
+      search('quero renovar o meu cartao', ['cc-renewal']);
+      search('preciso de alterar a minha morada', ['cc-address', 'cc-address-confirmation']);
+      search('I need to renew my citizen card', ['cc-renewal']);
+      search('Como posso renovar o meu cartão, por favor?', ['cc-renewal']);
+      search('I would like to renew my citizen card please', ['cc-renewal']);
       search('alterar morada', ['cc-address', 'cc-address-confirmation']);
       search('certidão', ['tax-certificates']);
       search('tax', ['financas', 'tax-certificates']);
       search('reclamar', ['consumer-complaint', 'public-feedback']);
       search('zzzinexistentezzz', []);
+      search('quero zzzinexistentezzz', []);
+      search('I need zzzinexistentezzz', []);
+      search('I need to renew my citizen card zzzinexistentezzz', []);
+      search('preciso de confirmar a minha morada', ['cc-address-confirmation']);
+      search('quero uma certidão de não dívida', ['tax-certificates']);
+      search('I want a tax certificate', ['tax-certificates']);
       search('taxi', []);
       search('<img src=x onerror=alert(1)>', []);
       search('', cards.map(c => c.id));
