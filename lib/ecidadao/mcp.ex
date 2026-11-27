@@ -13,6 +13,9 @@ defmodule Ecidadao.MCP do
     prepare_complaint
     official_submission_guidance
     sns24_service_guidance
+    municipal_service_search
+    municipal_appointment_availability
+    public_support_guidance
   )
 
   def public_handle(%{"jsonrpc" => "2.0", "method" => "initialize", "id" => id} = request) do
@@ -22,7 +25,7 @@ defmodule Ecidadao.MCP do
        capabilities: %{tools: %{listChanged: false}},
        serverInfo: %{name: "ecidadao-public", version: @server_version},
        instructions:
-         "Orienta para SIGA, Finanças e SNS 24 e prepara rascunhos de e-balcão, A Minha Rua e reclamações. Serviço independente; não acede a contas, consulta filas ou vagas, cria senhas ou marcações, nem submete pedidos. Não solicite credenciais, identificadores governamentais ou dados clínicos para orientação SNS 24."
+         "Pesquisa serviços municipais, consulta disponibilidade pública de atendimento em Ponte de Lima e orienta sobre apoios, SIGA, Finanças e SNS 24. Prepara rascunhos de e-balcão, A Minha Rua e reclamações. Serviço independente: não acede a contas, não reserva vagas, não emite senhas nem submete pedidos. Disponibilidade municipal é uma observação datada, não uma marcação. Apoios e catálogo municipal usam fontes datadas, não garantem elegibilidade ou verba disponível. Não solicite credenciais nem dados pessoais para pesquisa, disponibilidade ou orientação."
      })}
   end
 
@@ -321,6 +324,45 @@ defmodule Ecidadao.MCP do
     {:reply, result(id, prepared(Ecidadao.Sns24.guide(args), "Percurso SNS 24 inválido."))}
   end
 
+  def handle(%{
+        "jsonrpc" => "2.0",
+        "method" => "tools/call",
+        "id" => id,
+        "params" => %{"name" => "municipal_service_search", "arguments" => args}
+      }) do
+    {:reply,
+     result(
+       id,
+       prepared(Ecidadao.MunicipalDirectory.search(args), "Pesquisa municipal inválida.")
+     )}
+  end
+
+  def handle(%{
+        "jsonrpc" => "2.0",
+        "method" => "tools/call",
+        "id" => id,
+        "params" => %{"name" => "municipal_appointment_availability", "arguments" => args}
+      }) do
+    {:reply,
+     result(
+       id,
+       prepared(
+         Ecidadao.MunicipalAppointments.lookup(args),
+         "Não foi possível consultar a disponibilidade municipal."
+       )
+     )}
+  end
+
+  def handle(%{
+        "jsonrpc" => "2.0",
+        "method" => "tools/call",
+        "id" => id,
+        "params" => %{"name" => "public_support_guidance", "arguments" => args}
+      }) do
+    {:reply,
+     result(id, prepared(Ecidadao.PublicSupport.guide(args), "Percurso de apoio inválido."))}
+  end
+
   def handle(%{"jsonrpc" => "2.0", "method" => "tools/call", "id" => id}),
     do: {:reply, error(id, -32602, "Ferramenta ou argumentos inválidos.")}
 
@@ -331,6 +373,64 @@ defmodule Ecidadao.MCP do
 
   def tools do
     [
+      %{
+        name: "municipal_service_search",
+        title: "Pesquisar serviços municipais",
+        description:
+          "Pesquisa o catálogo datado de Gondomar, Maia e Ponte de Lima por necessidade, em PT/EN. Devolve destinos oficiais e autenticação quando conhecida. Títulos oficiais mantêm-se em português. Não consulta processos, disponibilidade ou contas nem submete pedidos. Não envie dados pessoais.",
+        inputSchema: %{
+          type: "object",
+          properties: %{
+            municipality: %{
+              type: "string",
+              enum: ["all", "gondomar", "maia", "ponte_de_lima"],
+              default: "all"
+            },
+            query: %{type: "string", maxLength: 160, default: ""},
+            limit: %{type: "integer", minimum: 1, maximum: 30, default: 12},
+            language: %{type: "string", enum: ["pt", "en"], default: "pt"}
+          },
+          additionalProperties: false
+        },
+        annotations: %{readOnlyHint: true, destructiveHint: false, openWorldHint: false}
+      },
+      %{
+        name: "municipal_appointment_availability",
+        title: "Consultar vagas municipais em Ponte de Lima",
+        description:
+          "Consulta apenas atendimento presencial público de Ponte de Lima. Sem service_id lista áreas; com service_id devolve datas; com date AAAA-MM-DD devolve horários. Use IDs devolvidos pela própria ferramenta. Horas Europe/Lisbon. Não reserva nem confirma marcações, não acede a contas. Não envie dados pessoais. Resultados têm data de consulta e podem mudar; conclua no portal oficial.",
+        inputSchema: %{
+          type: "object",
+          properties: %{
+            municipality: %{type: "string", enum: ["ponte_de_lima"], default: "ponte_de_lima"},
+            service_id: %{type: "integer", minimum: 1},
+            date: %{
+              type: "string",
+              pattern: "^\\d{4}-\\d{2}-\\d{2}$",
+              description: "Data ISO, requer service_id; hoje até 366 dias."
+            },
+            language: %{type: "string", enum: ["pt", "en"], default: "pt"}
+          },
+          additionalProperties: false
+        },
+        annotations: %{readOnlyHint: true, destructiveHint: false, openWorldHint: true}
+      },
+      %{
+        name: "public_support_guidance",
+        title: "Orientar apoios à habitação e ambientais",
+        description:
+          "Explica Porta 65 Jovem/65+, +Habitação de Gondomar, Fundo Ambiental, Vale Eficiência II, E-Lar e Mobilidade Verde, em PT/EN. Fontes datadas e prazos publicados; distingue candidaturas novas, ações de beneficiários e pagamentos de fornecedores. Não verifica elegibilidade pessoal, verba remanescente ou conta e não submete candidaturas. Não envie dados pessoais.",
+        inputSchema: %{
+          type: "object",
+          properties: %{
+            service: %{type: "string", enum: Ecidadao.PublicSupport.services()},
+            language: %{type: "string", enum: ["pt", "en"], default: "pt"}
+          },
+          required: ["service"],
+          additionalProperties: false
+        },
+        annotations: %{readOnlyHint: true, destructiveHint: false, openWorldHint: false}
+      },
       %{
         name: "sns24_service_guidance",
         title: "Orientar serviços SNS 24",
@@ -618,6 +718,44 @@ defmodule Ecidadao.MCP do
       |> Enum.join("\n")
 
     %{content: [%{type: "text", text: text}], structuredContent: value}
+  end
+
+  defp prepared({:ok, %{status: status} = value}, _error)
+       when status in [
+              "catalogue_only",
+              "areas_listed",
+              "available_at_check_time",
+              "no_availability"
+            ] do
+    details =
+      Map.take(value, [
+        :total,
+        :results,
+        :areas,
+        :service_name,
+        :dates,
+        :date,
+        :slots,
+        :checked_at,
+        :verified_on,
+        :official_portal
+      ])
+
+    message =
+      Enum.join(
+        [value[:steps] || "", value[:warning] || value[:notice] || "", Jason.encode!(details)],
+        "\n\n"
+      )
+
+    %{content: [%{type: "text", text: message}], structuredContent: value}
+  end
+
+  defp prepared({:error, %{message: message} = errors}, _fallback) do
+    %{
+      content: [%{type: "text", text: message}],
+      structuredContent: %{errors: errors},
+      isError: true
+    }
   end
 
   defp prepared({:ok, value}, _error) do

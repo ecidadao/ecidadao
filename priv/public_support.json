@@ -1,0 +1,328 @@
+[
+  {
+    "id": "porta65_young",
+    "source": "https://www.portaldahabitacao.pt/porta-65-jovem",
+    "sources": [
+      "https://www.portaldahabitacao.pt/porta-65-jovem",
+      "https://www.portaldahabitacao.pt/web/guest/o-que-e-porta65jovem",
+      "https://www.portaldahabitacao.pt/como-se-candidatar-porta65jovem"
+    ],
+    "application_url": "https://www.portaldahabitacao.pt/como-se-candidatar-porta65jovem",
+    "phases": [
+      {
+        "action": "new_application",
+        "status": "official_portal_check_required",
+        "published_deadline": null,
+        "pt": "O percurso prevê candidatura sem contrato; o pagamento depende das condições do contrato.",
+        "en": "The route permits applications without a tenancy contract; payment depends on the contract conditions.",
+        "evidence_on": "2026-11-27"
+      }
+    ],
+    "pt": {
+      "title": "Porta 65 Jovem",
+      "audience": "Jovens que procuram apoio ao arrendamento.",
+      "purpose": "Orientação para candidatura ao apoio à renda.",
+      "requirements": "Verifique idade, agregado, rendimentos, renda, outros imóveis, relação com o senhorio e apoios existentes nas regras atuais; esta lista não é exaustiva.",
+      "checklist": [
+        "Consultar as regras e os documentos atuais.",
+        "Preparar comprovativos de rendimentos e, quando aplicável, contrato registado na AT."
+      ],
+      "navigation": "Siga o percurso oficial; os participantes autenticam-se no portal. Candidatar-se sem contrato não permite receber sem cumprir as condições contratuais.",
+      "example": "Quero conhecer o Porta 65 Jovem."
+    },
+    "en": {
+      "title": "Porta 65 Young",
+      "audience": "Young people seeking rental support.",
+      "purpose": "Guidance for applying for rent support.",
+      "requirements": "Check age, household, income, rent, other property, relationship to the landlord and existing support under current rules; this is not an exhaustive list.",
+      "checklist": [
+        "Read current rules and document requirements.",
+        "Prepare income evidence and, where applicable, the tenancy contract registered with AT."
+      ],
+      "navigation": "Follow the official route; participants authenticate on the portal. Applying without a contract does not allow payment without meeting the contract conditions.",
+      "example": "Explain Porta 65 Young."
+    }
+  },
+  {
+    "id": "porta65_plus",
+    "source": "https://www.portaldahabitacao.pt/web/guest/porta-65mais",
+    "sources": [
+      "https://www.portaldahabitacao.pt/web/guest/porta-65mais",
+      "https://www.portaldahabitacao.pt/porta65m/simulador/habitacaoArrendadaSimulador",
+      "https://www.portaldahabitacao.pt/web/guest/candidatura-perda-de-rendimento",
+      "https://www.portaldahabitacao.pt/web/guest/candidatura-monoparental1"
+    ],
+    "application_url": "https://www.portaldahabitacao.pt/web/guest/porta-65mais",
+    "phases": [
+      {
+        "action": "new_application",
+        "status": "official_portal_check_required",
+        "published_deadline": null,
+        "pt": "Escolha o percurso por quebra de rendimentos ou família monoparental.",
+        "en": "Choose the income-loss or single-parent household route.",
+        "evidence_on": "2026-11-27"
+      }
+    ],
+    "pt": {
+      "title": "Porta 65+",
+      "audience": "Agregados com quebra de rendimentos superior a 20% ou famílias monoparentais, independentemente da idade.",
+      "purpose": "Encontrar o percurso adequado de apoio ao arrendamento.",
+      "requirements": "Existem requisitos adicionais de rendimentos, arrendamento e agregado; confirme as regras atuais. Exemplos monetários de 2023 não estabelecem limites para 2026.",
+      "checklist": [
+        "Consultar o simulador oficial.",
+        "Verificar documentos da modalidade escolhida e preparar comprovativos apenas para o portal oficial."
+      ],
+      "navigation": "Na página oficial, escolha perda de rendimento ou família monoparental. A candidatura exige autenticação oficial; a simulação não é uma decisão.",
+      "example": "Como funciona o Porta 65+?"
+    },
+    "en": {
+      "title": "Porta 65+",
+      "audience": "Households with an income drop greater than 20%, or single-parent households, regardless of age.",
+      "purpose": "Find the relevant rental-support route.",
+      "requirements": "Additional income, tenancy and household requirements apply; check current rules. Monetary examples from 2023 do not establish 2026 limits.",
+      "checklist": [
+        "Consult the official simulator.",
+        "Check the selected route's documents and prepare evidence only for the official portal."
+      ],
+      "navigation": "On the official page, choose income loss or single-parent household. Applying requires official authentication; a simulation is not a decision.",
+      "example": "How does Porta 65+ work?"
+    }
+  },
+  {
+    "id": "gondomar_housing",
+    "source": "https://www.cm-gondomar.pt/abertas-candidaturas-a-2-a-fase-do-apoio-ao-arrendamento-e-credito-a-habitacao/",
+    "sources": [
+      "https://www.cm-gondomar.pt/abertas-candidaturas-a-2-a-fase-do-apoio-ao-arrendamento-e-credito-a-habitacao/",
+      "https://servicosonline.cm-gondomar.pt/"
+    ],
+    "application_url": "https://servicosonline.cm-gondomar.pt/",
+    "phases": [
+      {
+        "action": "new_application",
+        "status": "within_published_deadline",
+        "published_deadline": "2026-11-30",
+        "pt": "Segunda fase de +Habitação: prazo publicado de 30/11/2026.",
+        "en": "Second +Habitação phase: published deadline 30 November 2026.",
+        "evidence_on": "2026-11-03"
+      }
+    ],
+    "pt": {
+      "title": "Gondomar +Habitação",
+      "audience": "Residentes de Gondomar com encargos de renda ou crédito à habitação.",
+      "purpose": "Orientação para a segunda fase do apoio municipal.",
+      "requirements": "O aviso refere residência no concelho há pelo menos seis meses e condições relativas aos encargos; consulte o aviso e regulamento completos.",
+      "checklist": [
+        "Confirmar condições e documentos no aviso municipal.",
+        "Preparar comprovativos de residência e encargos conforme solicitado pelo município."
+      ],
+      "navigation": "O aviso indica candidatura online, presencial ou por correio. Este apoio a renda ou crédito é distinto do programa de arrendamento de habitações municipais.",
+      "example": "Qual é o prazo do +Habitação de Gondomar?"
+    },
+    "en": {
+      "title": "Gondomar +Habitação",
+      "audience": "Gondomar residents with rent or mortgage costs.",
+      "purpose": "Guidance on the second phase of municipal housing-cost support.",
+      "requirements": "The announcement mentions at least six months of residence in the municipality and housing-cost conditions; read the full notice and regulations.",
+      "checklist": [
+        "Check conditions and documents in the municipal notice.",
+        "Prepare residence and housing-cost evidence as requested by the municipality."
+      ],
+      "navigation": "The notice provides online, in-person and postal routes. This rent or mortgage support is separate from the municipal rental housing programme.",
+      "example": "What is the Gondomar +Habitação deadline?"
+    }
+  },
+  {
+    "id": "environmental_fund",
+    "source": "https://www.fundoambiental.pt/apoios-2026.aspx",
+    "sources": [
+      "https://www.fundoambiental.pt/apoios-2026.aspx",
+      "https://www.fundoambiental.pt/candidaturas/formularios.aspx"
+    ],
+    "application_url": "https://www.fundoambiental.pt/apoios-2026.aspx",
+    "phases": [
+      {
+        "action": "new_application",
+        "status": "no_open_forms_observed_in_annual_section",
+        "published_deadline": null,
+        "pt": "A secção Apoios 2026 não apresentava formulários abertos na verificação; isto não abrange todos os avisos anteriores ou PRR.",
+        "en": "The 2026 support section showed no open forms when checked; this does not cover every earlier or PRR notice.",
+        "evidence_on": "2026-11-27"
+      }
+    ],
+    "pt": {
+      "title": "Fundo Ambiental: orientação",
+      "audience": "Pessoas que procuram informação sobre apoios ambientais.",
+      "purpose": "Localizar avisos oficiais por finalidade e tipo de beneficiário.",
+      "requirements": "Cada aviso tem requisitos próprios; a lista geral contém informação desatualizada e não prova disponibilidade atual.",
+      "checklist": [
+        "Abrir o aviso específico, alterações e republicações.",
+        "Confirmar beneficiários, despesas, documentos e prazos nesse aviso."
+      ],
+      "navigation": "Consulte a página anual e o aviso específico. Execução de apoios anteriores pode continuar; não se conclui que todos os fundos estejam encerrados. Saldo disponível desconhecido.",
+      "example": "Onde confirmar os avisos do Fundo Ambiental?"
+    },
+    "en": {
+      "title": "Environmental Fund guidance",
+      "audience": "People seeking environmental support information.",
+      "purpose": "Locate official notices by purpose and beneficiary type.",
+      "requirements": "Each notice has its own requirements; the general list contains stale information and does not prove current availability.",
+      "checklist": [
+        "Read the specific notice, amendments and republications.",
+        "Confirm beneficiaries, expenses, documents and deadlines in that notice."
+      ],
+      "navigation": "Consult the annual page and specific notice. Earlier programmes may still be in execution; this does not mean all funds are closed. Remaining budget is unknown.",
+      "example": "Where can I check Environmental Fund notices?"
+    }
+  },
+  {
+    "id": "vale_efficiency",
+    "source": "https://www.fundoambiental.pt/apoios-prr/c13-eficiencia-energetica-em-edificios/06c13-i01-programa-vale-eficiencia-ii.aspx",
+    "sources": [
+      "https://www.fundoambiental.pt/apoios-prr/c13-eficiencia-energetica-em-edificios/06c13-i01-programa-vale-eficiencia-ii.aspx"
+    ],
+    "application_url": "https://www.fundoambiental.pt/apoios-prr/c13-eficiencia-energetica-em-edificios/06c13-i01-programa-vale-eficiencia-ii.aspx",
+    "phases": [
+      {
+        "action": "new_application",
+        "status": "closed_to_new_beneficiaries",
+        "published_deadline": "2024-10-31",
+        "pt": "Novos beneficiários: candidaturas encerradas desde 31/10/2024.",
+        "en": "New beneficiaries: applications closed since 31 October 2024.",
+        "evidence_on": "2026-11-27"
+      },
+      {
+        "action": "existing_beneficiary_expression_of_interest",
+        "status": "within_published_deadline",
+        "published_deadline": "2027-01-25",
+        "pt": "Manifestação de interesse até 25/01/2027 apenas para beneficiários já elegíveis à espera de facilitador técnico.",
+        "en": "Expression of interest until 25 January 2027 only for already eligible beneficiaries awaiting a technical facilitator.",
+        "evidence_on": "2026-11-27"
+      }
+    ],
+    "pt": {
+      "title": "Vale Eficiência II",
+      "audience": "Beneficiários já elegíveis que aguardam facilitador técnico.",
+      "purpose": "Explicar o mecanismo simplificado de manifestação de interesse.",
+      "requirements": "A manifestação de interesse não reabre candidaturas para novos beneficiários.",
+      "checklist": [
+        "Confirmar no portal a situação de beneficiário elegível e a espera por facilitador.",
+        "Consultar instruções do mecanismo simplificado e fornecedores qualificados."
+      ],
+      "navigation": "Use o percurso do aviso oficial para a manifestação de interesse. Não envie aqui dados do processo.",
+      "example": "O Vale Eficiência II aceita novos beneficiários?"
+    },
+    "en": {
+      "title": "Efficiency Voucher II",
+      "audience": "Already eligible beneficiaries awaiting a technical facilitator.",
+      "purpose": "Explain the simplified expression-of-interest mechanism.",
+      "requirements": "The expression of interest does not reopen applications to new beneficiaries.",
+      "checklist": [
+        "Confirm eligible beneficiary status and the wait for a facilitator on the portal.",
+        "Read the simplified mechanism instructions and qualified supplier information."
+      ],
+      "navigation": "Use the route in the official notice for the expression of interest. Do not send case details here.",
+      "example": "Does Efficiency Voucher II accept new beneficiaries?"
+    }
+  },
+  {
+    "id": "elar",
+    "source": "https://www.fundoambiental.pt/apoios-prr/c13-eficiencia-energetica-em-edificios/11c13-i012025-programa-e-lar-2-fase.aspx",
+    "sources": [
+      "https://www.fundoambiental.pt/apoios-prr/c13-eficiencia-energetica-em-edificios/11c13-i012025-programa-e-lar-2-fase.aspx"
+    ],
+    "application_url": "https://www.fundoambiental.pt/apoios-prr/c13-eficiencia-energetica-em-edificios/11c13-i012025-programa-e-lar-2-fase.aspx",
+    "phases": [
+      {
+        "action": "new_application",
+        "status": "closed_to_new_applications",
+        "published_deadline": null,
+        "pt": "Novas candidaturas encerradas segundo a informação de 24/03/2026.",
+        "en": "New applications closed according to the information dated 24 March 2026.",
+        "evidence_on": "2026-03-24"
+      },
+      {
+        "action": "supplier_payment_request",
+        "status": "within_published_deadline",
+        "published_deadline": "2026-11-30",
+        "pt": "Pedidos de pagamento de fornecedores até 30/11/2026; não são candidaturas de beneficiários.",
+        "en": "Supplier payment requests until 30 November 2026; these are not beneficiary applications.",
+        "evidence_on": "2026-11-27"
+      }
+    ],
+    "pt": {
+      "title": "E-Lar: segunda fase",
+      "audience": "Beneficiários da segunda fase e fornecedores com operações em execução.",
+      "purpose": "Distinguir candidaturas encerradas de pedidos de pagamento de fornecedores.",
+      "requirements": "O prazo de pagamento pertence aos fornecedores; não autoriza novas candidaturas de beneficiários.",
+      "checklist": [
+        "Confirmar o papel de beneficiário ou fornecedor no aviso.",
+        "Fornecedores: verificar documentação e condições do pedido de pagamento no portal."
+      ],
+      "navigation": "Consulte o aviso da segunda fase e o percurso oficial correspondente ao seu papel.",
+      "example": "O prazo do E-Lar é para fornecedores?"
+    },
+    "en": {
+      "title": "E-Lar: second phase",
+      "audience": "Second-phase beneficiaries and suppliers with ongoing operations.",
+      "purpose": "Distinguish closed applications from supplier payment requests.",
+      "requirements": "The payment deadline is for suppliers; it does not authorize new beneficiary applications.",
+      "checklist": [
+        "Check the beneficiary or supplier role in the notice.",
+        "Suppliers: check payment-request documents and conditions on the portal."
+      ],
+      "navigation": "Read the second-phase notice and follow the official route for your role.",
+      "example": "Is the E-Lar deadline for suppliers?"
+    }
+  },
+  {
+    "id": "green_mobility",
+    "source": "https://www.fundoambiental.pt/apoios-2026/mitigacao-as-alteracoes-climaticas/incentivo-pela-aquisicao-de-veiculos-de-emissoes-nulas-ano-20252026-mobilidade-verde-passageiros-2-fase.aspx",
+    "sources": [
+      "https://www.fundoambiental.pt/apoios-2026/mitigacao-as-alteracoes-climaticas/incentivo-pela-aquisicao-de-veiculos-de-emissoes-nulas-ano-20252026-mobilidade-verde-passageiros-2-fase.aspx",
+      "https://efundos.fundoambiental.pt/"
+    ],
+    "application_url": "https://efundos.fundoambiental.pt/",
+    "phases": [
+      {
+        "action": "new_application",
+        "status": "published_deadline_passed",
+        "published_deadline": "2026-07-27",
+        "pt": "Mobilidade Verde – Passageiros 2025/2026, segunda fase: prazo de candidatura publicado de 27/07/2026.",
+        "en": "Green Mobility – Passengers 2025/2026, second phase: published application deadline 27 July 2026.",
+        "evidence_on": "2026-11-27"
+      },
+      {
+        "action": "existing_application_follow_up",
+        "status": "official_portal_check_required",
+        "published_deadline": null,
+        "pt": "Consulte o estado da candidatura no eFundos.",
+        "en": "Check application status in eFundos.",
+        "evidence_on": "2026-11-27"
+      }
+    ],
+    "pt": {
+      "title": "Mobilidade Verde: segunda fase",
+      "audience": "Interessados no incentivo a veículos de emissões nulas e candidatos da segunda fase.",
+      "purpose": "Consultar o aviso e encontrar o acompanhamento de candidatura.",
+      "requirements": "A existência da ficha não significa candidaturas abertas ou verba remanescente.",
+      "checklist": [
+        "Consultar regras e documentos da categoria de veículo no aviso.",
+        "Para candidatura existente, consultar o processo no eFundos."
+      ],
+      "navigation": "Use o eFundos oficial para acompanhamento. Este catálogo não consulta o seu estado pessoal nem confirma novas vagas.",
+      "example": "Onde acompanho a candidatura à Mobilidade Verde?"
+    },
+    "en": {
+      "title": "Green Mobility: second phase",
+      "audience": "People interested in zero-emission vehicle incentives and second-phase applicants.",
+      "purpose": "Read the notice and find application follow-up.",
+      "requirements": "The listing does not mean applications are open or funding remains.",
+      "checklist": [
+        "Read the notice's rules and documents for the vehicle category.",
+        "For an existing application, check the case in eFundos."
+      ],
+      "navigation": "Use official eFundos for follow-up. This catalogue does not access your personal status or confirm new availability.",
+      "example": "Where can I track my Green Mobility application?"
+    }
+  }
+]

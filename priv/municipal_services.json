@@ -1,0 +1,3136 @@
+{
+  "verified_on": "2026-11-27",
+  "sources": {
+    "gondomar": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+    "maia": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+    "ponte_de_lima": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios"
+  },
+  "services": [
+    {
+      "id": "gondomar-10553",
+      "municipality": "gondomar",
+      "title": "Pedido de Audiência Presidente da Câmara",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=10553&formato=SPO_menu_10553",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Apoio ao Municipe"
+    },
+    {
+      "id": "gondomar-10555",
+      "municipality": "gondomar",
+      "title": "Pedido de Inspeção de Ascensores",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=10555&formato=SPO_menu_10555",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Licenças e taxas"
+    },
+    {
+      "id": "gondomar-10556",
+      "municipality": "gondomar",
+      "title": "Pedido de Inspeção Extraordinária de Ascensores",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=10556&formato=SPO_menu_10556",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Licenças e taxas"
+    },
+    {
+      "id": "gondomar-10557",
+      "municipality": "gondomar",
+      "title": "Pedido de Reinspeção de Ascensores",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=10557&formato=SPO_menu_10557",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Licenças e taxas"
+    },
+    {
+      "id": "gondomar-10558",
+      "municipality": "gondomar",
+      "title": "Pedido de audiência Vice-Presidente da Câmara",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=10558&formato=SPO_menu_10558",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Apoio ao Municipe"
+    },
+    {
+      "id": "gondomar-10559",
+      "municipality": "gondomar",
+      "title": "Pedido de Audiência Vereadora Dra. Aurora Vieira",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=10559&formato=SPO_menu_10559",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Apoio ao Municipe"
+    },
+    {
+      "id": "gondomar-10561",
+      "municipality": "gondomar",
+      "title": "Pedido de Audiência Vereadora Dra. Carla Pinto Ferreira",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=10561&formato=SPO_menu_10561",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Apoio ao Municipe"
+    },
+    {
+      "id": "gondomar-10562",
+      "municipality": "gondomar",
+      "title": "Pedido de Audiência Vereador Dr. José Fernando Moreira",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=10562&formato=SPO_menu_10562",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Apoio ao Municipe"
+    },
+    {
+      "id": "gondomar-10565",
+      "municipality": "gondomar",
+      "title": "Pedido de Emissão Cartão de Estacionamento de Residente/Comerciante",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=10565&formato=SPO_menu_10565",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Mobilidade, Transito e Transportes"
+    },
+    {
+      "id": "gondomar-10566",
+      "municipality": "gondomar",
+      "title": "Pedido de Cartão de Estacionamento de Residente/Comerciante - Renovação",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=10566&formato=SPO_menu_10566",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Mobilidade, Transito e Transportes"
+    },
+    {
+      "id": "gondomar-10569",
+      "municipality": "gondomar",
+      "title": "Pedido de Certidão - Ciclomotores",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=10569&formato=SPO_menu_10569",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Certidões e Outros Documentos"
+    },
+    {
+      "id": "gondomar-10570",
+      "municipality": "gondomar",
+      "title": "Pedido de Certidão - Licença de Condução de Ciclomotor",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=10570&formato=SPO_menu_10570",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Certidões e Outros Documentos"
+    },
+    {
+      "id": "gondomar-10571",
+      "municipality": "gondomar",
+      "title": "Pedido de Certidão - Narrativa",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=10571&formato=SPO_menu_10571",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Certidões e Outros Documentos"
+    },
+    {
+      "id": "gondomar-10572",
+      "municipality": "gondomar",
+      "title": "Pedido de Fotocópia Autenticada",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=10572&formato=SPO_menu_10572",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Certidões e Outros Documentos"
+    },
+    {
+      "id": "gondomar-10573",
+      "municipality": "gondomar",
+      "title": "Pedido de Fotocópia Não Autenticada",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=10573&formato=SPO_menu_10573",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Certidões e Outros Documentos"
+    },
+    {
+      "id": "gondomar-10574",
+      "municipality": "gondomar",
+      "title": "Táxi - Pedido de Averbamento de Licença por Mudança de Titular",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=10574&formato=SPO_menu_10574",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Mobilidade, Transito e Transportes"
+    },
+    {
+      "id": "gondomar-10575",
+      "municipality": "gondomar",
+      "title": "Táxi - Pedido de Averbamento de Licença por Mudança de Veículo",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=10575&formato=SPO_menu_10575",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Mobilidade, Transito e Transportes"
+    },
+    {
+      "id": "gondomar-10576",
+      "municipality": "gondomar",
+      "title": "Táxi – Pedido de 2ª Via de Licença",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=10576&formato=SPO_menu_10576",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Mobilidade, Transito e Transportes"
+    },
+    {
+      "id": "gondomar-10577",
+      "municipality": "gondomar",
+      "title": "Alojamento Local - Registo, alteração de dados ou cessação de atividade de estabelecimentos",
+      "official_url": "https://servicosonline.cm-gondomar.pt/SpoProServlet.asp?intmenu=10577&view=a",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Atividades Económicas"
+    },
+    {
+      "id": "gondomar-10578",
+      "municipality": "gondomar",
+      "title": "Centro de bronzeamento artificial",
+      "official_url": "https://servicosonline.cm-gondomar.pt/SpoProServlet.asp?intmenu=10578&view=a",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Atividades Económicas"
+    },
+    {
+      "id": "gondomar-10579",
+      "municipality": "gondomar",
+      "title": "Comércio a retalho de animais de companhia e respectivos alimentos",
+      "official_url": "https://servicosonline.cm-gondomar.pt/SpoProServlet.asp?intmenu=10579&view=a",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Atividades Económicas"
+    },
+    {
+      "id": "gondomar-10580",
+      "municipality": "gondomar",
+      "title": "Comércio a retalho em estabelecimento que pertença a uma empresa que utilize uma ou mais insígnias o",
+      "official_url": "https://servicosonline.cm-gondomar.pt/SpoProServlet.asp?intmenu=10580&view=a",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Atividades Económicas"
+    },
+    {
+      "id": "gondomar-10581",
+      "municipality": "gondomar",
+      "title": "Comércio por grosso e a retalho de produtos alimentares",
+      "official_url": "https://servicosonline.cm-gondomar.pt/SpoProServlet.asp?intmenu=10581&view=a",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Atividades Económicas"
+    },
+    {
+      "id": "gondomar-10582",
+      "municipality": "gondomar",
+      "title": "Lavandaria",
+      "official_url": "https://servicosonline.cm-gondomar.pt/SpoProServlet.asp?intmenu=10582&view=a",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Atividades Económicas"
+    },
+    {
+      "id": "gondomar-10583",
+      "municipality": "gondomar",
+      "title": "Manutenção e reparação de veículos automóveis, motociclos e ciclomotores",
+      "official_url": "https://servicosonline.cm-gondomar.pt/SpoProServlet.asp?intmenu=10583&view=a",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Atividades Económicas"
+    },
+    {
+      "id": "gondomar-10584",
+      "municipality": "gondomar",
+      "title": "Instalação de equipamento",
+      "official_url": "https://servicosonline.cm-gondomar.pt/SpoProServlet.asp?intmenu=10584&view=a",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Ocupação do Espaço Público"
+    },
+    {
+      "id": "gondomar-10585",
+      "municipality": "gondomar",
+      "title": "Organização de feira por entidade privada",
+      "official_url": "https://servicosonline.cm-gondomar.pt/SpoProServlet.asp?intmenu=10585&view=a",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Ocupação do Espaço Público"
+    },
+    {
+      "id": "gondomar-10586",
+      "municipality": "gondomar",
+      "title": "Piercings e Tatuagens",
+      "official_url": "https://servicosonline.cm-gondomar.pt/SpoProServlet.asp?intmenu=10586&view=a",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Atividades Económicas"
+    },
+    {
+      "id": "gondomar-10587",
+      "municipality": "gondomar",
+      "title": "Restauração ou bebidas não sedentária",
+      "official_url": "https://servicosonline.cm-gondomar.pt/SpoProServlet.asp?intmenu=10587&view=a",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Atividades Económicas"
+    },
+    {
+      "id": "gondomar-10588",
+      "municipality": "gondomar",
+      "title": "Restauração e bebidas",
+      "official_url": "https://servicosonline.cm-gondomar.pt/SpoProServlet.asp?intmenu=10588&view=a",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Atividades Económicas"
+    },
+    {
+      "id": "gondomar-10589",
+      "municipality": "gondomar",
+      "title": "Adaptação e reparação de veículos automóveis utilizadores de gases de petróleo liquefeito (GPL)",
+      "official_url": "https://servicosonline.cm-gondomar.pt/SpoProServlet.asp?intmenu=10589&view=a",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Atividades Económicas"
+    },
+    {
+      "id": "gondomar-10597",
+      "municipality": "gondomar",
+      "title": "Candidatura a procedimento concursal - Audiência dos interessados",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=10597&formato=SPO_menu_10597",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Recursos Humanos"
+    },
+    {
+      "id": "gondomar-10598",
+      "municipality": "gondomar",
+      "title": "Pedido de atendimento técnico",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=10598&formato=SPO_menu_10598",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Apoio ao Municipe"
+    },
+    {
+      "id": "gondomar-10599",
+      "municipality": "gondomar",
+      "title": "Pedido de inscrição para Reunião Pública",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=10599&formato=SPO_menu_10599",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Apoio ao Municipe"
+    },
+    {
+      "id": "gondomar-10617",
+      "municipality": "gondomar",
+      "title": "PIP - Renovação",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=10617&formato=SPO_menu_10617",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Urbanismo / PIP - Pedido de Informação Prévia"
+    },
+    {
+      "id": "gondomar-10618",
+      "municipality": "gondomar",
+      "title": "Pedido de Recolha de Águas Residuais Domésticas",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=10618&formato=SPO_menu_10618",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Ambiente"
+    },
+    {
+      "id": "gondomar-10619",
+      "municipality": "gondomar",
+      "title": "Pedido de Autorização para a realização de procissão, desfile e cortejo na via pública",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=10619&formato=SPO_menu_10619",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Ocupação do Espaço Público"
+    },
+    {
+      "id": "gondomar-10620",
+      "municipality": "gondomar",
+      "title": "Isenção do Pagamento de Taxas",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=10620&formato=SPO_menu_10620",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Licenças e taxas"
+    },
+    {
+      "id": "gondomar-10621",
+      "municipality": "gondomar",
+      "title": "Requerimento Geral",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=10621&formato=SPO_menu_10621",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Certidões e Outros Documentos"
+    },
+    {
+      "id": "gondomar-10630",
+      "municipality": "gondomar",
+      "title": "CTD - Certidão Infraestruturas",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=10630&formato=SPO_menu_10630",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Urbanismo / CTD - Certidões de Urbanismo"
+    },
+    {
+      "id": "gondomar-10640",
+      "municipality": "gondomar",
+      "title": "LIC - Pagamento de taxas",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=10640&formato=SPO_menu_10640",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Urbanismo / LIC - Licenciamento"
+    },
+    {
+      "id": "gondomar-10658",
+      "municipality": "gondomar",
+      "title": "Mobilidade interna",
+      "official_url": "https://servicosonline.cm-gondomar.pt/SpoProServlet.asp?intmenu=10658&view=a",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Recursos Humanos"
+    },
+    {
+      "id": "gondomar-10675",
+      "municipality": "gondomar",
+      "title": "Elogios",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=10675&formato=SPO_menu_10675",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "A sua opinião"
+    },
+    {
+      "id": "gondomar-10676",
+      "municipality": "gondomar",
+      "title": "Reclamações",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=10676&formato=SPO_menu_10676",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "A sua opinião"
+    },
+    {
+      "id": "gondomar-10677",
+      "municipality": "gondomar",
+      "title": "Sugestões",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=10677&formato=SPO_menu_10677",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "A sua opinião"
+    },
+    {
+      "id": "gondomar-10678",
+      "municipality": "gondomar",
+      "title": "Comunicação do início de trabalhos para ocupação do espaço público por motivo de obras",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=10678&formato=SPO_menu_10678",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Ocupação do Espaço Público"
+    },
+    {
+      "id": "gondomar-10679",
+      "municipality": "gondomar",
+      "title": "Pedido de Licença de ocupação do espaço publico por motivo de obras particulares",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=10679&formato=SPO_menu_10679",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Ocupação do Espaço Público"
+    },
+    {
+      "id": "gondomar-10682",
+      "municipality": "gondomar",
+      "title": "Reserva de Estacionamento no Espaço Público para Deficiente Motor",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=10682&formato=SPO_menu_10682",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Mobilidade, Transito e Transportes"
+    },
+    {
+      "id": "gondomar-10683",
+      "municipality": "gondomar",
+      "title": "Pedido de Averbamento de Titular de Publicidade e/ou Ocupação do Espaço Publico",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=10683&formato=SPO_menu_10683",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Publicidade"
+    },
+    {
+      "id": "gondomar-10684",
+      "municipality": "gondomar",
+      "title": "Pedido de Licença para Ações Promocionais de Rua",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=10684&formato=SPO_menu_10684",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Publicidade"
+    },
+    {
+      "id": "gondomar-10685",
+      "municipality": "gondomar",
+      "title": "Pedido de Licença de Publicidade",
+      "official_url": "https://servicosonline.cm-gondomar.pt/SpoProServlet.asp?intmenu=10685&view=a",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Publicidade"
+    },
+    {
+      "id": "gondomar-10687",
+      "municipality": "gondomar",
+      "title": "Pedido de Não Renovação Publicidade / Ocupação de Via Pública",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=10687&formato=SPO_menu_10687",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Publicidade"
+    },
+    {
+      "id": "gondomar-10688",
+      "municipality": "gondomar",
+      "title": "Pedido de Licença de Ocupação da Via Pública",
+      "official_url": "https://servicosonline.cm-gondomar.pt/SpoProServlet.asp?intmenu=10688&view=a",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Publicidade"
+    },
+    {
+      "id": "gondomar-10689",
+      "municipality": "gondomar",
+      "title": "Pedido de Licença para Publicidade Sonora",
+      "official_url": "https://servicosonline.cm-gondomar.pt/SpoProServlet.asp?intmenu=10689&view=a",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Publicidade"
+    },
+    {
+      "id": "gondomar-10690",
+      "municipality": "gondomar",
+      "title": "Pedido de Renovação de Licença de Publicidade e/ou Ocupação",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=10690&formato=SPO_menu_10690",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Publicidade"
+    },
+    {
+      "id": "gondomar-10692",
+      "municipality": "gondomar",
+      "title": "Pedido de licenciamento de ocupação para realização obras e intervenções na via pública",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=10692&formato=SPO_menu_10692",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Ocupação do Espaço Público"
+    },
+    {
+      "id": "gondomar-10694",
+      "municipality": "gondomar",
+      "title": "Pedido de Autorização para Realização de Prova/Manifestação Desportiva",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=10694&formato=SPO_menu_10694",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Ocupação do Espaço Público"
+    },
+    {
+      "id": "gondomar-10695",
+      "municipality": "gondomar",
+      "title": "Pedido de Cedência de Espaço - GoldPark",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=10695&formato=SPO_menu_10695",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Equipamentos Municipais"
+    },
+    {
+      "id": "gondomar-10696",
+      "municipality": "gondomar",
+      "title": "Pedido de Licença Especial de Ruído",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=10696&formato=SPO_menu_10696",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Licenças e taxas"
+    },
+    {
+      "id": "gondomar-10697",
+      "municipality": "gondomar",
+      "title": "Pedido de Licença para Instalação de Recinto",
+      "official_url": "https://servicosonline.cm-gondomar.pt/SpoProServlet.asp?intmenu=10697&view=a",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Licenças e taxas"
+    },
+    {
+      "id": "gondomar-10699",
+      "municipality": "gondomar",
+      "title": "CTD - Certidão de Destaque",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=10699&formato=SPO_menu_10699",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Urbanismo / CTD - Certidões de Urbanismo"
+    },
+    {
+      "id": "gondomar-10705",
+      "municipality": "gondomar",
+      "title": "Requerimento Geral de Urbanismo",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=10705&formato=SPO_menu_10705",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Urbanismo / Outros Requerimentos"
+    },
+    {
+      "id": "gondomar-10710",
+      "municipality": "gondomar",
+      "title": "Licenciamento de Lugar de Estacionamento Privado em Espaço Público",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=10710&formato=SPO_menu_10710",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Mobilidade, Transito e Transportes"
+    },
+    {
+      "id": "gondomar-10714",
+      "municipality": "gondomar",
+      "title": "Comunicação prévia de ocupação para realização obras e intervenções na via pública",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=10714&formato=SPO_menu_10714",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Ocupação do Espaço Público"
+    },
+    {
+      "id": "gondomar-10715",
+      "municipality": "gondomar",
+      "title": "Mercado local de produtores por entidade privada - instalação",
+      "official_url": "https://servicosonline.cm-gondomar.pt/SpoProServlet.asp?intmenu=10715&view=a",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Atividades Económicas"
+    },
+    {
+      "id": "gondomar-10717",
+      "municipality": "gondomar",
+      "title": "Identificar condutor",
+      "official_url": "https://servicosonline.cm-gondomar.pt/SpoProServlet.asp?intmenu=10717&view=a",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Contraordenações Rodoviárias"
+    },
+    {
+      "id": "gondomar-10718",
+      "municipality": "gondomar",
+      "title": "Defesa",
+      "official_url": "https://servicosonline.cm-gondomar.pt/SpoProServlet.asp?intmenu=10718&view=a",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Contraordenações Rodoviárias"
+    },
+    {
+      "id": "gondomar-10721",
+      "municipality": "gondomar",
+      "title": "PH - Constituição de Propriedade Horizontal (edifícios anteriores a 1951/1961)",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=10721&formato=SPO_menu_10721",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Urbanismo / PH - Propriedade Horizontal"
+    },
+    {
+      "id": "gondomar-10722",
+      "municipality": "gondomar",
+      "title": "PH - Apresentação de Elementos",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=10722&formato=SPO_menu_10722",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Urbanismo / PH - Propriedade Horizontal"
+    },
+    {
+      "id": "gondomar-10723",
+      "municipality": "gondomar",
+      "title": "PH - Constituição de Propriedade Horizontal",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=10723&formato=SPO_menu_10723",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Urbanismo / PH - Propriedade Horizontal"
+    },
+    {
+      "id": "gondomar-10727",
+      "municipality": "gondomar",
+      "title": "CTD - Certidão Narrativa",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=10727&formato=SPO_menu_10727",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Urbanismo / CTD - Certidões de Urbanismo"
+    },
+    {
+      "id": "gondomar-10728",
+      "municipality": "gondomar",
+      "title": "CTD - Viabilidade Construtiva",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=10728&formato=SPO_menu_10728",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Urbanismo / CTD - Certidões de Urbanismo"
+    },
+    {
+      "id": "gondomar-10730",
+      "municipality": "gondomar",
+      "title": "CTD - Certidão de Antiguidade de Construção",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=10730&formato=SPO_menu_10730",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Urbanismo / CTD - Certidões de Urbanismo"
+    },
+    {
+      "id": "gondomar-10731",
+      "municipality": "gondomar",
+      "title": "CTD - Certidão Retificação de Áreas Loteamento",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=10731&formato=SPO_menu_10731",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Urbanismo / CTD - Certidões de Urbanismo"
+    },
+    {
+      "id": "gondomar-10732",
+      "municipality": "gondomar",
+      "title": "CTD - Certidão de Compropriedade",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=10732&formato=SPO_menu_10732",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Urbanismo / CTD - Certidões de Urbanismo"
+    },
+    {
+      "id": "gondomar-10735",
+      "municipality": "gondomar",
+      "title": "Candidatura ao Tarifário Especial da Água",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=10735&formato=SPO_menu_10735",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Apoio Social"
+    },
+    {
+      "id": "gondomar-10746",
+      "municipality": "gondomar",
+      "title": "Candidatura a procedimento concursal - Junção de documentos",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=10746&formato=SPO_menu_10746",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Recursos Humanos"
+    },
+    {
+      "id": "gondomar-10747",
+      "municipality": "gondomar",
+      "title": "Eixo + Habitação - Entrega de comprovativo",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=10747&formato=SPO_menu_10747",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Apoio Social"
+    },
+    {
+      "id": "gondomar-10748",
+      "municipality": "gondomar",
+      "title": "Candidatura ao Eixo + Habitação",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=10748&formato=SPO_menu_10748",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Apoio Social"
+    },
+    {
+      "id": "gondomar-10749",
+      "municipality": "gondomar",
+      "title": "Natal Solidário",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=10749&formato=SPO_menu_10749",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Apoio Social"
+    },
+    {
+      "id": "gondomar-10750",
+      "municipality": "gondomar",
+      "title": "Candidatura ao Eixo + Habitação - Entrega de documentos",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=10750&formato=SPO_menu_10750",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Apoio Social"
+    },
+    {
+      "id": "gondomar-10751",
+      "municipality": "gondomar",
+      "title": "Candidatura ao Tarifário Especial da Água - Entrega de documentos",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=10751&formato=SPO_menu_10751",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Apoio Social"
+    },
+    {
+      "id": "gondomar-10752",
+      "municipality": "gondomar",
+      "title": "Natal Solidário - Entrega de documentos",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=10752&formato=SPO_menu_10752",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Apoio Social"
+    },
+    {
+      "id": "gondomar-10753",
+      "municipality": "gondomar",
+      "title": "Candidatura ao Eixo + Alimentação - Entrega de documentos",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=10753&formato=SPO_menu_10753",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Apoio Social"
+    },
+    {
+      "id": "gondomar-10759",
+      "municipality": "gondomar",
+      "title": "Controlo metrológico",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=10759&formato=SPO_menu_10759",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Licenças e taxas"
+    },
+    {
+      "id": "gondomar-10772",
+      "municipality": "gondomar",
+      "title": "Pedido de libertação de caução",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=10772&formato=SPO_menu_10772",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Urbanismo / Outros Requerimentos"
+    },
+    {
+      "id": "gondomar-10773",
+      "municipality": "gondomar",
+      "title": "Pedido de consulta de processo",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=10773&formato=SPO_menu_10773",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Urbanismo / Outros Requerimentos"
+    },
+    {
+      "id": "gondomar-10774",
+      "municipality": "gondomar",
+      "title": "Pedido de Audiência Vereadora Dra. Ana Luísa Gomes",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=10774&formato=SPO_menu_10774",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Apoio ao Municipe"
+    },
+    {
+      "id": "gondomar-10777",
+      "municipality": "gondomar",
+      "title": "RGPD - Exercício de direitos do titular dos dados",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=10777&formato=SPO_menu_10777",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Área do Cidadão"
+    },
+    {
+      "id": "gondomar-10781",
+      "municipality": "gondomar",
+      "title": "Pedido de alteração de dados pessoais",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=10781&formato=SPO_menu_10781",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Área do Cidadão"
+    },
+    {
+      "id": "gondomar-10788",
+      "municipality": "gondomar",
+      "title": "Acordo de pagamento de dívida (rendas em mora)",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=10788&formato=SPO_menu_10788",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Habitação"
+    },
+    {
+      "id": "gondomar-10817",
+      "municipality": "gondomar",
+      "title": "Candidatura a atribuição do direito de uso do espaço público para comércio (não autenticado)",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=10817&formato=SPO_menu_10817",
+      "authentication": "unknown",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Ocupação do Espaço Público"
+    },
+    {
+      "id": "gondomar-10821",
+      "municipality": "gondomar",
+      "title": "Atualização de renda",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=10821&formato=SPO_menu_10821",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Habitação"
+    },
+    {
+      "id": "gondomar-10952",
+      "municipality": "gondomar",
+      "title": "Pedido de Atendimento Técnico Urbanismo",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=10952&formato=SPO_menu_10952",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Urbanismo / Outros Requerimentos"
+    },
+    {
+      "id": "gondomar-10966",
+      "municipality": "gondomar",
+      "title": "Simulador de Taxas",
+      "official_url": "https://servicosonline.cm-gondomar.pt/SpoProServlet.asp?intmenu=10966&view=a",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Urbanismo"
+    },
+    {
+      "id": "gondomar-10973",
+      "municipality": "gondomar",
+      "title": "CTD - Certidão de destaque aditamento / aperfeiçoamento",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=10973&formato=SPO_menu_10973",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Urbanismo / CTD - Certidões de Urbanismo"
+    },
+    {
+      "id": "gondomar-10974",
+      "municipality": "gondomar",
+      "title": "PH - Alteração de Propriedade Horizontal",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=10974&formato=SPO_menu_10974",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Urbanismo / PH - Propriedade Horizontal"
+    },
+    {
+      "id": "gondomar-10991",
+      "municipality": "gondomar",
+      "title": "Oficinas D'Ouro",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=10991&formato=SPO_menu_10991",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Atividades Sociais"
+    },
+    {
+      "id": "gondomar-10992",
+      "municipality": "gondomar",
+      "title": "GondoPET",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=10992&formato=SPO_menu_10992",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Atividades Sociais"
+    },
+    {
+      "id": "gondomar-11001",
+      "municipality": "gondomar",
+      "title": "PIP - n.º 1 do artigo 14.º do RJUE)",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=11001&formato=SPO_menu_11001",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Urbanismo / PIP - Pedido de Informação Prévia / PIP - Pedidos Inicias"
+    },
+    {
+      "id": "gondomar-11003",
+      "municipality": "gondomar",
+      "title": "PIP - Loteamentos (nos termos do n.º 2 do artigo 14.º do RJUE)",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=11003&formato=SPO_menu_11003",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Urbanismo / PIP - Pedido de Informação Prévia / PIP - Pedidos Inicias"
+    },
+    {
+      "id": "gondomar-11004",
+      "municipality": "gondomar",
+      "title": "PIP - Obras de Urbanização (nos termos do n.º 2 do artigo 14.º do RJUE)",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=11004&formato=SPO_menu_11004",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Urbanismo / PIP - Pedido de Informação Prévia / PIP - Pedidos Inicias"
+    },
+    {
+      "id": "gondomar-11005",
+      "municipality": "gondomar",
+      "title": "PIP - Obras de construção (nos termos do n.º 2 do artigo 14.º do RJUE)",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=11005&formato=SPO_menu_11005",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Urbanismo / PIP - Pedido de Informação Prévia / PIP - Pedidos Inicias"
+    },
+    {
+      "id": "gondomar-11006",
+      "municipality": "gondomar",
+      "title": "PIP - Obras de Demolição (nos termos do n.º 2 do artigo 14.º do RJUE)",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=11006&formato=SPO_menu_11006",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Urbanismo / PIP - Pedido de Informação Prévia / PIP - Pedidos Inicias"
+    },
+    {
+      "id": "gondomar-11007",
+      "municipality": "gondomar",
+      "title": "PIP - Outras Utilizações (nos termos do n.º 2 do artigo 14.º do RJUE)",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=11007&formato=SPO_menu_11007",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Urbanismo / PIP - Pedido de Informação Prévia / PIP - Pedidos Inicias"
+    },
+    {
+      "id": "gondomar-11008",
+      "municipality": "gondomar",
+      "title": "LIC - Projetos de Especialidade",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=11008&formato=SPO_menu_11008",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Urbanismo / LIC - Licenciamento"
+    },
+    {
+      "id": "gondomar-11012",
+      "municipality": "gondomar",
+      "title": "PIP - Aperfeiçoamento n.º 1 artigo 14.º RJUE",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=11012&formato=SPO_menu_11012",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Urbanismo / PIP - Pedido de Informação Prévia / PIP - Pedido de Aperfeiçoamento"
+    },
+    {
+      "id": "gondomar-11013",
+      "municipality": "gondomar",
+      "title": "PIP - Aperfeiçoamento n.º 2 artigo 14.º RJUE",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=11013&formato=SPO_menu_11013",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Urbanismo / PIP - Pedido de Informação Prévia / PIP - Pedido de Aperfeiçoamento"
+    },
+    {
+      "id": "gondomar-11020",
+      "municipality": "gondomar",
+      "title": "LIC - Loteamentos",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=11020&formato=SPO_menu_11020",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Urbanismo / LIC - Licenciamento / LIC - Pedidos Iniciais"
+    },
+    {
+      "id": "gondomar-11021",
+      "municipality": "gondomar",
+      "title": "LIC - Obras de Urbanização",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=11021&formato=SPO_menu_11021",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Urbanismo / LIC - Licenciamento / LIC - Pedidos Iniciais"
+    },
+    {
+      "id": "gondomar-11022",
+      "municipality": "gondomar",
+      "title": "LIC - Construção",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=11022&formato=SPO_menu_11022",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Urbanismo / LIC - Licenciamento / LIC - Pedidos Iniciais"
+    },
+    {
+      "id": "gondomar-11023",
+      "municipality": "gondomar",
+      "title": "LIC - Demolição",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=11023&formato=SPO_menu_11023",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Urbanismo / LIC - Licenciamento / LIC - Pedidos Iniciais"
+    },
+    {
+      "id": "gondomar-11024",
+      "municipality": "gondomar",
+      "title": "LIC - Remodelação de Terrenos",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=11024&formato=SPO_menu_11024",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Urbanismo / LIC - Licenciamento / LIC - Pedidos Iniciais"
+    },
+    {
+      "id": "gondomar-11027",
+      "municipality": "gondomar",
+      "title": "LIC - Pedidos de aditamento e aperfeiçoamento nos termos do DL n.º 108/2026 de 29 de maio",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=11027&formato=SPO_menu_11027",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Urbanismo / LIC - Licenciamento"
+    },
+    {
+      "id": "gondomar-11028",
+      "municipality": "gondomar",
+      "title": "CIO - Comunicação de início de obra com controlo prévio precedida de licenciamento",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=11028&formato=SPO_menu_11028",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Urbanismo / CIO - Comunicação de Início de Obra"
+    },
+    {
+      "id": "gondomar-11029",
+      "municipality": "gondomar",
+      "title": "CIO - Comunicação de início de obra com controlo prévio precedida de Comunicação Prévia",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=11029&formato=SPO_menu_11029",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Urbanismo / CIO - Comunicação de Início de Obra"
+    },
+    {
+      "id": "gondomar-11030",
+      "municipality": "gondomar",
+      "title": "CIO - Comunicação de início de obra isenta na sequência de Informação Prévia favorável",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=11030&formato=SPO_menu_11030",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Urbanismo / CIO - Comunicação de Início de Obra"
+    },
+    {
+      "id": "gondomar-11031",
+      "municipality": "gondomar",
+      "title": "CIO - Comunicação de início de obra sem controlo prévio",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=11031&formato=SPO_menu_11031",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Urbanismo / CIO - Comunicação de Início de Obra"
+    },
+    {
+      "id": "gondomar-11034",
+      "municipality": "gondomar",
+      "title": "CP - Pedidos de aditamento e aperfeiçoamento nos termos do DL n.º 108/2026 de 29 de maio",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=11034&formato=SPO_menu_11034",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Urbanismo / CP - Comunicação Prévia"
+    },
+    {
+      "id": "gondomar-11035",
+      "municipality": "gondomar",
+      "title": "CP - Loteamentos nos termos do DL n.º 108/2026 de 29 de maio",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=11035&formato=SPO_menu_11035",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Urbanismo / CP - Comunicação Prévia / CP - Pedidos iniciais"
+    },
+    {
+      "id": "gondomar-11036",
+      "municipality": "gondomar",
+      "title": "CP - Construção nos termos do DL n.º 108/2026 de 29 de maio",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=11036&formato=SPO_menu_11036",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Urbanismo / CP - Comunicação Prévia / CP - Pedidos iniciais"
+    },
+    {
+      "id": "gondomar-11037",
+      "municipality": "gondomar",
+      "title": "CP - Obras de Urbanização nos termos do DL n.º 108/2026 de 29 de maio",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=11037&formato=SPO_menu_11037",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Urbanismo / CP - Comunicação Prévia / CP - Pedidos iniciais"
+    },
+    {
+      "id": "gondomar-11038",
+      "municipality": "gondomar",
+      "title": "CP - Remodelação de Terrenos nos termos do DL n.º 108/2026 de 29 de maio",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=11038&formato=SPO_menu_11038",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Urbanismo / CP - Comunicação Prévia / CP - Pedidos iniciais"
+    },
+    {
+      "id": "gondomar-11039",
+      "municipality": "gondomar",
+      "title": "CP - Demolição nos termos do DL n.º 108/2026 de 29 de maio",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=11039&formato=SPO_menu_11039",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Urbanismo / CP - Comunicação Prévia / CP - Pedidos iniciais"
+    },
+    {
+      "id": "gondomar-11043",
+      "municipality": "gondomar",
+      "title": "AVB - Averbamento - Alteração do titular",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=11043&formato=SPO_menu_11043",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Urbanismo / AVB - Averbamentos"
+    },
+    {
+      "id": "gondomar-11044",
+      "municipality": "gondomar",
+      "title": "AVB - Averbamento - Substituição do empreiteiro",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=11044&formato=SPO_menu_11044",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Urbanismo / AVB - Averbamentos"
+    },
+    {
+      "id": "gondomar-11045",
+      "municipality": "gondomar",
+      "title": "AVB - Averbamentos - Substituição de técnicos",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=11045&formato=SPO_menu_11045",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Urbanismo / AVB - Averbamentos"
+    },
+    {
+      "id": "gondomar-11047",
+      "municipality": "gondomar",
+      "title": "UTI - Utilização de uso de edifício ou fração sujeita a comunicação prévia",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=11047&formato=SPO_menu_11047",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Urbanismo / UTI - Comunicação de Utilização"
+    },
+    {
+      "id": "gondomar-11048",
+      "municipality": "gondomar",
+      "title": "UTI- Utilização ou alteração de uso de edifício ou fração sujeita a comunicação prévia com prazo",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=11048&formato=SPO_menu_11048",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Urbanismo / UTI - Comunicação de Utilização"
+    },
+    {
+      "id": "gondomar-11049",
+      "municipality": "gondomar",
+      "title": "UTI - Pedido de aperfeiçoamento",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=11049&formato=SPO_menu_11049",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Urbanismo / UTI - Comunicação de Utilização"
+    },
+    {
+      "id": "gondomar-11050",
+      "municipality": "gondomar",
+      "title": "LIC - Alteração de Licença de Loteamento",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=11050&formato=SPO_menu_11050",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Urbanismo / LIC - Licenciamento"
+    },
+    {
+      "id": "gondomar-11053",
+      "municipality": "gondomar",
+      "title": "CIO - Pedido de aperfeiçoamento",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=11053&formato=SPO_menu_11053",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Urbanismo / CIO - Comunicação de Início de Obra"
+    },
+    {
+      "id": "gondomar-11054",
+      "municipality": "gondomar",
+      "title": "Pedido de cedência de viatura/transporte Municipal de passageiros",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=11054&formato=SPO_menu_11054",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Licenças e taxas"
+    },
+    {
+      "id": "gondomar-11059",
+      "municipality": "gondomar",
+      "title": "Procedimento Concursal Comum - Carreira especial de Fiscalização - Fiscal",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=11059&formato=SPO_menu_11059",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Recursos Humanos"
+    },
+    {
+      "id": "gondomar-11060",
+      "municipality": "gondomar",
+      "title": "Procedimento Concursal Comum - Carreira especial de Fiscalização - Fiscal Coordenador",
+      "official_url": "https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=11060&formato=SPO_menu_11060",
+      "authentication": "required",
+      "source": "https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?publico=1&objecto=json&raiz=Todos+Sercicos+Online&frame=1",
+      "verified_on": "2026-11-27",
+      "category": "Recursos Humanos"
+    },
+    {
+      "id": "gondomar-monos",
+      "municipality": "gondomar",
+      "title": "Recolha de monos",
+      "official_url": "https://www.cm-gondomar.pt/atividade-municipal/ambiente/monos/",
+      "authentication": "unknown",
+      "source": "https://www.cm-gondomar.pt/atividade-municipal/ambiente/monos/",
+      "verified_on": "2026-11-27",
+      "category": "Ambiente"
+    },
+    {
+      "id": "maia-019561e88efe0c8d",
+      "municipality": "maia",
+      "title": "Licenciamento de Publicidade em Viaturas",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/atividades-economicas/licenciamento-de-publicidade-em-viaturas",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27",
+      "category": "Atividades Económicas"
+    },
+    {
+      "id": "maia-01e13aee9c5624d4",
+      "municipality": "maia",
+      "title": "Recolha de monos e monstros",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/gestao-de-residuos/recolha-de-monos-e-monstros",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27",
+      "category": "Gestão de Resíduos"
+    },
+    {
+      "id": "maia-03ba996ce24f2177",
+      "municipality": "maia",
+      "title": "Informação Prévia - Obras de Demolição",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/urbanismo/informacao-previa/informacao-previa-obras-de-demolicao",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27",
+      "category": "Informação Prévia"
+    },
+    {
+      "id": "maia-03dbb7859b03df94",
+      "municipality": "maia",
+      "title": "Licenciamento de Obras - Loteamento",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/urbanismo/licenciamento/licenciamento-de-obras-loteamento",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27",
+      "category": "Licenciamento"
+    },
+    {
+      "id": "maia-05fcf0c07262e825",
+      "municipality": "maia",
+      "title": "Alteração à Utilização sem operação urbanística prévia",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/urbanismo/autorizacao-alteracao-a-utilizacao-e-licencas/alteracao-a-utilizacao-sem-operacao-urbanistica-previa",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27",
+      "category": "Autorização/Alteração à utilização e Licenças"
+    },
+    {
+      "id": "maia-0bd5dd64a3c44bdd",
+      "municipality": "maia",
+      "title": "Licença para Recinto Itinerante ou Improvisado",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/licencas-taxas-e-vistorias/licenca-para-recinto-itinerante-ou-improvisado",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27"
+    },
+    {
+      "id": "maia-0cdf0e1c4c95c1de",
+      "municipality": "maia",
+      "title": "Instalação Desportiva de Uso Público - Mera Comunicação Prévia de Abertura",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/atividades-economicas/instalacao-desportiva-de-uso-publico-mera-comunicacao-previa-de-abertura",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27",
+      "category": "Atividades Económicas"
+    },
+    {
+      "id": "maia-0fc82d2b7d526006",
+      "municipality": "maia",
+      "title": "Portal Geográfico",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/espaco-publico/portal-geografico",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27",
+      "category": "Espaço Público"
+    },
+    {
+      "id": "maia-0ffc5d66b089af96",
+      "municipality": "maia",
+      "title": "Ocupação do Domínio Público",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/espaco-publico/ocupacao-do-dominio-publico",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27",
+      "category": "Espaço Público"
+    },
+    {
+      "id": "maia-107c073388638442",
+      "municipality": "maia",
+      "title": "Cancelamento de Licença de Publicidade e ou Ocupação de Via Publica",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/atividades-economicas/cancelamento-de-licenca-de-publicidade-e-ou-ocupacao-de-via-publica",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27",
+      "category": "Atividades Económicas"
+    },
+    {
+      "id": "maia-1596870b48c1ea32",
+      "municipality": "maia",
+      "title": "Comunicação de Queima e Queimadas",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/protecao-civil-e-ambiente/comunicacao-de-queima-e-queimadas",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27",
+      "category": "Proteção Civil e Ambiente"
+    },
+    {
+      "id": "maia-167e13cdcbfacc4b",
+      "municipality": "maia",
+      "title": "Elogios/ Sugestões/Reclamações",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/elogios-sugestoes-reclamacoes",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27"
+    },
+    {
+      "id": "maia-18d85315cedd55e0",
+      "municipality": "maia",
+      "title": "Licença Especial de Ruído",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/licencas-taxas-e-vistorias/licenca-especial-de-ruido",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27"
+    },
+    {
+      "id": "maia-18e523fc09bf4342",
+      "municipality": "maia",
+      "title": "BUPI - Balcão Único do Prédio",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/urbanismo/bupi-balcao-unico-do-predio",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27",
+      "category": "Urbanismo"
+    },
+    {
+      "id": "maia-19d7cff596a3241c",
+      "municipality": "maia",
+      "title": "Comunicação prévia - Operação de Loteamento",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/urbanismo/comunicacao-previa/comunicacao-previa-operacao-de-loteamento",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27",
+      "category": "Comunicação Prévia"
+    },
+    {
+      "id": "maia-1b4eae3dd5e87d3e",
+      "municipality": "maia",
+      "title": "Certidão Inclusão em Zona Urbana Consolidada",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/urbanismo/averbamentos-e-certidoes/certidao-inclusao-em-zona-urbana-consolidada",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27",
+      "category": "Averbamentos e Certidões"
+    },
+    {
+      "id": "maia-27291fe555b7c129",
+      "municipality": "maia",
+      "title": "Gabinete Municipal de Informação e Apoio ao Consumidor (GMIAC)",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/acao-social/gabinete-municipal-de-informacao-e-apoio-ao-consumidor-gmiac",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27",
+      "category": "Ação Social"
+    },
+    {
+      "id": "maia-277e04fc8b437978",
+      "municipality": "maia",
+      "title": "Certidão comprovativa de alteração ou confirmação toponímica e ou número de polícia",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/urbanismo/averbamentos-e-certidoes/certidao-comprovativa-de-alteracao-ou-confirmacao-toponimica-e-ou-numero-de-policia",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27",
+      "category": "Averbamentos e Certidões"
+    },
+    {
+      "id": "maia-27e747135c8083a3",
+      "municipality": "maia",
+      "title": "Competências/atribuições da PM",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/servico-de-policia-municipal-e-fiscalizacao/competencias-atribuicoes-da-pm",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27",
+      "category": "Serviço de Polícia Municipal e Fiscalização"
+    },
+    {
+      "id": "maia-29afc7574de360fd",
+      "municipality": "maia",
+      "title": "O que fazer com o meu frigorifico avariado?",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/o-que-fazer-com-o-meu-frigorifico-avariado",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27"
+    },
+    {
+      "id": "maia-2b2a0cceb4fcb1e3",
+      "municipality": "maia",
+      "title": "Mera Comunicação Prévia de Espetáculos de Natureza Artística",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/escolas-educacao-e-cultura/mera-comunicacao-previa-de-espetaculos-de-natureza-artistica",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27",
+      "category": "Escolas, Educação e Cultura"
+    },
+    {
+      "id": "maia-302a09a3f1a6f1bf",
+      "municipality": "maia",
+      "title": "Destaque de parcela",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/urbanismo/averbamentos-e-certidoes/destaque-de-parcela",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27",
+      "category": "Averbamentos e Certidões"
+    },
+    {
+      "id": "maia-307d7545ee9e9d9c",
+      "municipality": "maia",
+      "title": "Recolha de Animais Errantes",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/voluntariado-e-instituicoes-de-apoio-a-pessoas-e-animais/gabinete-veterinario/recolha-de-animais-errantes",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27",
+      "category": "Gabinete Veterinário"
+    },
+    {
+      "id": "maia-311c35da1ba3dc28",
+      "municipality": "maia",
+      "title": "Informação Prévia de Alteração de Utilização",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/urbanismo/informacao-previa/informacao-previa-de-alteracao-de-utilizacao",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27",
+      "category": "Informação Prévia"
+    },
+    {
+      "id": "maia-36c86f5df666e132",
+      "municipality": "maia",
+      "title": "Exploração Modalidades Afins Jogos Fortuna Azar Outras Formas Jogo",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/atividades-economicas/exploracao-modalidades-afins-jogos-fortuna-azar-outras-formas-jogo",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27",
+      "category": "Atividades Económicas"
+    },
+    {
+      "id": "maia-3917c8f5660dbb12",
+      "municipality": "maia",
+      "title": "Concessão de Benefícios Públicos - Apoio cultural e recreativo",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/escolas-educacao-e-cultura/concessao-de-beneficios-publicos-apoio-cultural-e-recreativo",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27",
+      "category": "Escolas, Educação e Cultura"
+    },
+    {
+      "id": "maia-392f316fc771dbd1",
+      "municipality": "maia",
+      "title": "Sepultamento (Inumação)",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/cemiterios/sepultamento-inumacao",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27",
+      "category": "Cemitérios"
+    },
+    {
+      "id": "maia-395915c002d7a44e",
+      "municipality": "maia",
+      "title": "Licença Parcial para Construção de Estruturas",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/urbanismo/licencas-diversas/licenca-parcial-para-construcao-de-estruturas",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27",
+      "category": "Licenças diversas"
+    },
+    {
+      "id": "maia-3af2d6911e9eb69b",
+      "municipality": "maia",
+      "title": "Certidão de Propriedade Horizontal",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/urbanismo/averbamentos-e-certidoes/certidao-de-propriedade-horizontal",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27",
+      "category": "Averbamentos e Certidões"
+    },
+    {
+      "id": "maia-3b1c387bd404d6c5",
+      "municipality": "maia",
+      "title": "Autorização de Estacionamento Privativo",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/transito-e-estacionamento/autorizacao-de-estacionamento-privativo",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27",
+      "category": "Trânsito e Estacionamento"
+    },
+    {
+      "id": "maia-3c470e60e7144ed4",
+      "municipality": "maia",
+      "title": "Depósito da Ficha Técnica de Habitação",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/urbanismo/requerimentos-varios/deposito-da-ficha-tecnica-de-habitacao",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27",
+      "category": "Requerimentos vários"
+    },
+    {
+      "id": "maia-3db0fe9f38c5a717",
+      "municipality": "maia",
+      "title": "Certidão comprovativa da localização do imóvel em ARU/ORU (antes do início da obra)",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/urbanismo/areas-de-reabilitacao-urbana/certidao-comprovativa-da-localizacao-do-imovel-em-aru-oru-antes-do-inicio-da-obra",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27",
+      "category": "Áreas de Reabilitação Urbana"
+    },
+    {
+      "id": "maia-3ebbf3e60ce20fb0",
+      "municipality": "maia",
+      "title": "Licença Especial de Obras Inacabadas",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/urbanismo/licencas-diversas/licenca-especial-de-obras-inacabadas",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27",
+      "category": "Licenças diversas"
+    },
+    {
+      "id": "maia-403178e08ea29386",
+      "municipality": "maia",
+      "title": "Informação Prévia - Obras de Edificação",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/urbanismo/informacao-previa/informacao-previa-obras-de-edificacao",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27",
+      "category": "Informação Prévia"
+    },
+    {
+      "id": "maia-43813423266ca351",
+      "municipality": "maia",
+      "title": "Pretendo organizar um evento (procissão, prova desportiva, festa popular, etc.), o que devo fazer?",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/pretendo-organizar-um-evento-procissao-prova-desportiva-festa-popular-etc-o-que-devo-fazer",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27"
+    },
+    {
+      "id": "maia-49f851f47c52aff3",
+      "municipality": "maia",
+      "title": "Divisionamento em regime de propriedade horizontal",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/urbanismo/diversos-urbanismo/divisionamento-em-regime-de-propriedade-horizontal",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27",
+      "category": "Diversos Urbanismo"
+    },
+    {
+      "id": "maia-4af644821a27b00a",
+      "municipality": "maia",
+      "title": "Exumação e/ou Transferências",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/cemiterios/exumacao-e-ou-transferencias",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27",
+      "category": "Cemitérios"
+    },
+    {
+      "id": "maia-4e3adb7d2c8724c8",
+      "municipality": "maia",
+      "title": "Comunicação de veículos abandonados",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/transito-e-estacionamento/comunicacao-de-veiculos-abandonados",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27",
+      "category": "Trânsito e Estacionamento"
+    },
+    {
+      "id": "maia-4ea5ae77b597e478",
+      "municipality": "maia",
+      "title": "Concessão de terreno",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/cemiterios/concessao-de-terreno",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27",
+      "category": "Cemitérios"
+    },
+    {
+      "id": "maia-596399a03e4bca7e",
+      "municipality": "maia",
+      "title": "Recolha de resíduos urbanos recicláveis em residências, comércios e restauração",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/gestao-de-residuos/recolha-de-residuos-urbanos-reciclaveis-em-residencias-comercios-e-restauracao",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27",
+      "category": "Gestão de Resíduos"
+    },
+    {
+      "id": "maia-5c8ca1b74bf7a51b",
+      "municipality": "maia",
+      "title": "Prorrogação de prazo",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/urbanismo/requerimentos-varios/prorrogacao-de-prazo",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27",
+      "category": "Requerimentos vários"
+    },
+    {
+      "id": "maia-5da075bbabc53ca3",
+      "municipality": "maia",
+      "title": "Vacinação antirrábica e identificação eletrónica",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/voluntariado-e-instituicoes-de-apoio-a-pessoas-e-animais/gabinete-veterinario/vacinacao-antirrabica-e-identificacao-eletronica",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27",
+      "category": "Gabinete Veterinário"
+    },
+    {
+      "id": "maia-5fb5ce043fc04b01",
+      "municipality": "maia",
+      "title": "Candidatura a Procedimentos Concursais",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/recursos-humanos/candidatura-a-procedimentos-concursais",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27",
+      "category": "Recursos Humanos"
+    },
+    {
+      "id": "maia-5fdf1d50aea3627f",
+      "municipality": "maia",
+      "title": "Candidatura para Habitação Social",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/acao-social/candidatura-para-habitacao-social",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27",
+      "category": "Ação Social"
+    },
+    {
+      "id": "maia-61d53721d186af21",
+      "municipality": "maia",
+      "title": "MAIA ENERGY HUB - Serviço de apoio à eficiência energética",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/maia-energy-hub-servico-de-apoio-a-eficiencia-energetica/maia-energy-hub-servico-de-apoio-a-eficiencia-energetica",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27",
+      "category": "MAIA ENERGY HUB - Serviço de apoio à eficiência energética"
+    },
+    {
+      "id": "maia-61e57043ba6a976e",
+      "municipality": "maia",
+      "title": "Licenciamento de Obras – Urbanização",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/urbanismo/licenciamento/licenciamento-de-obras-urbanizacao",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27",
+      "category": "Licenciamento"
+    },
+    {
+      "id": "maia-6493b1a715e50239",
+      "municipality": "maia",
+      "title": "Vistoria de Segurança e Salubridade",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/licencas-taxas-e-vistorias/vistoria-de-seguranca-e-salubridade",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27"
+    },
+    {
+      "id": "maia-6497a1ff6134d317",
+      "municipality": "maia",
+      "title": "Chave de Afetos – Teleassistência para Idosos",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/acao-social/chave-de-afetos-teleassistencia-para-idosos",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27",
+      "category": "Ação Social"
+    },
+    {
+      "id": "maia-65008e519d169792",
+      "municipality": "maia",
+      "title": "Emissão Licença de obras de Urbanização",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/urbanismo/autorizacao-alteracao-a-utilizacao-e-licencas/emissao-licenca-de-obras-de-urbanizacao",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27",
+      "category": "Autorização/Alteração à utilização e Licenças"
+    },
+    {
+      "id": "maia-665dbf9e18636552",
+      "municipality": "maia",
+      "title": "Isenção ou redução de pagamento de taxa ou receita municipal",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/reproducao-de-documentos-isencao-de-taxas/isencao-ou-reducao-de-pagamento-de-taxa-ou-receita-municipal",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27",
+      "category": "Reprodução de documentos/isenção de taxas"
+    },
+    {
+      "id": "maia-6a1e44438c98efdb",
+      "municipality": "maia",
+      "title": "Certidão comprovativa de que a construção é anterior a 1951 e confirmativa da sua situação",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/urbanismo/averbamentos-e-certidoes/certidao-comprovativa-de-que-a-construcao-e-anterior-a-1951-e-confirmativa-da-sua-situacao",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27",
+      "category": "Averbamentos e Certidões"
+    },
+    {
+      "id": "maia-6a5e99d19e3a5415",
+      "municipality": "maia",
+      "title": "Informação Prévia - Outras Operações Urbanísticas",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/urbanismo/informacao-previa/informacao-previa-outras-operacoes-urbanisticas",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27",
+      "category": "Informação Prévia"
+    },
+    {
+      "id": "maia-6dc7c429f7acf89d",
+      "municipality": "maia",
+      "title": "Utilização de Artigos de Pirotecnia",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/protecao-civil-e-ambiente/utilizacao-de-artigos-de-pirotecnia",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27",
+      "category": "Proteção Civil e Ambiente"
+    },
+    {
+      "id": "maia-6e4c49c75706a629",
+      "municipality": "maia",
+      "title": "Adoção de Animais",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/voluntariado-e-instituicoes-de-apoio-a-pessoas-e-animais/gabinete-veterinario/adocao-de-animais",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27",
+      "category": "Gabinete Veterinário"
+    },
+    {
+      "id": "maia-782dff6ce97f3eb7",
+      "municipality": "maia",
+      "title": "Devolução de caução prestada para garantia da correta execução das obras de urbanização",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/urbanismo/diversos-urbanismo/devolucao-de-caucao-prestada-para-garantia-da-correta-execucao-das-obras-de-urbanizacao",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27",
+      "category": "Diversos Urbanismo"
+    },
+    {
+      "id": "maia-78d219092fcd14ec",
+      "municipality": "maia",
+      "title": "Quero pedir um local de estacionamento, o que tenho de fazer?",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/quero-pedir-um-local-de-estacionamento-o-que-tenho-de-fazer",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27"
+    },
+    {
+      "id": "maia-7a7d38d2743e7185",
+      "municipality": "maia",
+      "title": "Reprodução de Documentos",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/reproducao-de-documentos-isencao-de-taxas/reproducao-de-documentos",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27",
+      "category": "Reprodução de documentos/isenção de taxas"
+    },
+    {
+      "id": "maia-7d7ada3b7010892c",
+      "municipality": "maia",
+      "title": "Controlo Metrológico - Verificação Periódica de Instrumentos",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/licencas-taxas-e-vistorias/controlo-metrologico-verificacao-periodica-de-instrumentos",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27"
+    },
+    {
+      "id": "maia-7ecf1fa34a5ff155",
+      "municipality": "maia",
+      "title": "Pedido ou Cancelamento de Lugar de Feira ou Mercado",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/atividades-economicas/pedido-ou-cancelamento-de-lugar-de-feira-ou-mercado",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27",
+      "category": "Atividades Económicas"
+    },
+    {
+      "id": "maia-7ef54253ebd574a1",
+      "municipality": "maia",
+      "title": "Reprodução de documentos de Elementos de Processos de Obras",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/urbanismo/requerimentos-varios/reproducao-de-documentos-de-elementos-de-processos-de-obras",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27",
+      "category": "Requerimentos vários"
+    },
+    {
+      "id": "maia-80bd5615637cbbf4",
+      "municipality": "maia",
+      "title": "Cabaz de Natal",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/acao-social/cabaz-de-natal59",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27",
+      "category": "Ação Social"
+    },
+    {
+      "id": "maia-82b88d6fad37f850",
+      "municipality": "maia",
+      "title": "Comunicação Prévia - Remodelação de Terrenos",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/urbanismo/comunicacao-previa/comunicacao-previa-remodelacao-de-terrenos",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27",
+      "category": "Comunicação Prévia"
+    },
+    {
+      "id": "maia-8398085b83e145c8",
+      "municipality": "maia",
+      "title": "Certidão Comprovativa Da Boa Execução Obras De Urbanização",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/urbanismo/averbamentos-e-certidoes/certidao-comprovativa-da-boa-execucao-obras-de-urbanizacao",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27",
+      "category": "Averbamentos e Certidões"
+    },
+    {
+      "id": "maia-84cefc18657f0cc0",
+      "municipality": "maia",
+      "title": "Certidão de capacidade construtiva para efeitos de IMI",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/urbanismo/averbamentos-e-certidoes/certidao-de-capacidade-construtiva-para-efeitos-de-imi",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27",
+      "category": "Averbamentos e Certidões"
+    },
+    {
+      "id": "maia-84f828e4d1e57dfd",
+      "municipality": "maia",
+      "title": "Registo de Ocorrências",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/registo-de-ocorrencias",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27"
+    },
+    {
+      "id": "maia-871e4e09e1c74766",
+      "municipality": "maia",
+      "title": "Concessão de Ossários / Columbários",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/cemiterios/concessao-de-ossarios-columbarios",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27",
+      "category": "Cemitérios"
+    },
+    {
+      "id": "maia-874a2817c735f881",
+      "municipality": "maia",
+      "title": "Ficha Técnica de Habitação",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/urbanismo/requerimentos-varios/ficha-tecnica-de-habitacao",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27",
+      "category": "Requerimentos vários"
+    },
+    {
+      "id": "maia-886a30d2c5f33709",
+      "municipality": "maia",
+      "title": "Inspeção / Reinspeção de Elevadores",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/licencas-taxas-e-vistorias/inspecao-reinspecao-de-elevadores",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27"
+    },
+    {
+      "id": "maia-890bd5e12f81a64f",
+      "municipality": "maia",
+      "title": "Informação Prévia - Obras de Urbanização",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/urbanismo/informacao-previa/informacao-previa-obras-de-urbanizacao",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27",
+      "category": "Informação Prévia"
+    },
+    {
+      "id": "maia-8a557cfd014cbd39",
+      "municipality": "maia",
+      "title": "Bolsas de estudo a jovens dotados de talento artístico, científico e mérito académico, para frequência do ensino superior",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/escolas-educacao-e-cultura/bolsas-de-estudo-a-jovens-dotados-de-talento-artistico-cientifico-e-merito-academico-para-frequencia-do-ensino-superior",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27",
+      "category": "Escolas, Educação e Cultura"
+    },
+    {
+      "id": "maia-8b45c42ef71e1de1",
+      "municipality": "maia",
+      "title": "Plano Diretor Municipal",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/urbanismo/plano-diretor-municipal",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27",
+      "category": "Urbanismo"
+    },
+    {
+      "id": "maia-8c8991227bd41ca5",
+      "municipality": "maia",
+      "title": "Comunicação de Obras Isentas de Controlo Prévio",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/urbanismo/comunicacao-previa/comunicacao-de-obras-isentas-de-controlo-previo",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27",
+      "category": "Comunicação Prévia"
+    },
+    {
+      "id": "maia-8d5b8bc6ba9920f9",
+      "municipality": "maia",
+      "title": "Averbamento / Substituição",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/urbanismo/averbamentos-e-certidoes/averbamento-substituicao",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27",
+      "category": "Averbamentos e Certidões"
+    },
+    {
+      "id": "maia-8d90c667463ad4b2",
+      "municipality": "maia",
+      "title": "Comunicação de Ninhos de Vespa Asiática",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/protecao-civil-e-ambiente/comunicacao-de-ninhos-de-vespa-asiatica",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27",
+      "category": "Proteção Civil e Ambiente"
+    },
+    {
+      "id": "maia-906e8c67a27afa4a",
+      "municipality": "maia",
+      "title": "Emissão de Licença obras demolição",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/urbanismo/autorizacao-alteracao-a-utilizacao-e-licencas/emissao-de-licenca-obras-demolicao",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27",
+      "category": "Autorização/Alteração à utilização e Licenças"
+    },
+    {
+      "id": "maia-916a5eca9e6b8374",
+      "municipality": "maia",
+      "title": "Licenciamento do Exercício da Realização de Provas e Manifestações Desportivas e Outras",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/atividades-economicas/licenciamento-do-exercicio-da-realizacao-de-provas-e-manifestacoes-desportivas-e-outras",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27",
+      "category": "Atividades Económicas"
+    },
+    {
+      "id": "maia-964b9b39eced3bf8",
+      "municipality": "maia",
+      "title": "Cremação e Depósito de Cinzas",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/cemiterios/cremacao-e-deposito-de-cinzas",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27",
+      "category": "Cemitérios"
+    },
+    {
+      "id": "maia-980c63dc8a718d52",
+      "municipality": "maia",
+      "title": "Comunicação Prévia - Obras de Demolição",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/urbanismo/comunicacao-previa/comunicacao-previa-obras-de-demolicao",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27",
+      "category": "Comunicação Prévia"
+    },
+    {
+      "id": "maia-98ccecc6a278921d",
+      "municipality": "maia",
+      "title": "Plano Municipal de Emergência Proteção Civil da Maia",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/protecao-civil-e-ambiente/plano-municipal-de-emergencia-protecao-civil-da-maia",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27",
+      "category": "Proteção Civil e Ambiente"
+    },
+    {
+      "id": "maia-99cbdc3a39c4b578",
+      "municipality": "maia",
+      "title": "Emissão de plantas",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/urbanismo/requerimentos-varios/emissao-de-plantas",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27",
+      "category": "Requerimentos vários"
+    },
+    {
+      "id": "maia-9cd21b56844911f8",
+      "municipality": "maia",
+      "title": "Recolha de resíduos verdes",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/gestao-de-residuos/recolha-de-residuos-verdes",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27",
+      "category": "Gestão de Resíduos"
+    },
+    {
+      "id": "maia-9def6877e0131ce9",
+      "municipality": "maia",
+      "title": "Licença de Distribuição de Impressos e ou Produtos Publicitários e Outras Ações Promocionais",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/atividades-economicas/licenca-de-distribuicao-de-impressos-e-ou-produtos-publicitarios-e-outras-acoes-promocionais",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27",
+      "category": "Atividades Económicas"
+    },
+    {
+      "id": "maia-a078f83f64d397aa",
+      "municipality": "maia",
+      "title": "Comprovação do Estado de Conservação de Imóvel - Vistorias",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/urbanismo/areas-de-reabilitacao-urbana/comprovacao-do-estado-de-conservacao-de-imovel-vistorias",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27",
+      "category": "Áreas de Reabilitação Urbana"
+    },
+    {
+      "id": "maia-a1445b5b70f60e35",
+      "municipality": "maia",
+      "title": "Comunicação Prévia - Obras de Edificação",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/urbanismo/comunicacao-previa/comunicacao-previa-obras-de-edificacao",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27",
+      "category": "Comunicação Prévia"
+    },
+    {
+      "id": "maia-a1c56f5373ba9cdd",
+      "municipality": "maia",
+      "title": "Publicidade não sujeita a licenciamento, nem mera comunicação prévia",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/atividades-economicas/publicidade-nao-sujeita-a-licenciamento-nem-mera-comunicacao-previa",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27",
+      "category": "Atividades Económicas"
+    },
+    {
+      "id": "maia-a311e21c15c7980f",
+      "municipality": "maia",
+      "title": "Cancelamento de Licença de Publicidade em viaturas",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/licencas-taxas-e-vistorias/cancelamento-de-licenca-de-publicidade-em-viaturas",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27"
+    },
+    {
+      "id": "maia-a38189bdcf1abdef",
+      "municipality": "maia",
+      "title": "Mera comunicação prévia de Publicidade/ocupação de domínio público",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/atividades-economicas/mera-comunicacao-previa-de-publicidade-ocupacao-de-dominio-publico",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27",
+      "category": "Atividades Económicas"
+    },
+    {
+      "id": "maia-ad70596f5773624e",
+      "municipality": "maia",
+      "title": "Averbamento de Licença de Publicidade e ou Ocupação de Via Publica",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/atividades-economicas/averbamento-de-licenca-de-publicidade-e-ou-ocupacao-de-via-publica",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27",
+      "category": "Atividades Económicas"
+    },
+    {
+      "id": "maia-b0d5dc8280121a2c",
+      "municipality": "maia",
+      "title": "Programa Municipal de Emergência Social",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/acao-social/programa-municipal-de-emergencia-social",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27",
+      "category": "Ação Social"
+    },
+    {
+      "id": "maia-b1c094c3eb8a230f",
+      "municipality": "maia",
+      "title": "Fiscalização e contraordenações – EMEM",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/fiscalizacao-e-contraordenacoes-emem/fiscalizacao-e-contraordenacoes-emem",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27",
+      "category": "Fiscalização e contraordenações – EMEM"
+    },
+    {
+      "id": "maia-b3e100511eb44a38",
+      "municipality": "maia",
+      "title": "Comunicação Prévia - Obras de Urbanização",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/urbanismo/comunicacao-previa/comunicacao-previa-obras-de-urbanizacao",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27",
+      "category": "Comunicação Prévia"
+    },
+    {
+      "id": "maia-b419d113dc3b1c3f",
+      "municipality": "maia",
+      "title": "COMPROMISSUM - Centro de Voluntariado da Maia",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/voluntariado-e-instituicoes-de-apoio-a-pessoas-e-animais/banco-de-voluntarios/compromissum-centro-de-voluntariado-da-maia",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27",
+      "category": "Banco de Voluntários"
+    },
+    {
+      "id": "maia-b5197fa6af60d0db",
+      "municipality": "maia",
+      "title": "Horários de recolha de lixo",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/gestao-de-residuos/horarios-de-recolha-de-lixo",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27",
+      "category": "Gestão de Resíduos"
+    },
+    {
+      "id": "maia-b79e0cc3c86b6e40",
+      "municipality": "maia",
+      "title": "Agendar Atendimento",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/agendar-atendimento",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27"
+    },
+    {
+      "id": "maia-b9a1f5ea43a9146e",
+      "municipality": "maia",
+      "title": "Certificado de Registo de Cidadão da UE",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/servico-de-policia-municipal-e-fiscalizacao/certificado-de-registo-de-cidadao-da-ue",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27",
+      "category": "Serviço de Polícia Municipal e Fiscalização"
+    },
+    {
+      "id": "maia-ba067e5e68330673",
+      "municipality": "maia",
+      "title": "Auxílios económicos para refeição escolar, cadernos de atividades, material escolar e visitas de estudo",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/escolas-educacao-e-cultura/auxilios-economicos-para-refeicao-escolar-cadernos-de-atividades-material-escolar-e-visitas-de-estudo",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27",
+      "category": "Escolas, Educação e Cultura"
+    },
+    {
+      "id": "maia-ba1e99dd420eb792",
+      "municipality": "maia",
+      "title": "Certidão de Destaque de Parcela",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/urbanismo/averbamentos-e-certidoes/certidao-de-destaque-de-parcela",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27",
+      "category": "Averbamentos e Certidões"
+    },
+    {
+      "id": "maia-bf3950b22dc00bb6",
+      "municipality": "maia",
+      "title": "Cartão de estacionamento para pessoas com deficiência condicionadas na sua mobilidade",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/transito-e-estacionamento/cartao-de-estacionamento-para-pessoas-com-deficiencia-condicionadas-na-sua-mobilidade",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27",
+      "category": "Trânsito e Estacionamento"
+    },
+    {
+      "id": "maia-c946ecc2170f0b2b",
+      "municipality": "maia",
+      "title": "Licenciamento de Obras - Remodelação de Terrenos",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/urbanismo/licenciamento/licenciamento-de-obras-remodelacao-de-terrenos",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27",
+      "category": "Licenciamento"
+    },
+    {
+      "id": "maia-cc4b04b5f7b7bcb8",
+      "municipality": "maia",
+      "title": "Emissão Licença Operações de Loteamento",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/urbanismo/autorizacao-alteracao-a-utilizacao-e-licencas/emissao-licenca-operacoes-de-loteamento",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27",
+      "category": "Autorização/Alteração à utilização e Licenças"
+    },
+    {
+      "id": "maia-cdcc6f75ea2053d4",
+      "municipality": "maia",
+      "title": "Averbamento de Alvará de Concessão de Terreno / Ossário e 2.ª via",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/cemiterios/averbamento-de-alvara-de-concessao-de-terreno-ossario-e-2-via",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27",
+      "category": "Cemitérios"
+    },
+    {
+      "id": "maia-d0c94f2ad8a5dc5a",
+      "municipality": "maia",
+      "title": "Maia Natal 2026",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/escolas-educacao-e-cultura/maia-natal-2026/maia-natal-2026",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27",
+      "category": "Maia Natal 2026"
+    },
+    {
+      "id": "maia-d46faa16b6fbb9c1",
+      "municipality": "maia",
+      "title": "Autorização para Interrupção / Condicionamento Trânsito",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/transito-e-estacionamento/autorizacao-para-interrupcao-condicionamento-transito",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27",
+      "category": "Trânsito e Estacionamento"
+    },
+    {
+      "id": "maia-d5392d2762470dd8",
+      "municipality": "maia",
+      "title": "Estou interessado em voluntariado, o que devo fazer?",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/estou-interessado-em-voluntariado-o-que-devo-fazer",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27"
+    },
+    {
+      "id": "maia-d59e5a56fc8d35d0",
+      "municipality": "maia",
+      "title": "Recursos Sociais Município da Maia",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/acao-social/recursos-sociais-municipio-da-maia",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27",
+      "category": "Ação Social"
+    },
+    {
+      "id": "maia-d80491c0f4f20201",
+      "municipality": "maia",
+      "title": "Junção de Elementos e Documentos",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/urbanismo/requerimentos-varios/juncao-de-elementos-e-documentos",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27",
+      "category": "Requerimentos vários"
+    },
+    {
+      "id": "maia-d924a92807251387",
+      "municipality": "maia",
+      "title": "Licenciamento de Obras - Demolição",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/urbanismo/licenciamento/licenciamento-de-obras-demolicao",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27",
+      "category": "Licenciamento"
+    },
+    {
+      "id": "maia-dafe7a1c4a44a2a0",
+      "municipality": "maia",
+      "title": "Transporte Escolar",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/escolas-educacao-e-cultura/transporte-escolar",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27",
+      "category": "Escolas, Educação e Cultura"
+    },
+    {
+      "id": "maia-dcef75daa797ebc5",
+      "municipality": "maia",
+      "title": "Recolha de Cadáver de Animais na Via Pública",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/voluntariado-e-instituicoes-de-apoio-a-pessoas-e-animais/gabinete-veterinario/recolha-de-cadaver-de-animais-na-via-publica",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27",
+      "category": "Gabinete Veterinário"
+    },
+    {
+      "id": "maia-df0d09a2cd4b6140",
+      "municipality": "maia",
+      "title": "Emissão de Licença de obras de edificação",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/urbanismo/autorizacao-alteracao-a-utilizacao-e-licencas/emissao-de-licenca-de-obras-de-edificacao",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27",
+      "category": "Autorização/Alteração à utilização e Licenças"
+    },
+    {
+      "id": "maia-e23589b03b6f2307",
+      "municipality": "maia",
+      "title": "Licenciamento de Publicidade",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/atividades-economicas/licenciamento-de-publicidade",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27",
+      "category": "Atividades Económicas"
+    },
+    {
+      "id": "maia-e405a681c1760b6c",
+      "municipality": "maia",
+      "title": "Cartão Escolar Municipal",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/escolas-educacao-e-cultura/cartao-escolar-municipal",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27",
+      "category": "Escolas, Educação e Cultura"
+    },
+    {
+      "id": "maia-e5dd564d1c27b96f",
+      "municipality": "maia",
+      "title": "Licenciamento de Obras - Edificação",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/urbanismo/licenciamento/licenciamento-de-obras-edificacao",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27",
+      "category": "Licenciamento"
+    },
+    {
+      "id": "maia-e61b6288941ce969",
+      "municipality": "maia",
+      "title": "Tarifários Sociais de Água, Saneamento e Resíduos Urbanos da Maia",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/acao-social/tarifarios-sociais-de-agua-saneamento-e-residuos-urbanos-da-maia",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27",
+      "category": "Ação Social"
+    },
+    {
+      "id": "maia-e6348c608fab7f34",
+      "municipality": "maia",
+      "title": "Autorização para Estacionamento de Pessoa com Mobilidade Reduzida",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/transito-e-estacionamento/autorizacao-para-estacionamento-de-pessoa-com-mobilidade-reduzida",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27",
+      "category": "Trânsito e Estacionamento"
+    },
+    {
+      "id": "maia-e6ede729cfb978b3",
+      "municipality": "maia",
+      "title": "Autorização à Utilização de edifício",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/urbanismo/autorizacao-alteracao-a-utilizacao-e-licencas/autorizacao-a-utilizacao-de-edificio",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27",
+      "category": "Autorização/Alteração à utilização e Licenças"
+    },
+    {
+      "id": "maia-e737a04834893624",
+      "municipality": "maia",
+      "title": "Quero construir uma casa, o que tenho de fazer?",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/quero-construir-uma-casa-o-que-tenho-de-fazer",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27"
+    },
+    {
+      "id": "maia-e86132132fccf42a",
+      "municipality": "maia",
+      "title": "Emissão de Licença de obras de Remodelação de Terrenos",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/urbanismo/autorizacao-alteracao-a-utilizacao-e-licencas/emissao-de-licenca-de-obras-de-remodelacao-de-terrenos",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27",
+      "category": "Autorização/Alteração à utilização e Licenças"
+    },
+    {
+      "id": "maia-f463a3526fe87511",
+      "municipality": "maia",
+      "title": "Alargamento do horário de funcionamento de estabelecimento comercial",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/licencas-taxas-e-vistorias/alargamento-do-horario-de-funcionamento-de-estabelecimento-comercial",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27"
+    },
+    {
+      "id": "maia-f4dc17cab583491f",
+      "municipality": "maia",
+      "title": "Ocupação de Subsolo - Instalação de Infraestruturas",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/espaco-publico/ocupacao-de-subsolo-instalacao-de-infraestruturas",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27",
+      "category": "Espaço Público"
+    },
+    {
+      "id": "maia-f78c54c140cc08c6",
+      "municipality": "maia",
+      "title": "Comunicação prévia - Outras Operações Urbanísticas",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/urbanismo/comunicacao-previa/comunicacao-previa-outras-operacoes-urbanisticas",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27",
+      "category": "Comunicação Prévia"
+    },
+    {
+      "id": "maia-f8cd5bd8aa711af2",
+      "municipality": "maia",
+      "title": "Informação Prévia - Operações de Loteamento",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/urbanismo/informacao-previa/informacao-previa-operacoes-de-loteamento",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27",
+      "category": "Informação Prévia"
+    },
+    {
+      "id": "maia-f98eb1fdef3987ca",
+      "municipality": "maia",
+      "title": "Participação de Sinistro",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/licencas-taxas-e-vistorias/participacao-de-sinistro",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27"
+    },
+    {
+      "id": "maia-fb88eab85de922a2",
+      "municipality": "maia",
+      "title": "Junção de Projetos de Especialidades",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/urbanismo/requerimentos-varios/juncao-de-projetos-de-especialidades",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27",
+      "category": "Requerimentos vários"
+    },
+    {
+      "id": "maia-fba3540eaa6f85ed",
+      "municipality": "maia",
+      "title": "Bolsa de Estudos",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/escolas-educacao-e-cultura/bolsa-de-estudos",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27",
+      "category": "Escolas, Educação e Cultura"
+    },
+    {
+      "id": "maia-fbc59ebc76ff6325",
+      "municipality": "maia",
+      "title": "Biblioteca Municipal - Cartão de utilizador individual",
+      "official_url": "https://diretorio.cm-maia.pt/diretorio-de-servicos/directorio_de_servicos/escolas-educacao-e-cultura/biblioteca-municipal-cartao-de-utilizador-individual",
+      "authentication": "unknown",
+      "source": "https://diretorio.cm-maia.pt/todos-os-servicos-de-a-a-z",
+      "verified_on": "2026-11-27",
+      "category": "Escolas, Educação e Cultura"
+    },
+    {
+      "id": "ponte_de_lima-00b38d64fbdf95de",
+      "municipality": "ponte_de_lima",
+      "title": "Prolongamento de Horário (Componente de Apoio à Família) Educação Pré-Escolar",
+      "official_url": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios/detalhe-de-procedimento?procedure_id=QVRFI0FTRSNBU0VfRElWMDcjNA==&model_id=4",
+      "authentication": "unknown",
+      "source": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios",
+      "verified_on": "2026-11-27"
+    },
+    {
+      "id": "ponte_de_lima-015d47ebaeb24389",
+      "municipality": "ponte_de_lima",
+      "title": "Ficha Técnica de Habitação",
+      "official_url": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios/detalhe-de-procedimento?procedure_id=T0JQI09ORVJFRFBETSNET1VESVYwNCM4&model_id=8",
+      "authentication": "unknown",
+      "source": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios",
+      "verified_on": "2026-11-27"
+    },
+    {
+      "id": "ponte_de_lima-08dc91813ab17e2a",
+      "municipality": "ponte_de_lima",
+      "title": "Certidão de Destaque",
+      "official_url": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios/detalhe-de-procedimento?procedure_id=T0JQI0NFUlQjRE9VQ0VSMTkjNQ==&model_id=5",
+      "authentication": "unknown",
+      "source": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios",
+      "verified_on": "2026-11-27"
+    },
+    {
+      "id": "ponte_de_lima-181f58081a4732c8",
+      "municipality": "ponte_de_lima",
+      "title": "Nova Licença",
+      "official_url": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios/detalhe-de-procedimento?procedure_id=T0JQI09ORVJFRFBETSNET1VESVYxNiMxMA==&model_id=10",
+      "authentication": "unknown",
+      "source": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios",
+      "verified_on": "2026-11-27"
+    },
+    {
+      "id": "ponte_de_lima-18c1c0029ad7f243",
+      "municipality": "ponte_de_lima",
+      "title": "Vistoria Final de Instalação de Armazenamento de GPL e Abastecimento de Combustíveis Líquidos (Classes A1; A2; A3)",
+      "official_url": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios/detalhe-de-procedimento?procedure_id=T0JQI0NPTUIjRE9VRElWMjkjMw==&model_id=3",
+      "authentication": "unknown",
+      "source": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios",
+      "verified_on": "2026-11-27"
+    },
+    {
+      "id": "ponte_de_lima-1ca3de7df2a1f881",
+      "municipality": "ponte_de_lima",
+      "title": "Apresentação de Denúncia",
+      "official_url": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios/detalhe-de-procedimento?procedure_id=RklTI09CUCNJUEYjMQ==&model_id=1",
+      "authentication": "unknown",
+      "source": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios",
+      "verified_on": "2026-11-27"
+    },
+    {
+      "id": "ponte_de_lima-2e1f96b1289433a7",
+      "municipality": "ponte_de_lima",
+      "title": "Alteração à Licença de Loteamento",
+      "official_url": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios/detalhe-de-procedimento?procedure_id=T0JQI0FMVExPVEUjRE9VTElDMDEjNw==&model_id=7",
+      "authentication": "unknown",
+      "source": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios",
+      "verified_on": "2026-11-27"
+    },
+    {
+      "id": "ponte_de_lima-2e56558ebf887eda",
+      "municipality": "ponte_de_lima",
+      "title": "Material Escolar (Ação Social Escolar - 1º Ciclo)",
+      "official_url": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios/detalhe-de-procedimento?procedure_id=QVRFI0FTRSNBU0VfRElWMDkjMw==&model_id=3",
+      "authentication": "unknown",
+      "source": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios",
+      "verified_on": "2026-11-27"
+    },
+    {
+      "id": "ponte_de_lima-3058810422aa3f6c",
+      "municipality": "ponte_de_lima",
+      "title": "Certidão de constituição de prédio em Regime de Propriedade",
+      "official_url": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios/detalhe-de-procedimento?procedure_id=T0JQI0NFUlQjRE9VQ0VSMDkjMTA=&model_id=10",
+      "authentication": "unknown",
+      "source": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios",
+      "verified_on": "2026-11-27"
+    },
+    {
+      "id": "ponte_de_lima-3193614387358dc3",
+      "municipality": "ponte_de_lima",
+      "title": "Prorrogação de Prazo de Execução de Obra de Edificação",
+      "official_url": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios/detalhe-de-procedimento?procedure_id=T0JQI09ORVJFRFBETSNET1VQUlowMiM2&model_id=6",
+      "authentication": "unknown",
+      "source": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios",
+      "verified_on": "2026-11-27"
+    },
+    {
+      "id": "ponte_de_lima-32fd09c0bdbf7cae",
+      "municipality": "ponte_de_lima",
+      "title": "Buscas de Processos",
+      "official_url": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios/detalhe-de-procedimento?procedure_id=T0JQI0RJVkVSU09TI0RPVURJVjAzIzQ=&model_id=4",
+      "authentication": "unknown",
+      "source": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios",
+      "verified_on": "2026-11-27"
+    },
+    {
+      "id": "ponte_de_lima-33591dff29afe4fb",
+      "municipality": "ponte_de_lima",
+      "title": "Comunicação prévia ou comunicação prévia com prazo para a utilização ou alteração de uso de edifício ou fração",
+      "official_url": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios/detalhe-de-procedimento?procedure_id=T0JQI1VUSUwjRE9QVVRJMDEjMQ==&model_id=1",
+      "authentication": "unknown",
+      "source": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios",
+      "verified_on": "2026-11-27"
+    },
+    {
+      "id": "ponte_de_lima-37d3e73e47a2257d",
+      "municipality": "ponte_de_lima",
+      "title": "Pedido de Compropriedade",
+      "official_url": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios/detalhe-de-procedimento?procedure_id=T0JQI0NFUlQjRE9VRElWMDcjNg==&model_id=6",
+      "authentication": "unknown",
+      "source": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios",
+      "verified_on": "2026-11-27"
+    },
+    {
+      "id": "ponte_de_lima-38e501aadc41dcd5",
+      "municipality": "ponte_de_lima",
+      "title": "Pedido Geral/Exposição",
+      "official_url": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios/detalhe-de-procedimento?procedure_id=T0JQI09ORVJFRFBETSNET1VESVYyMyMxMw==&model_id=13",
+      "authentication": "unknown",
+      "source": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios",
+      "verified_on": "2026-11-27"
+    },
+    {
+      "id": "ponte_de_lima-3f7f5095245f27e4",
+      "municipality": "ponte_de_lima",
+      "title": "Vistoria Prévia - Conservação, Segurança e Salubridade",
+      "official_url": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios/detalhe-de-procedimento?procedure_id=T0JQI09ORVJFRFBETSNET1VESVYxOSM2&model_id=6",
+      "authentication": "unknown",
+      "source": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios",
+      "verified_on": "2026-11-27"
+    },
+    {
+      "id": "ponte_de_lima-40119197e9c4ab1a",
+      "municipality": "ponte_de_lima",
+      "title": "Fornecimento de Projeto Gratuito",
+      "official_url": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios/detalhe-de-procedimento?procedure_id=T0JQI09ORVJFRFBETSNET1VMSUMwNCM2&model_id=6",
+      "authentication": "unknown",
+      "source": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios",
+      "verified_on": "2026-11-27"
+    },
+    {
+      "id": "ponte_de_lima-403b91cdfc56e026",
+      "municipality": "ponte_de_lima",
+      "title": "Pedido de Cedência de Viaturas Municipais",
+      "official_url": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios/detalhe-de-procedimento?procedure_id=QVRFI0VEVSNFRFVfRElWMDEjMQ==&model_id=1",
+      "authentication": "unknown",
+      "source": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios",
+      "verified_on": "2026-11-27"
+    },
+    {
+      "id": "ponte_de_lima-42f1e6783161afb9",
+      "municipality": "ponte_de_lima",
+      "title": "Pedido de Desistência de Serviço",
+      "official_url": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios/detalhe-de-procedimento?procedure_id=QVRFI0FTRSNBU0VfRElWMDgjMw==&model_id=3",
+      "authentication": "unknown",
+      "source": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios",
+      "verified_on": "2026-11-27"
+    },
+    {
+      "id": "ponte_de_lima-46ebbeab65fddb8a",
+      "municipality": "ponte_de_lima",
+      "title": "Ação Social Escolar do Pré-Escolar",
+      "official_url": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios/detalhe-de-procedimento?procedure_id=QVRFI0FTRSNBU0VfRElWMDEjMw==&model_id=3",
+      "authentication": "unknown",
+      "source": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios",
+      "verified_on": "2026-11-27"
+    },
+    {
+      "id": "ponte_de_lima-4972491d8a38ce61",
+      "municipality": "ponte_de_lima",
+      "title": "Pedido de Cópias/2ª Via de Documentos",
+      "official_url": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios/detalhe-de-procedimento?procedure_id=T0JQI09ORVJFRFBETSNET1VESVYwMSMxMg==&model_id=12",
+      "authentication": "unknown",
+      "source": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios",
+      "verified_on": "2026-11-27"
+    },
+    {
+      "id": "ponte_de_lima-4ce2b70a75f5f4cb",
+      "municipality": "ponte_de_lima",
+      "title": "Parecer para a utilização não Agrícola de Terreno Inserido na RAN",
+      "official_url": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios/detalhe-de-procedimento?procedure_id=T0JQI0NFUlQjRE9VRElWMTcjNA==&model_id=4",
+      "authentication": "unknown",
+      "source": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios",
+      "verified_on": "2026-11-27"
+    },
+    {
+      "id": "ponte_de_lima-500313eb13461736",
+      "municipality": "ponte_de_lima",
+      "title": "Revisão do Processo de Ação Social Escolar - Pré-Escolar",
+      "official_url": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios/detalhe-de-procedimento?procedure_id=QVRFI0FTRSNBU0VfRElWMDYjMw==&model_id=3",
+      "authentication": "unknown",
+      "source": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios",
+      "verified_on": "2026-11-27"
+    },
+    {
+      "id": "ponte_de_lima-5046a934a3c57173",
+      "municipality": "ponte_de_lima",
+      "title": "Ação Social Escolar do 1.º Ciclo",
+      "official_url": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios/detalhe-de-procedimento?procedure_id=QVRFI0FTRSNBU0VfRElWMDIjNA==&model_id=4",
+      "authentication": "unknown",
+      "source": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios",
+      "verified_on": "2026-11-27"
+    },
+    {
+      "id": "ponte_de_lima-558f3300db402473",
+      "municipality": "ponte_de_lima",
+      "title": "Aperfeiçoamento do Pedido",
+      "official_url": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios/detalhe-de-procedimento?procedure_id=T0JQI09ORVJFRFBETSNET1AwMiMx&model_id=1",
+      "authentication": "unknown",
+      "source": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios",
+      "verified_on": "2026-11-27"
+    },
+    {
+      "id": "ponte_de_lima-5bb393ef3a4b758d",
+      "municipality": "ponte_de_lima",
+      "title": "Certidão da não Existência de Processos de Obras",
+      "official_url": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios/detalhe-de-procedimento?procedure_id=T0JQI0NFUlQjRE9VQ0VSMDMjNA==&model_id=4",
+      "authentication": "unknown",
+      "source": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios",
+      "verified_on": "2026-11-27"
+    },
+    {
+      "id": "ponte_de_lima-61d0070eb44a2102",
+      "municipality": "ponte_de_lima",
+      "title": "Certidão da Receção Provisória/Prestação de Caução",
+      "official_url": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios/detalhe-de-procedimento?procedure_id=T0JQI0NFUlQjRE9VQ0VSMDEjNQ==&model_id=5",
+      "authentication": "unknown",
+      "source": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios",
+      "verified_on": "2026-11-27"
+    },
+    {
+      "id": "ponte_de_lima-62a0b22520e6e14c",
+      "municipality": "ponte_de_lima",
+      "title": "Certidão - Instrumento de Gestão Territorial Aplicável",
+      "official_url": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios/detalhe-de-procedimento?procedure_id=T0JQI0NFUlQjRE9VQ0VSMjAjMTM=&model_id=13",
+      "authentication": "unknown",
+      "source": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios",
+      "verified_on": "2026-11-27"
+    },
+    {
+      "id": "ponte_de_lima-63d79f900914427f",
+      "municipality": "ponte_de_lima",
+      "title": "Autorização de Instalação de Infraestruturas de Suporte de Estações de Radiocomunicações",
+      "official_url": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios/detalhe-de-procedimento?procedure_id=T0JQI1JBRElPI0RPVURJVjI4IzQ=&model_id=4",
+      "authentication": "unknown",
+      "source": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios",
+      "verified_on": "2026-11-27"
+    },
+    {
+      "id": "ponte_de_lima-6fd95b0c985983fd",
+      "municipality": "ponte_de_lima",
+      "title": "Pedido de Certidão",
+      "official_url": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios/detalhe-de-procedimento?procedure_id=T0JQI0NFUlQjRE9VQ0VSMjIjMTM=&model_id=13",
+      "authentication": "unknown",
+      "source": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios",
+      "verified_on": "2026-11-27"
+    },
+    {
+      "id": "ponte_de_lima-6febaf784e96e5bf",
+      "municipality": "ponte_de_lima",
+      "title": "Pedido de Desistência de Serviço",
+      "official_url": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios/detalhe-de-procedimento?procedure_id=QVRFI0FTRSNBU0VfRElWMDgjNA==&model_id=4",
+      "authentication": "unknown",
+      "source": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios",
+      "verified_on": "2026-11-27"
+    },
+    {
+      "id": "ponte_de_lima-750f1cee945c201b",
+      "municipality": "ponte_de_lima",
+      "title": "Junção de Elementos",
+      "official_url": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios/detalhe-de-procedimento?procedure_id=T0JQI0RJVkVSU09TI0RPVURJVjA2Izc=&model_id=7",
+      "authentication": "unknown",
+      "source": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios",
+      "verified_on": "2026-11-27"
+    },
+    {
+      "id": "ponte_de_lima-7c7b2100eb6cd596",
+      "municipality": "ponte_de_lima",
+      "title": "Revisão do Processo de Ação Social Escolar - 1º Ciclo",
+      "official_url": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios/detalhe-de-procedimento?procedure_id=QVRFI0FTRSNBU0VfRElWMDUjMw==&model_id=3",
+      "authentication": "unknown",
+      "source": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios",
+      "verified_on": "2026-11-27"
+    },
+    {
+      "id": "ponte_de_lima-7f26bb4f58b65d46",
+      "municipality": "ponte_de_lima",
+      "title": "Licenciamento Simplificado das Instalações de Armazenamento de GPL e Abastecimento de Combustíveis Líquidos (Classes A1; A2; A3) ou não sujeitas a Licenciamento (Classes B1; B2)",
+      "official_url": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios/detalhe-de-procedimento?procedure_id=T0JQI0NPTUIjRE9VRElWMTUjNA==&model_id=4",
+      "authentication": "unknown",
+      "source": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios",
+      "verified_on": "2026-11-27"
+    },
+    {
+      "id": "ponte_de_lima-814eff776df2d3a3",
+      "municipality": "ponte_de_lima",
+      "title": "Pedido de Recolha de Monstros e de Resíduos de Equipamentos",
+      "official_url": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios/detalhe-de-procedimento?procedure_id=QVRFI1JTVSNSU1VfRElWMDIjMg==&model_id=2",
+      "authentication": "unknown",
+      "source": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios",
+      "verified_on": "2026-11-27"
+    },
+    {
+      "id": "ponte_de_lima-848419c4b5ab72fc",
+      "municipality": "ponte_de_lima",
+      "title": "Prorrogação de Prazo Para Apresentação dos Projetos de Especialidades",
+      "official_url": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios/detalhe-de-procedimento?procedure_id=T0JQI09ORVJFRFBETSNET1VQUlowMyM1&model_id=5",
+      "authentication": "unknown",
+      "source": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios",
+      "verified_on": "2026-11-27"
+    },
+    {
+      "id": "ponte_de_lima-89310bbf24bc65a9",
+      "municipality": "ponte_de_lima",
+      "title": "Bolsas de Estudo para o Ensino Superior - Candidatura",
+      "official_url": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios/detalhe-de-procedimento?procedure_id=QVRFI0FTRSNBU0VfRElWMDMjMw==&model_id=3",
+      "authentication": "unknown",
+      "source": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios",
+      "verified_on": "2026-11-27"
+    },
+    {
+      "id": "ponte_de_lima-8a5f49fd222eaf9e",
+      "municipality": "ponte_de_lima",
+      "title": "Certidão de Integração de Terreno no Domínio Público",
+      "official_url": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios/detalhe-de-procedimento?procedure_id=T0JQI0NFUlQjRE9VQ0VSMDYjMTA=&model_id=10",
+      "authentication": "unknown",
+      "source": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios",
+      "verified_on": "2026-11-27"
+    },
+    {
+      "id": "ponte_de_lima-8ed592df275aea15",
+      "municipality": "ponte_de_lima",
+      "title": "Junção de Elementos para Licença, Comunicação Prévia e Pedido de Informação Prévia",
+      "official_url": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios/detalhe-de-procedimento?procedure_id=T0JQI09ORVJFRFBETSNET1VESVYwNiMxMw==&model_id=13",
+      "authentication": "unknown",
+      "source": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios",
+      "verified_on": "2026-11-27"
+    },
+    {
+      "id": "ponte_de_lima-94188cf703970d44",
+      "municipality": "ponte_de_lima",
+      "title": "Alargamento de Horário de Funcionamento - Estabelecimentos Comerciais e Prestação de Serviços",
+      "official_url": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios/detalhe-de-procedimento?procedure_id=QVRFI0VDI0hPUjAxIzI=&model_id=2",
+      "authentication": "unknown",
+      "source": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios",
+      "verified_on": "2026-11-27"
+    },
+    {
+      "id": "ponte_de_lima-a29191efbe1af02f",
+      "municipality": "ponte_de_lima",
+      "title": "Junção de Elementos para Pedido de Certidão",
+      "official_url": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios/detalhe-de-procedimento?procedure_id=T0JQI0NFUlQjRE9VRElWMDYjMTg=&model_id=18",
+      "authentication": "unknown",
+      "source": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios",
+      "verified_on": "2026-11-27"
+    },
+    {
+      "id": "ponte_de_lima-adf39a1e307d1ac8",
+      "municipality": "ponte_de_lima",
+      "title": "Operações de Loteamentos - Infraestruturas",
+      "official_url": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios/detalhe-de-procedimento?procedure_id=T0JQI0xPVEUjRE9VTElDMTAjNA==&model_id=4",
+      "authentication": "unknown",
+      "source": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios",
+      "verified_on": "2026-11-27"
+    },
+    {
+      "id": "ponte_de_lima-bd3d401f5c5d9552",
+      "municipality": "ponte_de_lima",
+      "title": "Apresentação de Projetos de Especialidades",
+      "official_url": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios/detalhe-de-procedimento?procedure_id=T0JQI09ORVJFRFBETSNET1VMSUMwNyM2&model_id=6",
+      "authentication": "unknown",
+      "source": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios",
+      "verified_on": "2026-11-27"
+    },
+    {
+      "id": "ponte_de_lima-bec4e1b22c50fbf3",
+      "municipality": "ponte_de_lima",
+      "title": "Licença Especial para a Conclusão de Obras",
+      "official_url": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios/detalhe-de-procedimento?procedure_id=T0JQI09ORVJFRFBETSNET1VESVYyNCMxMw==&model_id=13",
+      "authentication": "unknown",
+      "source": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios",
+      "verified_on": "2026-11-27"
+    },
+    {
+      "id": "ponte_de_lima-c17bb89b531c25f1",
+      "municipality": "ponte_de_lima",
+      "title": "Junção de Elementos para Instalação de Infraestruturas de Su",
+      "official_url": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios/detalhe-de-procedimento?procedure_id=T0JQI1JBRElPI0RPVURJVjA2IzI1&model_id=25",
+      "authentication": "unknown",
+      "source": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios",
+      "verified_on": "2026-11-27"
+    },
+    {
+      "id": "ponte_de_lima-c242c4e80277c7f5",
+      "municipality": "ponte_de_lima",
+      "title": "Incentivo à Produção Pecuária",
+      "official_url": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios/detalhe-de-procedimento?procedure_id=QVRFI0RBRVYjSU5DUEVDMDEjMg==&model_id=2",
+      "authentication": "unknown",
+      "source": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios",
+      "verified_on": "2026-11-27"
+    },
+    {
+      "id": "ponte_de_lima-c442cddc171edf35",
+      "municipality": "ponte_de_lima",
+      "title": "Pedido de Transportes Escolares - Circuitos Especiais (Jardim de Infância)",
+      "official_url": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios/detalhe-de-procedimento?procedure_id=QVRFI1RFI1RFX0RJVjAzIzQ=&model_id=4",
+      "authentication": "unknown",
+      "source": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios",
+      "verified_on": "2026-11-27"
+    },
+    {
+      "id": "ponte_de_lima-c6a56f03e8110d8b",
+      "municipality": "ponte_de_lima",
+      "title": "Legalização de Obras de Edificação nos termos do artigo 102.º-A do RJUE",
+      "official_url": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios/detalhe-de-procedimento?procedure_id=T0JQI09ORVJFRFBETSNET1VMSUMxNyMy&model_id=2",
+      "authentication": "unknown",
+      "source": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios",
+      "verified_on": "2026-11-27"
+    },
+    {
+      "id": "ponte_de_lima-c929ee51093b7724",
+      "municipality": "ponte_de_lima",
+      "title": "Pedido de Transportes Escolares - Circuitos Especiais (2º/3º Ciclo e Secundário)",
+      "official_url": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios/detalhe-de-procedimento?procedure_id=QVRFI1RFI1RFX0RJVjA0IzQ=&model_id=4",
+      "authentication": "unknown",
+      "source": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios",
+      "verified_on": "2026-11-27"
+    },
+    {
+      "id": "ponte_de_lima-d5473cfb457fb896",
+      "municipality": "ponte_de_lima",
+      "title": "Operações de Loteamentos - Receção das Obras de Urbanização",
+      "official_url": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios/detalhe-de-procedimento?procedure_id=T0JQI0xPVEUjRE9VTElDMTEjOA==&model_id=8",
+      "authentication": "unknown",
+      "source": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios",
+      "verified_on": "2026-11-27"
+    },
+    {
+      "id": "ponte_de_lima-dd82a4d73c49c20e",
+      "municipality": "ponte_de_lima",
+      "title": "Certidão de Prédio em Ruínas",
+      "official_url": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios/detalhe-de-procedimento?procedure_id=T0JQI0NFUlQjRE9VQ0VSMjMjNQ==&model_id=5",
+      "authentication": "unknown",
+      "source": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios",
+      "verified_on": "2026-11-27"
+    },
+    {
+      "id": "ponte_de_lima-e18dc926806aae9a",
+      "municipality": "ponte_de_lima",
+      "title": "Informação sobre o início dos trabalhos",
+      "official_url": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios/detalhe-de-procedimento?procedure_id=T0JQI09ORVJFRFBETSNET1VESVYzMCMz&model_id=3",
+      "authentication": "unknown",
+      "source": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios",
+      "verified_on": "2026-11-27"
+    },
+    {
+      "id": "ponte_de_lima-e42dcc9f8e26c420",
+      "municipality": "ponte_de_lima",
+      "title": "Benefícios Fiscais - Prédio urbanos objeto de reabilitação e incentivos à reabilitação urbana (ARU e ORU)",
+      "official_url": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios/detalhe-de-procedimento?procedure_id=T0JQI09ORVJFRFBETSNET1VESVYyMSM4&model_id=8",
+      "authentication": "unknown",
+      "source": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios",
+      "verified_on": "2026-11-27"
+    },
+    {
+      "id": "ponte_de_lima-e61d3116dfbe6bae",
+      "municipality": "ponte_de_lima",
+      "title": "Averbamento",
+      "official_url": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios/detalhe-de-procedimento?procedure_id=T0JQI09ORVJFRFBETSNET1VESVYwOSMxMQ==&model_id=11",
+      "authentication": "unknown",
+      "source": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios",
+      "verified_on": "2026-11-27"
+    },
+    {
+      "id": "ponte_de_lima-ea8de548e6eb860b",
+      "municipality": "ponte_de_lima",
+      "title": "Licença, Comunicação Prévia e Pedido de Informação Prévia",
+      "official_url": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios/detalhe-de-procedimento?procedure_id=T0JQI09ORVJFRFBETSNET1AwMSMx&model_id=1",
+      "authentication": "unknown",
+      "source": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios",
+      "verified_on": "2026-11-27"
+    },
+    {
+      "id": "ponte_de_lima-f40de37ee2b24948",
+      "municipality": "ponte_de_lima",
+      "title": "Pedido Geral/Exposição",
+      "official_url": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios/detalhe-de-procedimento?procedure_id=RklTI09CUCNFWFAjMQ==&model_id=1",
+      "authentication": "unknown",
+      "source": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios",
+      "verified_on": "2026-11-27"
+    },
+    {
+      "id": "ponte_de_lima-f8a3b40311d59109",
+      "municipality": "ponte_de_lima",
+      "title": "Certidão de Prédio anterior à entrada em vigor do RGEU",
+      "official_url": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios/detalhe-de-procedimento?procedure_id=T0JQI0NFUlQjRE9VQ0VSMTcjNQ==&model_id=5",
+      "authentication": "unknown",
+      "source": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios",
+      "verified_on": "2026-11-27"
+    },
+    {
+      "id": "ponte_de_lima-fa89045a7c6272bc",
+      "municipality": "ponte_de_lima",
+      "title": "Junção de Elementos para utilização ou alteração de uso de edifício ou fração",
+      "official_url": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios/detalhe-de-procedimento?procedure_id=T0JQI1VUSUwjRE9VRElWMDYjMQ==&model_id=1",
+      "authentication": "unknown",
+      "source": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios",
+      "verified_on": "2026-11-27"
+    },
+    {
+      "id": "ponte_de_lima-fce5d04d7a503d44",
+      "municipality": "ponte_de_lima",
+      "title": "Pedido de Transportes Escolares - Circuitos Especiais (1º Ciclo do Ensino Básico)",
+      "official_url": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios/detalhe-de-procedimento?procedure_id=QVRFI1RFI1RFX0RJVjAyIzU=&model_id=5",
+      "authentication": "unknown",
+      "source": "https://www.cm-pontedelima.pt/servicos/apoio-ao-municipe/servicos-online/formularios",
+      "verified_on": "2026-11-27"
+    }
+  ]
+}

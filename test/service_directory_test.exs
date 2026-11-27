@@ -10,7 +10,7 @@ defmodule Ecidadao.ServiceDirectoryTest do
 
   test "curated entries have unique stable identifiers, translated guidance and safe destinations" do
     entries = ServiceDirectory.all()
-    assert length(entries) == 10
+    assert length(entries) == 13
     assert length(Enum.uniq_by(entries, & &1.id)) == length(entries)
 
     for entry <- entries do
@@ -25,6 +25,9 @@ defmodule Ecidadao.ServiceDirectoryTest do
         assert String.starts_with?(uri.path, "/servicos/")
       else
         assert entry.url in [
+                 "/municipios",
+                 "/vagas",
+                 "/apoios",
                  "/saude",
                  "/siga",
                  "/financas",
@@ -57,7 +60,7 @@ defmodule Ecidadao.ServiceDirectoryTest do
       assert body =~ ~s(id="service-search" type="search")
       assert body =~ ~s(id="service-search-status" role="status")
       assert body =~ ~s(id="service-empty" class="notice" hidden)
-      assert body =~ ~s(10 #{Locale.text("serviços encontrados", locale)})
+      assert body =~ ~s(13 #{Locale.text("serviços encontrados", locale)})
       assert body =~ ~s(href="https://www.gov.pt/servicos/renovar-o-cartao-de-cidadao")
 
       for entry <- ServiceDirectory.all() do

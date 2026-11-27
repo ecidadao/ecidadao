@@ -11,7 +11,7 @@ curl --fail-with-body https://ecidadao.pt/mcp/public \
   --data '{"jsonrpc":"2.0","id":1,"method":"tools/list"}'
 ```
 
-O catálogo público inclui `siga_visit_guidance`, `financas_service_guidance`, `prepare_financas_ebalcao`, `prepare_street_report`, `prepare_complaint` `official_submission_guidance` e `sns24_service_guidance`. Use `tools/list` para obter os parâmetros de cada ferramenta. Os rascunhos não são guardados nem submetidos a portais oficiais.
+O catálogo público inclui `siga_visit_guidance`, `financas_service_guidance`, `prepare_financas_ebalcao`, `prepare_street_report`, `prepare_complaint`, `official_submission_guidance`, `sns24_service_guidance`, `municipal_service_search`, `municipal_appointment_availability` e `public_support_guidance`. Use `tools/list` para obter os parâmetros de cada ferramenta. Os rascunhos não são guardados nem submetidos a portais oficiais.
 
 Os plugins e comandos de instalação para Codex e Claude Code estão em [ecidadao/plugins](https://github.com/ecidadao/plugins).
 
@@ -33,7 +33,33 @@ A aplicação não precisa de base de dados. Não registe corpos de pedidos cont
 
 ## Livro Amarelo no endpoint experimental
 
-`prepare_public_service_feedback` está disponível exclusivamente em `/mcp`. Não integra as sete ferramentas de `/mcp/public` nem altera a distribuição independente dos plugins. `prepare_complaint` continua a preparar reclamações de consumo para o Livro de Reclamações Eletrónico.
+`prepare_public_service_feedback` está disponível exclusivamente em `/mcp`. Não integra as dez ferramentas de `/mcp/public` nem altera a distribuição independente dos plugins. `prepare_complaint` continua a preparar reclamações de consumo para o Livro de Reclamações Eletrónico.
+
+## Municípios e apoios — 0.3.4
+
+As três ferramentas aceitam apenas os campos documentados e recusam campos pessoais adicionais, sem os refletir. Estão disponíveis em ambos os endpoints MCP.
+
+| Ferramenta | Parâmetros | Resultado e limite |
+|---|---|---|
+| `municipal_service_search` | `municipality`: all/gondomar/maia/ponte_de_lima; `query` até 160 caracteres; `limit` 1–30; `language` pt/en | Catálogo local de 320 entradas: 136 Gondomar, 126 Maia, 58 Ponte de Lima. Fonte de 27/11/2026; títulos oficiais em português. Sem consulta de disponibilidade ou processos |
+| `municipal_appointment_availability` | `municipality`: ponte_de_lima; `service_id` opcional, inteiro devolvido pela lista; `date` ISO opcional, requer serviço; `language` pt/en | Sem serviço lista áreas; com serviço lista datas; com data lista horários. Fonte municipal externa, horários Europe/Lisbon, `checked_at`, `reserved:false`. Nenhuma reserva |
+| `public_support_guidance` | `service`: porta65_young/porta65_plus/gondomar_housing/environmental_fund/vale_efficiency/elar/green_mobility; `language` pt/en | Orientação datada com fases e prazos, `submitted:false`, sem consulta de orçamento, conta ou elegibilidade pessoal |
+
+Pesquisa e orientação não fazem chamadas externas. A disponibilidade usa apenas GET em destinos fixos de Ponte de Lima, com validação dos serviços devolvidos, timeout, limite de resposta e cache de 30 segundos que conserva a hora da observação. Erros da fonte nunca são apresentados como ausência de vagas. O cache limita consultas novas por instância; não é um limite distribuído. A interface usada pelo portal pode mudar e não tem contrato público de suporte externo confirmado.
+
+Páginas: `/municipios`, `/vagas`, `/apoios`. APIs web: `POST /api/municipal/services` e `POST /api/municipal/appointments`; JSON. A segunda devolve 422 para argumentos inválidos, 429 para limite temporário e 503 quando a fonte não está disponível. Revalidar e concluir sempre no portal oficial.
+
+```json
+{"jsonrpc":"2.0","id":1,"method":"tools/call","params":{"name":"municipal_service_search","arguments":{"municipality":"gondomar","query":"tarifário água"}}}
+```
+
+```json
+{"jsonrpc":"2.0","id":2,"method":"tools/call","params":{"name":"municipal_appointment_availability","arguments":{}}}
+```
+
+```json
+{"jsonrpc":"2.0","id":3,"method":"tools/call","params":{"name":"public_support_guidance","arguments":{"service":"porta65_plus","language":"en"}}}
+```
 
 A ferramenta recebe `type` (`complaint`, `compliment` ou `suggestion`), `organisation`, `subject` e `description`. Aceita ainda `location`, `incident_date` (AAAA-MM-DD, se conhecida) e `requested_resolution`. Organização, local e assunto têm limite de 200 caracteres; descrição, 5000; resultado pretendido, 1500. Campos opcionais podem ser omitidos. Campos desconhecidos são descartados e não aparecem no rascunho; não envie nomes pessoais, NIF, contactos, credenciais ou códigos, incluindo no texto livre.
 
