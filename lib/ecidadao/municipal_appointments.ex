@@ -217,9 +217,9 @@ defmodule Ecidadao.MunicipalAppointments do
       warning:
         if(language == "en",
           do:
-            "Public in-person availability only, observed at the stated time; it may change. This frontend API has no confirmed external support contract. No appointment has been reserved.",
+            "Public in-person availability only, observed at the stated time; it may change. No appointment has been reserved.",
           else:
-            "Apenas disponibilidade pública de atendimento presencial, observada no momento indicado; pode mudar. Esta API do site não tem contrato de suporte externo confirmado. Nenhuma marcação foi reservada."
+            "Apenas disponibilidade pública de atendimento presencial, observada no momento indicado; pode mudar. Nenhuma marcação foi reservada."
         )
     }
   end
