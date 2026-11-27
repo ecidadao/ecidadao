@@ -11,7 +11,7 @@ defmodule EcidadaoWeb.MunicipalMapPage do
       <link rel="stylesheet" href="/map-assets/municipal-map.css">
       <section class="hero coverage-hero">
         <p class="eyebrow">#{c.eyebrow}</p><h1>#{c.title}</h1>
-        <p class="lead">#{c.intro}</p><p class="notice">#{c.scope}</p>
+        <p class="lead">#{c.intro}</p>
       </section>
       <section id="coverage" aria-labelledby="coverage-heading">
         <h2 id="coverage-heading">#{c.heading}</h2>
@@ -37,6 +37,7 @@ defmodule EcidadaoWeb.MunicipalMapPage do
             </ul>
             <article id="coverage-detail" class="card" hidden aria-labelledby="coverage-selected"></article></div>
         </div>
+        <p class="notice">#{c.scope}</p>
         <p class="help-note">#{c.privacy}</p>
         <p id="coverage-metadata" hidden></p><p id="coverage-notice"></p>
         <noscript><p>#{c.nojs} <a href="/municipios">#{c.catalogue}</a> · <a href="/vagas">#{c.availability}</a> · <a href="/apoios">#{c.support}</a></p></noscript>

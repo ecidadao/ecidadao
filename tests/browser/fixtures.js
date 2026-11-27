@@ -6,6 +6,10 @@ const test = base.extend({
     const externalRequests = [];
     await context.route('**/*', async route => {
       const url = new URL(route.request().url());
+      // Isolate the homepage basemap; browser tests never fetch public tiles.
+      if (url.hostname === 'tile.openstreetmap.org' && /^\/\d+\/\d+\/\d+\.png$/.test(url.pathname)) {
+        return route.fulfill({ contentType: 'image/png', body: Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+aS1cAAAAASUVORK5CYII=', 'base64') });
+      }
       if (url.origin !== baseURL) {
         externalRequests.push(url.href);
         return route.abort('blockedbyclient');

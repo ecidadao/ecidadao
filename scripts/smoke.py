@@ -13,6 +13,7 @@ parser.add_argument("--services", action="store_true", help="Check the curated s
 parser.add_argument("--sns24", action="store_true", help="Require SNS 24 pages and public guidance")
 parser.add_argument("--municipal", action="store_true", help="Require municipal pages and three new public tools")
 parser.add_argument("--live-municipal", action="store_true", help="Also query public Ponte de Lima areas (external availability required)")
+parser.add_argument("--map", action="store_true", help="Require municipal coverage map and its data/assets")
 args = parser.parse_args()
 
 def request(path, payload=None):
@@ -25,6 +26,21 @@ def request(path, payload=None):
 
 health = json.loads(request("/health"))
 assert health["status"] == "ok"
+if args.map:
+    for path in ("/", "/sobre"):
+        assert request(path)
+    for language in ("pt", "en"):
+        page = request("/mapa?lang=" + language).decode()
+        assert '<html lang="' + language + '">' in page
+        assert 'prefers-color-scheme:dark' in page
+        coverage = json.loads(request("/api/municipal/coverage?lang=" + language))
+        assert coverage["language"] == language
+        assert coverage["municipality_count"] == len(coverage["municipalities"]) == 3
+        assert coverage["total_service_count"] == sum(m["service_count"] for m in coverage["municipalities"])
+        assert {m["id"] for m in coverage["municipalities"] if m["availability_lookup"]} == {"ponte_de_lima"}
+    assert '/map-assets/municipal-map.js' in request("/").decode()
+    for path in ("/map-assets/leaflet.js", "/map-assets/leaflet.css", "/map-assets/municipal-map.js", "/map-assets/municipal-map.css"):
+        assert request(path)
 if args.revision and args.revision != "legacy":
     assert health["revision"] == args.revision, health
 paths = ["/", "/como-usar", "/siga", "/financas", "/a-minha-rua", "/reclamacoes", "/privacidade", "/termos", "/apoio", "/imagens/siga-passo.png"]
@@ -48,7 +64,7 @@ if args.locales:
             assert '<html lang="en">' in page, path
             assert 'prefers-color-scheme:dark' in page, path
             assert 'Help with public services' in page, path
-    assert 'O próximo passo fica mais simples.' in request("/?lang=pt").decode()
+    assert '<html lang="pt">' in request("/?lang=pt").decode()
 if args.feedback:
     for kind, service in [
         ("complaint", "fazer-reclamacao-de-um-servico-publico"),

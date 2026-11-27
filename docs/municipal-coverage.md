@@ -1,6 +1,6 @@
 # Contrato do mapa de cobertura municipal
 
-Revisão de capacidades e coordenadas: **2026-11-27**. Base: integrações existentes da versão 0.3.4, atualizadas nesta worktree a partir de `origin/main` (`8842028`). Este incremento fornece dados de cobertura; não acrescenta ferramenta MCP nem faz consultas públicas externas ao carregar o mapa.
+Revisão de capacidades e coordenadas: **2026-11-27**. Base: integrações MCP existentes da versão 0.3.4. A página inicial `/` e o endereço alternativo `/mapa` apresentam o mapa interativo; `/sobre` conserva a apresentação do projeto. Não acrescenta ferramenta MCP nem faz consultas de disponibilidade municipal ao carregar o mapa. O navegador obtém cartografia do OpenStreetMap; a API de cobertura usa dados locais.
 
 ## Entrada e resposta
 

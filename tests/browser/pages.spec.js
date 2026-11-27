@@ -1,7 +1,8 @@
 const { test, expect } = require('./fixtures');
 
 const pages = [
-  ['/', 'O próximo passo fica mais simples.', 'Your next step, made simpler.'],
+  ['/', 'Veja onde o eCidadão pode ajudar.', 'See where eCidadão can help.'],
+  ['/sobre', 'O próximo passo fica mais simples.', 'Your next step, made simpler.'],
   ['/reclamacoes', 'Uma reclamação clara começa por um bom rascunho.', 'A clear complaint starts with a good draft.'],
   ['/livro-amarelo', 'Ajude a melhorar os serviços públicos.', 'Help improve public services.'],
   ['/a-minha-rua', 'Ajude a melhorar o espaço público.', 'Help improve public spaces.'],
