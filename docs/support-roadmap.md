@@ -36,6 +36,10 @@ A pedido do responsável do projeto, saúde passa a ter uma linha própria: perc
 
 ## Próximo trabalho independente de adesões
 
+A [investigação de território e BUPi](territory-bupi-integrations.md) propõe guia municipal, pesquisa de metadados SNIG e piloto cartográfico DGT. Foram verificadas consultas OGC e WMS; os serviços geográficos BUPi recusaram as tentativas de capacidades neste ambiente. CRUS não serve para decidir licenciamento ou edificabilidade. Nenhuma destas propostas está ainda implementada no produto.
+
+A [investigação de Finanças e Segurança Social](financas-social-security-integrations.md) distingue funções locais (validação estrutural IRS, documentos importados, preparação e-Clic), webservices empresariais (AT/e-Fatura, PSi) e contratos institucionais iAP. Login CMD não concede acesso geral a contas. Priorizar um registo de capacidades e um validador IRS local; pilotos privados dependem da habilitação, representação e contrato aplicáveis. Não foram usadas contas nem submetidos pedidos.
+
 A [pesquisa municipal](municipal-integrations.md) sustenta as três capacidades implementadas em 0.3.4: catálogo municipal, orientação de apoios e consulta de vagas em Ponte de Lima. A [pesquisa de ambiente e habitação](environment-housing-discovery.md) inclui também APA/SNIAmb; a integração geográfica APA continua em investigação e não existe ferramenta pública de medições ambientais.
 
 1. Expandir os percursos curados com base nas necessidades mais frequentes, mantendo fonte e revisão por serviço.
