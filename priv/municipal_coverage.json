@@ -1,0 +1,68 @@
+[
+  {
+    "id": "gondomar",
+    "name": "Gondomar",
+    "administrative_code": "1304",
+    "center": {
+      "latitude": 41.102349,
+      "longitude": -8.478341
+    },
+    "coordinate_source": "https://ogcapi.dgterritorio.gov.pt/collections/municipios/items/182?f=json",
+    "coordinate_method": "caop_geometry_bbox_midpoint",
+    "coordinate_crs": "OGC:CRS84",
+    "coordinate_bbox": [
+      -8.584110501906936,
+      41.00138011574353,
+      -8.37257074147663,
+      41.20331791266853
+    ],
+    "coordinate_dataset": "CAOP2025 Municípios — Continente",
+    "coordinate_reviewed_on": "2026-11-27",
+    "coordinate_license": "https://creativecommons.org/licenses/by/4.0/",
+    "coordinate_attribution": "Direção-Geral do Território"
+  },
+  {
+    "id": "maia",
+    "name": "Maia",
+    "administrative_code": "1306",
+    "center": {
+      "latitude": 41.2375,
+      "longitude": -8.604624
+    },
+    "coordinate_source": "https://ogcapi.dgterritorio.gov.pt/collections/municipios/items/184?f=json",
+    "coordinate_method": "caop_geometry_bbox_midpoint",
+    "coordinate_crs": "OGC:CRS84",
+    "coordinate_bbox": [
+      -8.69398379243571,
+      41.17963208525134,
+      -8.51526427307662,
+      41.29536884690236
+    ],
+    "coordinate_dataset": "CAOP2025 Municípios — Continente",
+    "coordinate_reviewed_on": "2026-11-27",
+    "coordinate_license": "https://creativecommons.org/licenses/by/4.0/",
+    "coordinate_attribution": "Direção-Geral do Território"
+  },
+  {
+    "id": "ponte_de_lima",
+    "name": "Ponte de Lima",
+    "administrative_code": "1607",
+    "center": {
+      "latitude": 41.746979,
+      "longitude": -8.580598
+    },
+    "coordinate_source": "https://ogcapi.dgterritorio.gov.pt/collections/municipios/items/237?f=json",
+    "coordinate_method": "caop_geometry_bbox_midpoint",
+    "coordinate_crs": "OGC:CRS84",
+    "coordinate_bbox": [
+      -8.699715669922647,
+      41.62367065692656,
+      -8.461479746472861,
+      41.87028780628237
+    ],
+    "coordinate_dataset": "CAOP2025 Municípios — Continente",
+    "coordinate_reviewed_on": "2026-11-27",
+    "coordinate_license": "https://creativecommons.org/licenses/by/4.0/",
+    "coordinate_attribution": "Direção-Geral do Território"
+  }
+]

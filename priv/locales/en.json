@@ -506,5 +506,8 @@
   "Veja os percursos Porta 65, Fundo Ambiental e +Habitação de Gondomar, com requisitos e prazos publicados.": "Explore Porta 65, the Environmental Fund and Gondomar housing support, with requirements and published deadlines.",
   "Dez ferramentas públicas para usar em conversas Claude ou ChatGPT. Veja passos simples e prints.": "Ten public tools to use in Claude or ChatGPT conversations. See simple steps and screenshots.",
   "A pesquisa municipal e a orientação de apoios não exigem dados pessoais. A pesquisa é processada em memória no nosso catálogo. Para consultar vagas em Ponte de Lima, o servidor envia ao município apenas o serviço e a data selecionados e guarda a resposta pública em memória durante 30 segundos. Não cria uma reserva nem envia identidade ou contactos.": "Municipal search and support guidance do not require personal data. Searches are processed in memory against our catalogue. To check appointments in Ponte de Lima, the server sends the municipality only the selected service and date and caches the public response in memory for 30 seconds. It does not make a booking or send identity or contact details.",
-  "Última atualização: 27 de novembro de 2026.": "Last updated: 27 November 2026."
+  "Última atualização: 27 de novembro de 2026.": "Last updated: 27 November 2026.",
+  "Mapa": "Map",
+  "Sobre": "About",
+  "No mapa de cobertura, a localização é opcional e só é pedida quando escolhe usá-la. O cálculo de proximidade ocorre no navegador; não enviamos a sua posição ao servidor eCidadão nem a guardamos. O mapa usa imagens do OpenStreetMap, cujo serviço recebe o endereço IP e a zona visualizada para as fornecer.": "On the coverage map, location is optional and requested only when you choose to use it. Distance is calculated in your browser; we do not send your position to the eCidadão server or store it. The map uses OpenStreetMap tiles; that service receives your IP address and the displayed area to supply them."
 }

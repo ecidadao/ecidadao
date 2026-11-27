@@ -81,7 +81,8 @@ defmodule Ecidadao.ServiceDirectoryTest do
     refute body =~ "private-search-marker"
     home = conn(:get, "/") |> Router.call(Router.init([])) |> Map.fetch!(:resp_body)
     assert home =~ ~r/<nav>.*href="\/servicos"/s
-    assert home =~ ~r/class="hero-actions">.*?href="\/servicos"/s
+    about = conn(:get, "/sobre") |> Router.call(Router.init([])) |> Map.fetch!(:resp_body)
+    assert about =~ ~r/class="hero-actions">.*?href="\/servicos"/s
   end
 
   test "actual client script filters bilingual whole words, announces counts and safely clears" do

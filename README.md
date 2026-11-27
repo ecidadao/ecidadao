@@ -2,6 +2,8 @@
 
 ![eCidadão](priv/static/brand/ecidadao-logo.svg)
 
+A página inicial é o [mapa de cobertura municipal](https://ecidadao.pt/), também disponível em `/mapa`. Mostra as integrações MCP de Gondomar, Maia e Ponte de Lima, com contagens do catálogo, fontes e percursos oficiais. A localização é opcional e o cálculo de proximidade fica no navegador. A apresentação do projeto está em `/sobre`. [Contrato e limites do mapa](docs/municipal-coverage.md).
+
 Aplicação independente e gratuita para comparar filas públicas SIGA, preparar questões para o e-balcão das Finanças e organizar rascunhos de reclamações de consumo e de ocorrências no espaço público em Portugal. Não está associada ao Estado, ao SIGA, à Autoridade Tributária, ao Livro de Reclamações Eletrónico nem à ARTE. **Não emite senhas, não cria marcações e não submete pedidos oficiais**: a pessoa conclui cada ação no portal respetivo.
 
 O código está sob Apache-2.0. A página `/siga` consulta tempos públicos de espera por distrito, entidade e tipo de senha, filtra por raio em linha reta e ordena os balcões abertos pelo tempo observado. A consulta usa endpoints internos do site SIGA, sujeitos a alterações; não garante cobertura de distritos vizinhos nem calcula viagem. A página `/financas` ajuda a encontrar o portal oficial e prepara um rascunho para o e-balcão sem autenticação. A página `/a-minha-rua` consulta ocorrências públicas recentes com cache de dois minutos e prepara um reporte. O envio oficial, a identificação, o consentimento e o reCAPTCHA ficam nos portais oficiais.

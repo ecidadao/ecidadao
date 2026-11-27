@@ -1,0 +1,4 @@
+# Preserve official release bytes and their Subresource Integrity hashes.
+leaflet.css -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+leaflet.js -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+LEAFLET-LICENSE.txt -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol

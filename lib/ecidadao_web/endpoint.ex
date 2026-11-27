@@ -9,6 +9,13 @@ defmodule EcidadaoWeb.Endpoint do
   )
 
   plug(Plug.RequestId)
+
+  plug(Plug.Static,
+    at: "/map-assets",
+    from: {:ecidadao, "priv/static/map"},
+    only: ~w(leaflet.js leaflet.css municipal-map.js municipal-map.css images LEAFLET-LICENSE.txt)
+  )
+
   plug(Plug.Telemetry, event_prefix: [:ecidadao, :endpoint])
 
   plug(Plug.Static,

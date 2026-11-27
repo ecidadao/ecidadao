@@ -7,6 +7,10 @@ defmodule EcidadaoWeb.Router do
   plug(:dispatch)
 
   get "/" do
+    html(conn, &EcidadaoWeb.MunicipalMapPage.render/1)
+  end
+
+  get "/sobre" do
     html(conn, &EcidadaoWeb.Page.landing/1)
   end
 
@@ -20,6 +24,15 @@ defmodule EcidadaoWeb.Router do
 
   get "/municipios" do
     html(conn, &EcidadaoWeb.CivicPage.municipalities/1)
+  end
+
+  get "/mapa" do
+    html(conn, &EcidadaoWeb.MunicipalMapPage.render/1)
+  end
+
+  get "/api/municipal/coverage" do
+    {conn, locale} = EcidadaoWeb.Locale.select(conn)
+    json(conn, 200, Ecidadao.MunicipalCoverage.snapshot(locale))
   end
 
   get "/apoios" do

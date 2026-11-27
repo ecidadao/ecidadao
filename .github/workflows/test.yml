@@ -88,7 +88,7 @@ jobs:
         with:
           python-version: '3.12'
       - run: python -m pip install --require-hashes -r scripts/requirements-ci.txt
-      - run: python scripts/smoke.py https://ecidadao.pt --revision "$GITHUB_SHA" --municipal --locales --sns24 --services
+      - run: python scripts/smoke.py https://ecidadao.pt --revision "$GITHUB_SHA" --municipal --locales --sns24 --services --map
       - run: python scripts/check_mcp.py https://ecidadao.pt/mcp/public
       - uses: actions/upload-artifact@v4
         if: always()
