@@ -1,0 +1,10 @@
+{
+  "name": "ecidadao-browser-tests",
+  "private": true,
+  "scripts": {
+    "test:browser": "playwright test",
+    "test:browser:report": "playwright show-report"
+  },
+  "engines": { "node": ">=22" },
+  "devDependencies": { "@playwright/test": "1.65.1" }
+}

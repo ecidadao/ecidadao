@@ -9,6 +9,7 @@ parser.add_argument("--revision")
 parser.add_argument("--brand", action="store_true", help="Also check the optional brand assets")
 parser.add_argument("--locales", action="store_true", help="Check English pages and automatic colour scheme")
 parser.add_argument("--feedback", action="store_true", help="Check Livro Amarelo drafts and official handoff links")
+parser.add_argument("--services", action="store_true", help="Check the curated service finder")
 args = parser.parse_args()
 
 def request(path, payload=None):
@@ -26,10 +27,17 @@ if args.revision and args.revision != "legacy":
 paths = ["/", "/como-usar", "/siga", "/financas", "/a-minha-rua", "/reclamacoes", "/privacidade", "/termos", "/apoio", "/imagens/siga-passo.png"]
 if args.feedback:
     paths.append("/livro-amarelo")
+if args.services:
+    paths.append("/servicos")
 if args.brand:
     paths += ["/marca/ecidadao-logo.svg", "/marca/ecidadao-logo.png", "/marca/ecidadao-github.svg", "/marca/ecidadao-github.png", "/marca/ecidadao-identidade.zip"]
 for path in paths:
     assert request(path), path
+if args.services:
+    page = request("/servicos").decode()
+    assert 'id="service-search"' in page
+    assert 'data-service-id="cc-renewal"' in page
+    assert 'href="https://www.gov.pt/servicos/renovar-o-cartao-de-cidadao"' in page
 if args.locales:
     for path in paths:
         if "." not in path:

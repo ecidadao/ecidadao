@@ -13,6 +13,7 @@ defmodule EcidadaoWeb.LocaleTest do
   test "all public pages render English on the server and keep Portuguese available" do
     for {path, title} <- [
           {"/", "Your next step, made simpler."},
+          {"/servicos", "What do you need?"},
           {"/siga", "Compare queues near you."},
           {"/financas", "Prepare your question for e-balcão."},
           {"/reclamacoes", "A clear complaint starts with a good draft."},
