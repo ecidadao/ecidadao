@@ -92,10 +92,20 @@ defmodule EcidadaoWeb.MunicipalMapPage do
       verified: "Catalogue sources verified",
       snapshotNote: "This is the coverage snapshot, not a live check of appointment times.",
       appointment: "Check appointment times in Ponte de Lima ↗",
-      locating: "Finding the nearest covered municipality…",
+      locating:
+        "Allow location in your browser if prompted. Waiting for an approximate position…",
       unsupported: "This browser does not support location. Use the municipality list.",
-      denied: "Location was not allowed. You can still use the map and list.",
-      geoError: "Location could not be obtained in time. Try again or use the list.",
+      denied:
+        "Location was not allowed. Check this site's permission and your device's location settings, or choose a municipality from the list.",
+      geoError:
+        "Your browser could not determine a position. Check your device's location settings or open this page in your regular browser. You can also choose a municipality from the list.",
+      geoTimeout:
+        "Location could not be obtained within 30 seconds. Try again or choose a municipality from the list.",
+      geoNoResponse:
+        "The browser has not returned a position. Check whether a permission prompt is still open, try your regular browser, or use the municipality list.",
+      geoCancel: "Cancel location",
+      geoCancelled:
+        "Location lookup cancelled. Choose a municipality from the list or try again.",
       nearest: "Nearest covered municipality",
       distance: "km in a straight line to the approximate municipal centre; not travel distance.",
       localOnly: "Your position has not been sent or saved.",
@@ -144,11 +154,20 @@ defmodule EcidadaoWeb.MunicipalMapPage do
       snapshotNote:
         "Esta é a cobertura dos serviços, não uma consulta em tempo real dos horários disponíveis.",
       appointment: "Consultar horários em Ponte de Lima ↗",
-      locating: "A procurar o município coberto mais próximo…",
+      locating:
+        "Permita a localização no navegador, se for pedido. A aguardar uma posição aproximada…",
       unsupported: "Este navegador não suporta localização. Utilize a lista de municípios.",
-      denied: "A localização não foi permitida. Pode continuar a usar o mapa e a lista.",
+      denied:
+        "A localização não foi permitida. Verifique a permissão deste site e as definições de localização do dispositivo, ou escolha um município na lista.",
       geoError:
-        "Não foi possível obter a localização a tempo. Tente novamente ou utilize a lista.",
+        "O navegador não conseguiu determinar a posição. Verifique a localização nas definições do dispositivo ou abra esta página no navegador habitual. Também pode escolher um município na lista.",
+      geoTimeout:
+        "Não foi possível obter a localização em 30 segundos. Tente novamente ou escolha um município na lista.",
+      geoNoResponse:
+        "O navegador ainda não devolveu uma posição. Verifique se ficou um pedido de permissão aberto, tente o navegador habitual ou utilize a lista de municípios.",
+      geoCancel: "Cancelar localização",
+      geoCancelled:
+        "Consulta de localização cancelada. Escolha um município na lista ou tente novamente.",
       nearest: "Município coberto mais próximo",
       distance: "km em linha reta até ao centro municipal aproximado; não é distância de viagem.",
       localOnly: "A sua posição não foi enviada nem guardada.",

@@ -5,6 +5,7 @@
   const el = id => document.getElementById('coverage-' + id);
   let snapshot = null, selected = null, map = null, markers = [], position = null;
   let generation = 0, request = null, geoGeneration = 0;
+  let geoPending = false, geoTimer = null;
   const make = (tag, text, className) => {
     const node = document.createElement(tag);
     if (text !== undefined) node.textContent = text;
@@ -128,24 +129,37 @@
   }
   el('refresh').addEventListener('click', refresh);
   el('locate').addEventListener('click', () => {
+    if (geoPending) {
+      ++geoGeneration; clearTimeout(geoTimer); geoPending = false;
+      el('locate').textContent = c.locate; el('location').textContent = c.geoCancelled;
+      return;
+    }
     if (!navigator.geolocation) { el('location').textContent = c.unsupported; return; }
     position = null;
-    const current = ++geoGeneration; el('locate').disabled = true; el('location').textContent = c.locating;
-    const timer = setTimeout(() => { if (current === geoGeneration) { ++geoGeneration; el('locate').disabled = false; el('location').textContent = c.geoError; } }, 11000);
+    const current = ++geoGeneration; geoPending = true;
+    el('locate').textContent = c.geoCancel; el('location').textContent = c.locating;
+    const finish = message => {
+      if (current !== geoGeneration) return false;
+      ++geoGeneration; clearTimeout(geoTimer); geoPending = false;
+      el('locate').textContent = c.locate;
+      if (message) el('location').textContent = message;
+      return true;
+    };
+    // Permission prompts can outlive the acquisition timeout. Never label that
+    // wait as a position timeout; allow cancellation and ignore late callbacks.
+    geoTimer = setTimeout(() => finish(c.geoNoResponse), 90000);
     try { navigator.geolocation.getCurrentPosition(result => {
-      clearTimeout(timer); if (current !== geoGeneration) return;
-      el('locate').disabled = false;
+      if (!finish()) return;
       const {latitude, longitude} = result.coords;
       if (!Number.isFinite(latitude) || !Number.isFinite(longitude) || Math.abs(latitude) > 90 || Math.abs(longitude) > 180) { el('location').textContent = c.geoError; return; }
       position = {latitude, longitude}; nearest();
     }, error => {
-      clearTimeout(timer); if (current !== geoGeneration) return;
-      el('locate').disabled = false; el('location').textContent = error.code === 1 ? c.denied : c.geoError;
-    }, {enableHighAccuracy: false, timeout: 10000, maximumAge: 0});
+      finish(error.code === 1 ? c.denied : error.code === 3 ? c.geoTimeout : c.geoError);
+    }, {enableHighAccuracy: false, timeout: 30000, maximumAge: 300000});
     } catch {
-      clearTimeout(timer); el('locate').disabled = false; el('location').textContent = c.geoError;
+      finish(c.geoError);
     }
   });
-  window.addEventListener('pagehide', () => { ++generation; ++geoGeneration; if (request) request.abort(); position = null; });
+  window.addEventListener('pagehide', () => { ++generation; ++geoGeneration; clearTimeout(geoTimer); geoPending = false; el('locate').textContent = c.locate; if (request) request.abort(); position = null; });
   setupMap(); refresh();
 })();
