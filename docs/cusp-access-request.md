@@ -1,6 +1,6 @@
-# Pedido técnico CUSP — rascunho não enviado
+# Pedido técnico CUSP — enviado
 
-Estado: preparado em 26/11/2026. Não foi enviado por email, formulário ou outro canal. Destina-se à equipa responsável pelo CUSP na ARTE, através do percurso oficial de adesão; não foi escolhido um endereço de destinatário. O NIPC e os dados da entidade requerente têm de ser fornecidos pelo responsável do projeto antes de qualquer envio.
+Estado: pedido de esclarecimento enviado à ARTE, para `conteudos@arte.gov.pt`, com autorização do responsável do projeto. Aguarda resposta. O envio não constitui adesão, compromisso de custos ou autorização de integração. O texto abaixo conserva a proposta técnica e as referências internas; não é uma transcrição exata do email.
 
 **Assunto: Acesso de consumo ao CUSP para descoberta de serviços e locais de atendimento — eCidadão**
 

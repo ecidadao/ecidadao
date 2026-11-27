@@ -6,7 +6,7 @@ Verificado em **26 de novembro de 2026**, aproximadamente 20:40–20:50 UTC. Com
 
 **Há uma fonte anónima funcional além dos metadados iAP:** a pesquisa do atual `www.gov.pt` devolve JSON com serviços, locais, coordenadas, horários e ligações oficiais. As páginas públicas de detalhe incluem JSON estruturado com requisitos, procedimentos e associações entre local e serviço. É suficiente para um protótipo de descoberta «o quê / onde / como», mas **não é uma API de integração publicamente contratualizada** nem uma operação de marcação.
 
-Recomendação: usar este resultado para definir o adaptador e validar os campos necessários; manter o CUSP como percurso para um contrato suportado. Antes de republicação comercial, resolver os direitos de reutilização. O [pedido técnico preparado](cusp-access-request.md) fica por enviar. Não foi alterado código de produto.
+Recomendação: usar este resultado para definir o adaptador e validar os campos necessários; manter o CUSP como percurso para um contrato suportado. Antes de republicação comercial, resolver os direitos de reutilização. Atualização posterior: o [pedido técnico CUSP](cusp-access-request.md) foi enviado à ARTE e aguarda resposta. Não foi alterado código de produto.
 
 ## 1. Pesquisa realmente utilizada pelo portal
 
@@ -145,4 +145,4 @@ python3 scripts/probe_service_discovery.py > /tmp/service-discovery-evidence.jso
 
 O probe faz exatamente quatro pedidos de leitura (duas pesquisas POST e dois GET), com timeout e limite de resposta; imprime pedidos, respostas, timestamp e build. Não pagina, não descarrega todos os locais e não persiste cookies. Sai com erro se a resposta de pesquisa estiver incompleta ou o contrato básico mudar. As contagens exploratórias nacional/geográfica acima não fazem parte dos quatro pedidos padrão.
 
-Para implementação futura: modelar serviço, canal, local e associação por identificadores; conservar fonte e data de verificação; apresentar requisitos por canal antes de sugerir deslocação; encaminhar para a página oficial quando faltarem dados; não prometer distância mínima, horário atual ou marcação concluída. A decisão de integração comercial e o acesso suportado continuam dependentes de resposta ao pedido CUSP, que permanece **não enviado**.
+Para implementação futura: modelar serviço, canal, local e associação por identificadores; conservar fonte e data de verificação; apresentar requisitos por canal antes de sugerir deslocação; encaminhar para a página oficial quando faltarem dados; não prometer distância mínima, horário atual ou marcação concluída. A decisão de integração comercial e o acesso suportado continuam dependentes de resposta ao pedido CUSP, já enviado e a aguardar resposta.
