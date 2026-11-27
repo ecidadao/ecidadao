@@ -26,6 +26,26 @@ defmodule Ecidadao.MCPTest do
            ]
   end
 
+  test "negotiates the protocol version requested by the client" do
+    init = fn version ->
+      request = %{
+        "jsonrpc" => "2.0",
+        "id" => 1,
+        "method" => "initialize",
+        "params" => %{"protocolVersion" => version}
+      }
+
+      {:reply, %{result: result}} = MCP.public_handle(request)
+      result
+    end
+
+    assert init.("2025-06-18").protocolVersion == "2025-06-18"
+    assert init.("2025-03-26").protocolVersion == "2025-03-26"
+    assert init.("2025-11-25").protocolVersion == "2025-11-25"
+    assert init.("1999-01-01").protocolVersion == "2025-11-25"
+    assert init.("2025-06-18").serverInfo.version == Mix.Project.config()[:version]
+  end
+
   test "public plugin endpoint advertises only authorized draft and guidance tools" do
     assert {:reply, %{result: %{tools: tools}}} =
              MCP.public_handle(%{"jsonrpc" => "2.0", "id" => 1, "method" => "tools/list"})

@@ -3,6 +3,8 @@ defmodule Ecidadao.MCP do
   alias Ecidadao.{Complaint, Financas, MinhaRua, Observation, PublicFeedback, Siga}
 
   @version "2025-11-25"
+  @supported_versions ~w(2025-11-25 2025-06-18 2025-03-26 2024-11-05)
+  @server_version Mix.Project.config()[:version]
   @public_tools ~w(
     siga_visit_guidance
     financas_service_guidance
@@ -12,12 +14,12 @@ defmodule Ecidadao.MCP do
     official_submission_guidance
   )
 
-  def public_handle(%{"jsonrpc" => "2.0", "method" => "initialize", "id" => id}) do
+  def public_handle(%{"jsonrpc" => "2.0", "method" => "initialize", "id" => id} = request) do
     {:reply,
      result(id, %{
-       protocolVersion: @version,
+       protocolVersion: negotiate_version(request),
        capabilities: %{tools: %{listChanged: false}},
-       serverInfo: %{name: "ecidadao-public", version: "0.3.1"},
+       serverInfo: %{name: "ecidadao-public", version: @server_version},
        instructions:
          "Ajuda a encontrar os portais oficiais SIGA e Finanças e a preparar rascunhos de e-balcão, A Minha Rua e reclamações. Serviço independente; não acede a contas, consulta filas, cria senhas ou marcações, nem submete pedidos. Não solicite credenciais ou identificadores governamentais."
      })}
@@ -49,12 +51,19 @@ defmodule Ecidadao.MCP do
 
   def public_handle(request), do: handle(request)
 
-  def handle(%{"jsonrpc" => "2.0", "method" => "initialize", "id" => id}) do
+  # MCP lifecycle: echo the client's version when supported, otherwise offer our latest.
+  defp negotiate_version(%{"params" => %{"protocolVersion" => requested}})
+       when requested in @supported_versions,
+       do: requested
+
+  defp negotiate_version(_request), do: @version
+
+  def handle(%{"jsonrpc" => "2.0", "method" => "initialize", "id" => id} = request) do
     {:reply,
      result(id, %{
-       protocolVersion: @version,
+       protocolVersion: negotiate_version(request),
        capabilities: %{tools: %{listChanged: false}, resources: %{listChanged: false}},
-       serverInfo: %{name: "ecidadao", version: "0.3.0"},
+       serverInfo: %{name: "ecidadao", version: @server_version},
        instructions:
          "Prepara rascunhos de reclamações, ocorrências A Minha Rua e questões e-balcão; consulta filas públicas SIGA e orienta para SIGA e Portal das Finanças. Serviço independente. Nunca afirma que um pedido, senha ou marcação foi submetido; a conclusão ocorre no portal oficial."
      })}
