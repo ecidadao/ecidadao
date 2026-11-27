@@ -55,7 +55,11 @@ O serviço público está em [https://ecidadao.pt](https://ecidadao.pt). Cada pu
 
 A [submissão 0.3.1](docs/plugin-submission-0.3.1.md) foi registada como “In review” em 13 de novembro de 2026. Este é um registo histórico, não uma confirmação do estado actual. A distribuição aberta em GitHub é independente dessa candidatura. Os novos pacotes são mantidos em [ecidadao/plugins](https://github.com/ecidadao/plugins).
 
-## Estrutura
+## Investigação de novas integrações
+
+O [plano de capacidades](docs/support-roadmap.md) distingue funcionalidades publicadas de oportunidades em investigação. A [pesquisa municipal](docs/municipal-integrations.md) inclui Gondomar, Maia e Ponte de Lima, com inventário público e provas de leitura de disponibilidade. A [pesquisa de ambiente e habitação](docs/environment-housing-discovery.md) cobre APA, Fundo Ambiental e Porta 65. Estas provas ainda não acrescentam ferramentas ao MCP público.
+
+## Estrutura do projeto
 
 - `lib/ecidadao/complaint.ex`: validação e formatação de reclamações sem persistência.
 - `lib/ecidadao/minha_rua.ex`: preparação de ocorrências e consulta das entradas públicas recentes.

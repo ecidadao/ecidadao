@@ -33,6 +33,8 @@ A pedido do responsável do projeto, saúde passa a ter uma linha própria: perc
 
 ## Próximo trabalho independente de adesões
 
+A [pesquisa municipal](municipal-integrations.md) acrescenta o inventário público de Gondomar, o diretório da Maia e uma prova de leitura real de disponibilidade em Ponte de Lima. A [pesquisa de ambiente e habitação](environment-housing-discovery.md) inclui APA/SNIAmb, Fundo Ambiental, Porta 65 Jovem e Porta 65+. São provas e propostas, não novas ferramentas publicadas. Priorizar catálogo municipal, orientação de apoios e um piloto de consulta de vagas em Ponte de Lima.
+
 1. Expandir os percursos curados com base nas necessidades mais frequentes, mantendo fonte e revisão por serviço.
 2. Testar e tornar explícita a cobertura das filas, incluindo a viabilidade de procura em distritos vizinhos.
 3. Melhorar instruções de passagem para o portal oficial e os estados «encontrado», «preparado», «submetido» e «confirmado».
