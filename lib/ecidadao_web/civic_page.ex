@@ -46,7 +46,7 @@ defmodule EcidadaoWeb.CivicPage do
     <p id="municipal-status" role="status" aria-live="polite">#{data.total} #{copy.found} · #{length(data.results)} #{copy.shown}</p>
     <div id="municipal-results" class="grid civic-results" aria-busy="false">#{Enum.map_join(data.results, &municipal_card(&1, copy))}</div>
     <section class="card"><h2>#{c("Fontes municipais", "Municipal sources", locale)}</h2>
-    <ul>#{Enum.map_join(Enum.sort(data.sources), fn {key, url} -> "<li>#{link(url, municipality_name(key))}</li>" end)}</ul>
+    <ul>#{Enum.map_join(Enum.sort(data.sources), fn {key, url} -> "<li>#{link(source_url(key, url), municipality_name(key))}</li>" end)}</ul>
     <p>#{copy.verified} <time datetime="#{data.verified_on}">#{data.verified_on}</time></p>
     <p><a href="/vagas?lang=#{locale}">#{c("Consultar horários de atendimento em Ponte de Lima", "Check appointment times in Ponte de Lima", locale)}</a></p></section>
     #{municipal_script(copy)}
@@ -77,7 +77,7 @@ defmodule EcidadaoWeb.CivicPage do
     <p>#{h(municipality_name(item["municipality"]))}</p><h2>#{h(item["title"])}</h2>
     <p>#{h(item["category"] || "")}</p>
     <p>#{link(item["official_url"], copy.open)}</p>
-    <p>#{link(item["source"], copy.source)} · #{copy.verified} <time datetime="#{h(item["verified_on"])}">#{h(item["verified_on"])}</time></p></article>
+    <p>#{link(source_url(item["municipality"], item["source"]), copy.source)} · #{copy.verified} <time datetime="#{h(item["verified_on"])}">#{h(item["verified_on"])}</time></p></article>
     """
   end
 
@@ -190,7 +190,8 @@ defmodule EcidadaoWeb.CivicPage do
             const card = node('article'); card.className = 'card civic-card'; card.dataset.serviceId = item.id;
             card.append(node('p', names[item.municipality]), node('h2', item.title), node('p', item.category));
             const action = node('p'); action.append(link(url, copy.open)); card.append(action);
-            const evidence = node('p'); evidence.append(link(source, copy.source), document.createTextNode(' · ' + copy.verified + ' ' + (item.verified_on || ''))); card.append(evidence);
+            const sourceURL = item.municipality === 'gondomar' ? 'https://servicosonline.cm-gondomar.pt/' : source;
+            const evidence = node('p'); evidence.append(link(sourceURL, copy.source), document.createTextNode(' · ' + copy.verified + ' ' + (item.verified_on || ''))); card.append(evidence);
             fragment.append(card);
           }
           results.replaceChildren(fragment);
@@ -209,6 +210,8 @@ defmodule EcidadaoWeb.CivicPage do
     do:
       "<style>.civic-card{min-width:0;overflow-wrap:anywhere}.civic-card h2{font-size:1.5rem}.civic-phase{margin:18px 0}.civic-phase h4{margin-top:0}.civic-card li{line-height:1.6;margin-bottom:8px}.civic-card summary{cursor:pointer;font-weight:700}.civic-results .card{margin-bottom:0}.civic-results{margin-bottom:30px}</style>"
 
+  defp source_url("gondomar", _provenance), do: "https://servicosonline.cm-gondomar.pt/"
+  defp source_url(_municipality, provenance), do: provenance
   defp municipality_name("gondomar"), do: "Gondomar"
   defp municipality_name("maia"), do: "Maia"
   defp municipality_name("ponte_de_lima"), do: "Ponte de Lima"

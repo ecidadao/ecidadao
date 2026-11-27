@@ -9,6 +9,8 @@ for (const locale of ['pt', 'en']) {
     const url = page.url();
     let mode = 'success';
     await page.route('**/api/municipal/services', async route => {
+      // Keep initial cards visible long enough to exercise asynchronous replacement.
+      await new Promise(resolve => setTimeout(resolve, 100));
       expect(route.request().method()).toBe('POST');
       expect(route.request().postDataJSON()).toEqual({ municipality: 'maia', query: 'parking', limit: 30, language: locale });
       if (mode === 'error') return route.fulfill({ status: 503, json: {} });
@@ -22,6 +24,7 @@ for (const locale of ['pt', 'en']) {
     await page.locator('#municipal-query').fill('parking');
     const submit = page.locator('#municipal-form button');
     await submit.click();
+    await expect(page.locator('#municipal-results h2')).toHaveCount(1);
     await expect(page.locator('#municipal-results h2')).toHaveText('<img src=x onerror=alert(1)>');
     await expect(page.locator('#municipal-results img')).toHaveCount(0);
     await expect(page.locator('#municipal-results a').first()).toHaveAttribute('href', 'https://diretorio.cm-maia.pt/example');
@@ -60,6 +63,22 @@ for (const locale of ['pt', 'en']) {
     expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
   });
 }
+
+test('Gondomar source links open the human portal and retain service destinations', async ({ page }) => {
+  await page.goto('/municipios?lang=pt');
+  await expect(page.locator('a[href="https://servicosonline.cm-gondomar.pt/"]')).toHaveCount(13);
+  await expect(page.locator('a[href*="MyNetMenuExterno"]')).toHaveCount(0);
+  const destination = 'https://servicosonline.cm-gondomar.pt/MyNetFormBD.asp?intmenu=10748&formato=SPO_menu_10748';
+  await page.route('**/api/municipal/services', route => route.fulfill({ json: {
+    total: 1, results: [{ id: 'gondomar-10748', municipality: 'gondomar', title: 'Candidatura ao Eixo + Habitação',
+      official_url: destination, source: 'https://servicosonline.cm-gondomar.pt/MyNetMenuExterno.asp?objecto=json', verified_on: '2026-11-27' }]
+  } }));
+  await page.locator('#municipality').selectOption('gondomar');
+  await page.locator('#municipal-form button').click();
+  await expect(page.locator('#municipal-results article')).toHaveCount(1);
+  await expect(page.locator('#municipal-results a').first()).toHaveAttribute('href', destination);
+  await expect(page.locator('#municipal-results a').last()).toHaveAttribute('href', 'https://servicosonline.cm-gondomar.pt/');
+});
 
 test.describe('civic pages without JavaScript', () => {
   test.use({ javaScriptEnabled: false });
