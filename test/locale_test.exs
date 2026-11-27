@@ -14,6 +14,7 @@ defmodule EcidadaoWeb.LocaleTest do
     for {path, title} <- [
           {"/", "Your next step, made simpler."},
           {"/servicos", "What do you need?"},
+          {"/saude", "Find your healthcare route."},
           {"/siga", "Compare queues near you."},
           {"/financas", "Prepare your question for e-balcão."},
           {"/reclamacoes", "A clear complaint starts with a good draft."},

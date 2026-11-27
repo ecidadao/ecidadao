@@ -34,7 +34,7 @@ defmodule EcidadaoWeb.Page do
       </section>
 
       <section class="landing-section" aria-labelledby="utilitarios-title"><div class="landing-section-head"><div><p class="eyebrow">#{t("Mais formas de ajudar", locale)}</p><h2 id="utilitarios-title">#{t("Utilitários", locale)}</h2></div><p>#{t("Ferramentas pequenas para preparar o passo seguinte sem entregar credenciais ao eCidadão.", locale)}</p></div><div class="utility-grid">
-        <a class="utility-card" href="/como-usar"><span class="utility-symbol" aria-hidden="true">⌁</span><h3>#{t("MCP no telemóvel", locale)}</h3><p>#{t("Seis ferramentas públicas para usar em conversas Claude ou ChatGPT. Veja passos simples e prints.", locale)}</p><strong>#{t("Ver guia ↗", locale)}</strong></a>
+        <a class="utility-card" href="/como-usar"><span class="utility-symbol" aria-hidden="true">⌁</span><h3>#{t("MCP no telemóvel", locale)}</h3><p>#{t("Sete ferramentas públicas para usar em conversas Claude ou ChatGPT. Veja passos simples e prints.", locale)}</p><strong>#{t("Ver guia ↗", locale)}</strong></a>
         <a class="utility-card" href="/a-minha-rua#recent-title"><span class="utility-symbol" aria-hidden="true">◎</span><h3>#{t("Ocorrências recentes", locale)}</h3><p>#{t("Veja as últimas entradas públicas de A Minha Rua com ligação à fonte oficial.", locale)}</p><strong>#{t("Consultar ↗", locale)}</strong></a>
         <a class="utility-card" href="/financas"><span class="utility-symbol" aria-hidden="true">✎</span><h3>#{t("Rascunhos para copiar", locale)}</h3><p>#{t("Prepare uma mensagem para o e-balcão, reveja-a e leve-a para o portal oficial.", locale)}</p><strong>#{t("Começar ↗", locale)}</strong></a>
       </div></section>
@@ -45,6 +45,39 @@ defmodule EcidadaoWeb.Page do
       </section>
 
       <section class="landing-mcp" aria-labelledby="landing-mcp-title"><div><p class="eyebrow">#{t("Para apps e assistentes", locale)}</p><h2 id="landing-mcp-title">#{t("Um MCP para vários serviços.", locale)}</h2><p>#{t("O servidor está disponível em HTTPS. Os plugins para Codex e Claude Code estão disponíveis em GitHub, com código aberto e ligação ao MCP público.", locale)}</p></div><div><code>https://ecidadao.pt/mcp/public</code><a class="official" href="/como-usar">#{t("Ver como ligar ↗", locale)}</a></div></section>
+      """,
+      locale
+    )
+  end
+
+  def health(locale \\ "pt") do
+    cards =
+      Enum.map_join(Ecidadao.Sns24.all(locale), "\n", fn route ->
+        """
+        <article class="card" id="#{route.id}">
+          <h2>#{t(route.title, locale)}</h2>
+          <p>#{t(route.requirements, locale)}</p>
+          <h3>Portal SNS 24</h3><p>#{t(route.portal, locale)}</p>
+          <h3>App SNS 24</h3><p>#{t(route.app, locale)}</p>
+          <h3>#{t("Como confirmar", locale)}</h3><p class="notice">#{t(route.confirmation, locale)}</p>
+          <p>#{t(route.alternative, locale)}</p>
+          <a class="official" href="#{route.source}">#{t("Consultar instruções oficiais ↗", locale)}</a>
+        </article>
+        """
+      end)
+
+    layout(
+      """
+      <section class="hero">
+        <p class="eyebrow">SNS 24</p>
+        <h1>#{t("Encontre o seu percurso de saúde.", locale)}</h1>
+        <p class="lead">#{t("Consultas, exames, medicação habitual e referenciações: saiba como avançar no portal ou na app oficial.", locale)}</p>
+        <p class="notice">#{t("O eCidadão orienta. Não acede à sua conta, consulta vagas, avalia sintomas ou envia pedidos. Inicie sessão apenas nos canais oficiais do SNS 24.", locale)}</p>
+        <p>#{t("Instruções verificadas em 27/11/2026. Confirme os requisitos atuais na fonte oficial. Os nomes dos menus mantêm-se em português para facilitar a navegação.", locale)}</p>
+        <div class="hero-actions"><a class="official secondary" href="#appointments">#{t("Consultas", locale)}</a><a class="official secondary" href="#exams">#{t("Exames", locale)}</a><a class="official secondary" href="#medication">#{t("Medicação habitual", locale)}</a><a class="official secondary" href="#referrals">#{t("Referenciações", locale)}</a></div>
+      </section>
+      <section aria-label="#{t("Percursos SNS 24", locale)}">#{cards}</section>
+      <section class="card"><h2>#{t("Precisa de ajuda para aceder?", locale)}</h2><p>#{t("Consulte como iniciar sessão ou encontre apoio num Balcão SNS 24. Não partilhe códigos de acesso com o eCidadão.", locale)}</p><p><a href="https://www.sns24.gov.pt/pt/servico/iniciar-sessao-no-portal-sns-24/">#{t("Acesso ao portal ↗", locale)}</a> · <a href="https://www.sns24.gov.pt/pt/servico/app-sns-24/">#{t("App oficial ↗", locale)}</a> · <a href="https://www.sns24.gov.pt/pt/servico/balcao-sns-24/">#{t("Balcões SNS 24 ↗", locale)}</a></p></section>
       """,
       locale
     )
@@ -560,7 +593,7 @@ defmodule EcidadaoWeb.Page do
       }
       return value;
     }
-    </script><meta name="color-scheme" content="light dark"><style>#{theme_css()}</style></head><body><header><div class="inner"><a class="brand" href="/" aria-label="#{t("eCidadão — início", locale)}"><img src="/marca/ecidadao-logo.svg" alt="eCidadão" width="1000" height="256"></a><nav><a href="/servicos">#{t("Procurar serviços", locale)}</a><a href="/siga">SIGA / IRN</a><a href="/financas">#{t("Finanças", locale)}</a><a href="/a-minha-rua">A Minha Rua</a><a href="/reclamacoes">#{t("Reclamações", locale)}</a><a href="/livro-amarelo">Livro Amarelo</a><a href="/como-usar">#{t("Como usar", locale)}</a></nav><div class="language-switch" role="group" aria-label="#{t("Idioma", locale)}"><a href="?lang=pt" lang="pt" hreflang="pt" aria-current="#{if locale == "pt", do: "true", else: "false"}">PT</a><a href="?lang=en" lang="en" hreflang="en" aria-current="#{if locale == "en", do: "true", else: "false"}">EN</a></div></div></header><main>#{body}</main><footer><div class="inner"><span>#{t("eCidadão · Projeto independente e gratuito", locale)}</span><div class="footer-links"><a href="https://github.com/ecidadao/ecidadao">#{t("Código aberto", locale)}</a><a href="https://github.com/ecidadao/plugins">Plugins</a><a href="https://github.com/ecidadao/ecidadao/blob/main/CONTRIBUTING.md">#{t("Contribuir", locale)}</a><a href="/apoio">#{t("Apoio", locale)}</a><a href="/privacidade">#{t("Privacidade", locale)}</a><a href="/termos">#{t("Termos", locale)}</a></div></div></footer><script>
+    </script><meta name="color-scheme" content="light dark"><style>#{theme_css()}</style></head><body><header><div class="inner"><a class="brand" href="/" aria-label="#{t("eCidadão — início", locale)}"><img src="/marca/ecidadao-logo.svg" alt="eCidadão" width="1000" height="256"></a><nav><a href="/servicos">#{t("Procurar serviços", locale)}</a><a href="/saude">SNS 24</a><a href="/siga">SIGA / IRN</a><a href="/financas">#{t("Finanças", locale)}</a><a href="/a-minha-rua">A Minha Rua</a><a href="/reclamacoes">#{t("Reclamações", locale)}</a><a href="/livro-amarelo">Livro Amarelo</a><a href="/como-usar">#{t("Como usar", locale)}</a></nav><div class="language-switch" role="group" aria-label="#{t("Idioma", locale)}"><a href="?lang=pt" lang="pt" hreflang="pt" aria-current="#{if locale == "pt", do: "true", else: "false"}">PT</a><a href="?lang=en" lang="en" hreflang="en" aria-current="#{if locale == "en", do: "true", else: "false"}">EN</a></div></div></header><main>#{body}</main><footer><div class="inner"><span>#{t("eCidadão · Projeto independente e gratuito", locale)}</span><div class="footer-links"><a href="https://github.com/ecidadao/ecidadao">#{t("Código aberto", locale)}</a><a href="https://github.com/ecidadao/plugins">Plugins</a><a href="https://github.com/ecidadao/ecidadao/blob/main/CONTRIBUTING.md">#{t("Contribuir", locale)}</a><a href="/apoio">#{t("Apoio", locale)}</a><a href="/privacidade">#{t("Privacidade", locale)}</a><a href="/termos">#{t("Termos", locale)}</a></div></div></footer><script>
     for (const link of document.querySelectorAll('.language-switch a')) {
       const url = new URL(location.href); url.searchParams.set('lang', link.lang); link.href = url.href;
     }

@@ -14,6 +14,10 @@ defmodule EcidadaoWeb.Router do
     html(conn, &EcidadaoWeb.Page.services/1)
   end
 
+  get "/saude" do
+    html(conn, &EcidadaoWeb.Page.health/1)
+  end
+
   get "/reclamacoes" do
     html(conn, &EcidadaoWeb.Page.complaints/1)
   end

@@ -2,7 +2,7 @@
 
 Verificação: 26 de novembro de 2026. Investigação só de leitura; não foram enviados dados pessoais nem pedidos de adesão. Nenhuma das integrações propostas abaixo foi ativada.
 
-Atualização de implementação: o percurso assistido Livro Amarelo foi acrescentado ao site em `/livro-amarelo`, com rascunhos de reclamação, elogio e sugestão e encaminhamento para gov.pt. Não submete participações. A ferramenta `prepare_public_service_feedback` está apenas no MCP experimental `/mcp`; o catálogo público dos plugins mantém as seis ferramentas existentes. A [investigação adicional](service-discovery-research.md) verificou pesquisa anónima de serviços e locais no gov.pt, incluindo Rio Tinto; o [pedido de acesso CUSP](cusp-access-request.md) está preparado e não foi enviado.
+Atualização de implementação: o percurso assistido Livro Amarelo foi acrescentado ao site em `/livro-amarelo`, com rascunhos de reclamação, elogio e sugestão e encaminhamento para gov.pt. Não submete participações. A ferramenta `prepare_public_service_feedback` está apenas no MCP experimental `/mcp`; o catálogo público dos plugins mantém as seis ferramentas existentes. A [investigação adicional](service-discovery-research.md) verificou pesquisa anónima de serviços e locais no gov.pt, incluindo Rio Tinto; o [pedido de acesso CUSP](cusp-access-request.md) foi enviado à ARTE e aguarda resposta.
 
 ## Resultado
 
@@ -49,7 +49,7 @@ O [serviço 37](https://www.iap.gov.pt/web/iap/details?id=37) identifica a ades�
 
 O guia CUSP descreve chave de pré-produção associada ao NIPC, validação funcional e técnica, e depois chave/URLs de produção. O processo geral dirige-se sobretudo a entidades que prestam serviços públicos e mantêm catálogos. A elegibilidade do eCidadão como consumidor privado só de leitura, bem como o universo de dados acessível, continua por confirmar.
 
-Pedido técnico a preparar, sem o enviar automaticamente:
+Âmbito do pedido técnico enviado, a aguardar resposta:
 
 - Acesso de leitura ao catálogo nacional, pontos de atendimento, horários, coordenadas, serviços e canais.
 - Direito de apresentação no site e em respostas MCP, atribuição, cache, atualização e traduções disponíveis.

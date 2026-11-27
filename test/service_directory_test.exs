@@ -10,7 +10,7 @@ defmodule Ecidadao.ServiceDirectoryTest do
 
   test "curated entries have unique stable identifiers, translated guidance and safe destinations" do
     entries = ServiceDirectory.all()
-    assert length(entries) == 9
+    assert length(entries) == 10
     assert length(Enum.uniq_by(entries, & &1.id)) == length(entries)
 
     for entry <- entries do
@@ -25,6 +25,7 @@ defmodule Ecidadao.ServiceDirectoryTest do
         assert String.starts_with?(uri.path, "/servicos/")
       else
         assert entry.url in [
+                 "/saude",
                  "/siga",
                  "/financas",
                  "/a-minha-rua",
@@ -56,7 +57,7 @@ defmodule Ecidadao.ServiceDirectoryTest do
       assert body =~ ~s(id="service-search" type="search")
       assert body =~ ~s(id="service-search-status" role="status")
       assert body =~ ~s(id="service-empty" class="notice" hidden)
-      assert body =~ ~s(9 #{Locale.text("serviços encontrados", locale)})
+      assert body =~ ~s(10 #{Locale.text("serviços encontrados", locale)})
       assert body =~ ~s(href="https://www.gov.pt/servicos/renovar-o-cartao-de-cidadao")
 
       for entry <- ServiceDirectory.all() do
@@ -129,6 +130,10 @@ defmodule Ecidadao.ServiceDirectoryTest do
       search('quero uma certidão de não dívida', ['tax-certificates']);
       search('I want a tax certificate', ['tax-certificates']);
       search('taxi', []);
+      search('quero pedir exames perto de mim', ['health']);
+      search('marcar consulta centro saude', ['health']);
+      search('I need tests near me', ['health']);
+      search('renew my prescription', ['health']);
       search('<img src=x onerror=alert(1)>', []);
       search('', cards.map(c => c.id));
       search('  ', cards.map(c => c.id));
