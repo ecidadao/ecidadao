@@ -77,22 +77,46 @@ test('location stays local and does not request tiles or refresh coverage', asyn
   expect(requests).toEqual([]);
 });
 
-for (const reason of ['denied', 'timeout', 'unsupported']) {
+for (const reason of ['denied', 'timeout', 'unavailable', 'unsupported']) {
   test(`location ${reason} preserves coverage usability`, async ({ page }) => {
     await page.addInitScript(reason => {
       Object.defineProperty(navigator, 'geolocation', {value: reason === 'unsupported' ? undefined : {
-        getCurrentPosition(_ok, fail) {fail({code: reason === 'denied' ? 1 : 3});}
+        getCurrentPosition(_ok, fail) {fail({code: reason === 'denied' ? 1 : reason === 'unavailable' ? 2 : 3});}
       }});
     }, reason);
     await page.goto('/mapa?lang=en');
     await expect(page.locator('#coverage-list button')).toHaveCount(3);
     await page.locator('#coverage-locate').click();
-    await expect(page.locator('#coverage-location')).toContainText(reason === 'denied' ? 'not allowed' : reason === 'unsupported' ? 'does not support' : 'could not be obtained');
+    await expect(page.locator('#coverage-location')).toContainText(reason === 'denied' ? 'not allowed' : reason === 'unsupported' ? 'does not support' : reason === 'unavailable' ? 'could not determine' : 'within 30 seconds');
     await expect(page.locator('#coverage-locate')).toBeEnabled();
     await page.locator('#coverage-list button[data-id="maia"]').click();
     await expect(page.locator('#coverage-selected')).toHaveText('Maia');
   });
 }
+
+test('permission wait longer than eleven seconds can still succeed; cancellation ignores old callbacks', async ({ page }) => {
+  await page.clock.install();
+  await page.addInitScript(() => {
+    window.geoCallbacks = [];
+    Object.defineProperty(navigator, 'geolocation', {value: {getCurrentPosition(ok, fail, options) {window.geoCallbacks.push({ok, fail, options});}}});
+  });
+  await page.goto('/mapa?lang=en');
+  await expect(page.locator('#coverage-status')).toContainText('3 municipalities');
+  await page.locator('#coverage-locate').click();
+  await page.clock.fastForward(15000);
+  await expect(page.locator('#coverage-location')).toContainText('Waiting');
+  expect(await page.evaluate(() => window.geoCallbacks[0].options)).toEqual({enableHighAccuracy: false, timeout: 30000, maximumAge: 300000});
+  await page.evaluate(() => window.geoCallbacks[0].ok({coords: {latitude: 41.2375, longitude: -8.604624}}));
+  await expect(page.locator('#coverage-location')).toContainText('Maia · 0');
+  await page.locator('#coverage-locate').click();
+  await page.getByRole('button', {name: 'Cancel location', exact: true}).click();
+  await page.locator('#coverage-locate').click();
+  await page.evaluate(() => window.geoCallbacks[1].ok({coords: {latitude: 0, longitude: 0}}));
+  await expect(page.locator('#coverage-location')).toContainText('Waiting');
+  await page.clock.fastForward(90000);
+  await expect(page.locator('#coverage-location')).toContainText('permission prompt');
+  await expect(page.locator('#coverage-locate')).toHaveText('Use my location');
+});
 
 test('map library or tile failure leaves list usable', async ({ page }) => {
   await page.route('**/map-assets/leaflet.js', route => route.abort());
