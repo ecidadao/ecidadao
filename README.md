@@ -43,7 +43,7 @@ As ferramentas expostas incluem `siga_visit_guidance`, `compare_siga_queues`, `f
 
 Este repositório contém a aplicação e o servidor MCP. Os pacotes instaláveis, skills e catálogos para Codex e Claude Code são mantidos em [ecidadao/plugins](https://github.com/ecidadao/plugins).
 
-O endpoint recomendado para clientes é `https://ecidadao.pt/mcp/public`: sete ferramentas de orientação e preparação de rascunhos, sem autenticação. A ferramenta `prepare_public_service_feedback` para o Livro Amarelo está disponível apenas no endpoint experimental `/mcp`, não em `/mcp/public`; o catálogo público mantém as sete ferramentas e os plugins têm distribuição independente. O endpoint `/mcp` inclui ferramentas experimentais e consultas a fontes externas; não é o catálogo público distribuído pelos plugins.
+O endpoint recomendado para clientes é `https://ecidadao.pt/mcp/public`: dez ferramentas de pesquisa, consulta, orientação e preparação de rascunhos, sem autenticação. Inclui pesquisa municipal, disponibilidade de atendimento em Ponte de Lima e orientação de apoios. Não reserva nem submete pedidos. A ferramenta `prepare_public_service_feedback` para o Livro Amarelo está disponível apenas no endpoint experimental `/mcp`; os plugins têm distribuição independente.
 
 Consulte [o guia MCP e de alojamento próprio](docs/mcp.md). Contribuições são bem-vindas: [CONTRIBUTING.md](CONTRIBUTING.md). Para vulnerabilidades, veja [SECURITY.md](SECURITY.md).
 
@@ -57,7 +57,7 @@ A [submissão 0.3.1](docs/plugin-submission-0.3.1.md) foi registada como “In r
 
 ## Investigação de novas integrações
 
-O [plano de capacidades](docs/support-roadmap.md) distingue funcionalidades publicadas de oportunidades em investigação. A [pesquisa municipal](docs/municipal-integrations.md) inclui Gondomar, Maia e Ponte de Lima, com inventário público e provas de leitura de disponibilidade. A [pesquisa de ambiente e habitação](docs/environment-housing-discovery.md) cobre APA, Fundo Ambiental e Porta 65. Estas provas ainda não acrescentam ferramentas ao MCP público.
+O [plano de capacidades](docs/support-roadmap.md) distingue funcionalidades entregues de oportunidades em investigação. Desde 0.3.4, `/municipios` pesquisa 320 entradas de Gondomar, Maia e Ponte de Lima; `/vagas` consulta atendimento presencial de Ponte de Lima; `/apoios` orienta sete percursos de habitação e ambiente em PT/EN. Veja os limites na [pesquisa municipal](docs/municipal-integrations.md) e na [pesquisa de ambiente e habitação](docs/environment-housing-discovery.md). Os dados geográficos da APA continuam em investigação.
 
 ## Estrutura do projeto
 

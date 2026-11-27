@@ -7,7 +7,12 @@ defmodule Ecidadao.Application do
 
   @impl true
   def start(_type, _args) do
-    children = [Ecidadao.MinhaRuaRecent, Ecidadao.SigaCache, EcidadaoWeb.Endpoint]
+    children = [
+      Ecidadao.MinhaRuaRecent,
+      Ecidadao.SigaCache,
+      Ecidadao.MunicipalAppointmentsCache,
+      EcidadaoWeb.Endpoint
+    ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
     # for other strategies and supported options

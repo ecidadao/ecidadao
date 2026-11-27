@@ -6,14 +6,17 @@ Atualizado em 27 de novembro de 2026. Este plano separa funcionalidades entregue
 
 | Capacidade | O que permite | Limite |
 |---|---|---|
-| Pesquisa por necessidade (`/servicos`) | Encontrar dez percursos selecionados em português e inglês | Catálogo curado; não é pesquisa nacional em tempo real no CUSP |
+| Pesquisa por necessidade (`/servicos`) | Encontrar treze percursos selecionados em português e inglês | Catálogo curado; não é pesquisa nacional em tempo real no CUSP |
+| Municípios (`/municipios`) | Pesquisar 320 entradas de Gondomar, Maia e Ponte de Lima | Catálogo público revisto em 27/11/2026; conclusão no portal oficial |
+| Vagas (`/vagas`) | Consultar áreas, datas e horários de atendimento presencial em Ponte de Lima | Leitura pública com cache de 30 segundos; não reserva nem garante disponibilidade futura |
+| Apoios (`/apoios`) | Sete percursos PT/EN de habitação e ambiente, com requisitos e fases | Sem candidatura, saldo disponível ou decisão de elegibilidade pessoal |
 | SIGA assistido | Consultar informação pública de filas dentro da cobertura do adaptador e seguir para canais oficiais | Não confirma uma marcação nem garante o balcão mais próximo de todos |
 | Finanças, rua e reclamações | Orientar e preparar os percursos assistidos existentes | Preparação não equivale a submissão oficial |
 | Livro Amarelo | Preparar reclamação, elogio ou sugestão e abrir o canal oficial | Sem submissão por API; ferramenta apenas no MCP experimental |
 | Acessibilidade de utilização | PT/EN, modo escuro automático e apresentação mobile | Testes de browser não equivalem a certificação de acessibilidade |
 | Verificação de publicação | Testes de browser antes de deploy e smoke checks da publicação | Testes locais não concluem operações administrativas reais |
 
-O catálogo público MCP passa a sete ferramentas em 0.3.3, incluindo orientação SNS 24 em PT/EN. Uma capacidade do website ou do MCP experimental não fica automaticamente disponível nos plugins públicos.
+O catálogo público MCP passa a dez ferramentas em 0.3.4, incluindo pesquisa municipal, consulta de vagas e orientação de apoios. Uma capacidade do website ou do MCP experimental não fica automaticamente disponível nos plugins públicos. Os estados de publicação dos plugins são mantidos no seu repositório.
 
 ## Sequência proposta
 
@@ -33,7 +36,7 @@ A pedido do responsável do projeto, saúde passa a ter uma linha própria: perc
 
 ## Próximo trabalho independente de adesões
 
-A [pesquisa municipal](municipal-integrations.md) acrescenta o inventário público de Gondomar, o diretório da Maia e uma prova de leitura real de disponibilidade em Ponte de Lima. A [pesquisa de ambiente e habitação](environment-housing-discovery.md) inclui APA/SNIAmb, Fundo Ambiental, Porta 65 Jovem e Porta 65+. São provas e propostas, não novas ferramentas publicadas. Priorizar catálogo municipal, orientação de apoios e um piloto de consulta de vagas em Ponte de Lima.
+A [pesquisa municipal](municipal-integrations.md) sustenta as três capacidades implementadas em 0.3.4: catálogo municipal, orientação de apoios e consulta de vagas em Ponte de Lima. A [pesquisa de ambiente e habitação](environment-housing-discovery.md) inclui também APA/SNIAmb; a integração geográfica APA continua em investigação e não existe ferramenta pública de medições ambientais.
 
 1. Expandir os percursos curados com base nas necessidades mais frequentes, mantendo fonte e revisão por serviço.
 2. Testar e tornar explícita a cobertura das filas, incluindo a viabilidade de procura em distritos vizinhos.

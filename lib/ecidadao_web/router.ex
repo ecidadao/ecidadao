@@ -18,6 +18,18 @@ defmodule EcidadaoWeb.Router do
     html(conn, &EcidadaoWeb.Page.health/1)
   end
 
+  get "/municipios" do
+    html(conn, &EcidadaoWeb.CivicPage.municipalities/1)
+  end
+
+  get "/apoios" do
+    html(conn, &EcidadaoWeb.CivicPage.public_support/1)
+  end
+
+  get "/vagas" do
+    html(conn, &EcidadaoWeb.MunicipalAppointmentsPage.render/1)
+  end
+
   get "/reclamacoes" do
     html(conn, &EcidadaoWeb.Page.complaints/1)
   end
@@ -72,6 +84,31 @@ defmodule EcidadaoWeb.Router do
     case Complaint.prepare(conn.body_params) do
       {:ok, draft} -> json(conn, 200, draft)
       {:error, errors} -> json(conn, 422, %{errors: errors})
+    end
+  end
+
+  post "/api/municipal/services" do
+    case Ecidadao.MunicipalDirectory.search(conn.body_params) do
+      {:ok, result} -> json(conn, 200, result)
+      {:error, errors} -> json(conn, 422, errors)
+    end
+  end
+
+  post "/api/municipal/appointments" do
+    case Ecidadao.MunicipalAppointments.lookup(conn.body_params) do
+      {:ok, result} ->
+        json(conn, 200, result)
+
+      {:error, result} ->
+        status =
+          case result.error do
+            "source_unavailable" -> 503
+            "rate_limited" -> 429
+            _ -> 422
+          end
+
+        conn = if status == 429, do: put_resp_header(conn, "retry-after", "1"), else: conn
+        conn |> put_resp_header("cache-control", "no-store") |> json(status, result)
     end
   end
 

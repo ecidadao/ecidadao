@@ -11,13 +11,15 @@ parser.add_argument("--locales", action="store_true", help="Check English pages 
 parser.add_argument("--feedback", action="store_true", help="Check Livro Amarelo drafts and official handoff links")
 parser.add_argument("--services", action="store_true", help="Check the curated service finder")
 parser.add_argument("--sns24", action="store_true", help="Require SNS 24 pages and public guidance")
+parser.add_argument("--municipal", action="store_true", help="Require municipal pages and three new public tools")
+parser.add_argument("--live-municipal", action="store_true", help="Also query public Ponte de Lima areas (external availability required)")
 args = parser.parse_args()
 
 def request(path, payload=None):
     data = json.dumps(payload).encode() if payload else None
     req = urllib.request.Request(args.base.rstrip("/") + path, data=data,
         headers={"Content-Type": "application/json", "Accept": "application/json, text/event-stream"})
-    with urllib.request.urlopen(req, timeout=10) as response:
+    with urllib.request.urlopen(req, timeout=35) as response:
         assert response.status == 200
         return response.read()
 
@@ -67,7 +69,39 @@ legacy_names = {
     "prepare_complaint", "official_submission_guidance", "prepare_street_report",
     "siga_visit_guidance", "financas_service_guidance", "prepare_financas_ebalcao"}
 # Keep the previous release verifiable during rollback; no other tools are allowed.
-assert public_names in (legacy_names, legacy_names | {"sns24_service_guidance"})
+previous_names = legacy_names | {"sns24_service_guidance"}
+civic_names = {"municipal_service_search", "municipal_appointment_availability", "public_support_guidance"}
+assert public_names in (legacy_names, previous_names, previous_names | civic_names)
+if args.municipal or args.live_municipal:
+    assert civic_names <= public_names
+if civic_names <= public_names:
+    for language in ("pt", "en"):
+        for path in ("/municipios", "/apoios", "/vagas"):
+            page = request(path + "?lang=" + language).decode()
+            assert '<html lang="' + language + '"' in page, path
+            assert 'prefers-color-scheme:dark' in page, path
+        for tool, arguments in [
+            ("municipal_service_search", {"municipality":"gondomar", "query":"water tariff", "language":language}),
+            ("public_support_guidance", {"service":"porta65_young", "language":language}),
+        ]:
+            response = json.loads(request("/mcp/public", {"jsonrpc":"2.0", "id":4,
+                "method":"tools/call", "params":{"name":tool,"arguments":arguments}}))
+            assert not response["result"].get("isError"), response
+            data = response["result"]["structuredContent"]
+            assert data["submitted"] is False and data["language"] == language
+            if tool == "municipal_service_search":
+                assert data["total"] > 0 and data["availability_checked"] is False
+    # Validate wiring without making rollout depend on the municipal server.
+    response = json.loads(request("/mcp/public", {"jsonrpc":"2.0", "id":5,
+        "method":"tools/call", "params":{"name":"municipal_appointment_availability",
+        "arguments":{"municipality":"unsupported"}}}))
+    assert response["result"].get("isError") is True
+if args.live_municipal:
+    response = json.loads(request("/mcp/public", {"jsonrpc":"2.0", "id":6,
+        "method":"tools/call", "params":{"name":"municipal_appointment_availability","arguments":{}}}))
+    assert not response["result"].get("isError"), response
+    data = response["result"]["structuredContent"]
+    assert data["status"] == "areas_listed" and data["reserved"] is False and data["checked_at"]
 if args.sns24:
     assert "sns24_service_guidance" in public_names
 if "sns24_service_guidance" in public_names:

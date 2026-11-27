@@ -1,6 +1,8 @@
 # Integrações municipais: Gondomar, Maia e Ponte de Lima
 
-Pesquisa de 27 de novembro de 2026. Estado: **descoberta e provas de leitura**, sem novas ferramentas publicadas no MCP. Não foram criadas reservas, candidaturas ou contas. As consultas não usaram dados pessoais do responsável do projeto.
+Pesquisa de 27 de novembro de 2026. A versão **0.3.4** implementa `municipal_service_search` (320 entradas curadas) e `municipal_appointment_availability` (leitura de áreas, datas e horários em Ponte de Lima), também acessíveis em `/municipios` e `/vagas`. As observações abaixo documentam a descoberta original. Não foram criadas reservas, candidaturas ou contas. As consultas não usaram dados pessoais do responsável do projeto.
+
+A consulta de vagas usa apenas GET público, com cache em memória de 30 segundos, limites de frequência e falha explícita quando a fonte está indisponível. Não existe contrato de integração confirmado com a autarquia; uma alteração do frontend pode interromper a leitura. A conclusão permanece no portal oficial.
 
 ## Resultado técnico
 

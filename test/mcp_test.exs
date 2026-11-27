@@ -12,6 +12,9 @@ defmodule Ecidadao.MCPTest do
              MCP.handle(%{"jsonrpc" => "2.0", "id" => 2, "method" => "tools/list"})
 
     assert Enum.map(tools, & &1.name) == [
+             "municipal_service_search",
+             "municipal_appointment_availability",
+             "public_support_guidance",
              "sns24_service_guidance",
              "open_report_camera",
              "preview_photo_report",
@@ -47,11 +50,14 @@ defmodule Ecidadao.MCPTest do
     assert init.("2025-06-18").serverInfo.version == Mix.Project.config()[:version]
   end
 
-  test "public plugin endpoint advertises only authorized draft and guidance tools" do
+  test "public plugin endpoint advertises authorized read-only, draft and guidance tools" do
     assert {:reply, %{result: %{tools: tools}}} =
              MCP.public_handle(%{"jsonrpc" => "2.0", "id" => 1, "method" => "tools/list"})
 
     assert Enum.map(tools, & &1.name) == [
+             "municipal_service_search",
+             "municipal_appointment_availability",
+             "public_support_guidance",
              "sns24_service_guidance",
              "prepare_complaint",
              "official_submission_guidance",

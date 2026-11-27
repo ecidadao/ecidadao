@@ -6,6 +6,36 @@ defmodule Ecidadao.ServiceDirectory do
   """
   @services [
     %{
+      id: "municipal-services",
+      title: "Encontrar serviços da câmara municipal",
+      description:
+        "Pesquise serviços de Gondomar, Maia e Ponte de Lima e encontre o formulário oficial.",
+      aliases:
+        "camara municipal municipio municipios gondomar maia ponte lima estacionamento agua monos habitacao urbanismo school parking water housing waste council municipality municipal services",
+      url: "/municipios",
+      official: false
+    },
+    %{
+      id: "municipal-appointments",
+      title: "Consultar vagas em Ponte de Lima",
+      description:
+        "Consulte datas e horários de atendimento municipal. A reserva é concluída no portal da câmara.",
+      aliases:
+        "ponte lima vagas horario data atendimento camara municipal consulta processo agendar marcacao appointments availability slots council booking dates",
+      url: "/vagas",
+      official: false
+    },
+    %{
+      id: "public-support",
+      title: "Encontrar apoios à habitação e ambientais",
+      description:
+        "Veja os percursos Porta 65, Fundo Ambiental e +Habitação de Gondomar, com requisitos e prazos publicados.",
+      aliases:
+        "apoio apoios subsidio subsidios habitacao renda arrendamento credito porta 65 jovem ambiental ambiente energia eficiencia elar bicicleta eletrico housing rent subsidy grants support environmental energy",
+      url: "/apoios",
+      official: false
+    },
+    %{
       id: "health",
       title: "Consultas, exames e serviços SNS 24",
       description:

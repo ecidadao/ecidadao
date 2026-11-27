@@ -1,6 +1,6 @@
 # Ambiente, apoios e Porta 65
 
-Verificado em 27/11/2026. Pesquisa e desenho de capacidades; não há candidatura submetida, acesso a contas, ferramenta nova publicada ou monitorização recorrente ativada.
+Verificado em 27/11/2026. A versão 0.3.4 implementa sete percursos PT/EN em `/apoios` e `public_support_guidance`, incluindo Porta 65 Jovem, Porta 65+, +Habitação Gondomar, Fundo Ambiental, Vale Eficiência II, E-Lar e Mobilidade Verde. Não há candidatura submetida, acesso a contas ou monitorização recorrente ativada. APA/SNIAmb permanece em investigação.
 
 ## Oportunidades independentes
 
