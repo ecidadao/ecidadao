@@ -10,7 +10,7 @@ defmodule EcidadaoWeb.Page do
           <p class="eyebrow">#{t("Serviços úteis · Portugal", locale)}</p>
           <h1>#{t("O próximo passo fica mais simples.", locale)}</h1>
           <p class="lead">#{t("Compare filas, encontre o serviço certo e prepare o que precisa de apresentar. O eCidadão ajuda a chegar ao portal oficial com tudo mais claro.", locale)}</p>
-          <div class="hero-actions"><a class="official" href="#servicos">#{t("Explorar serviços ↓", locale)}</a><a class="official secondary" href="/como-usar">#{t("Usar com Claude ou ChatGPT ↗", locale)}</a></div>
+          <div class="hero-actions"><a class="official" href="/servicos">#{t("Procurar serviços", locale)}</a><a class="official secondary" href="/como-usar">#{t("Usar com Claude ou ChatGPT ↗", locale)}</a></div>
           <p class="hero-disclaimer">#{t("Projeto independente e gratuito. Senhas, marcações e pedidos são concluídos nos portais oficiais.", locale)}</p>
         </div>
         <div class="hero-panel" aria-label="#{t("Serviços disponíveis", locale)}">
@@ -45,6 +45,69 @@ defmodule EcidadaoWeb.Page do
       </section>
 
       <section class="landing-mcp" aria-labelledby="landing-mcp-title"><div><p class="eyebrow">#{t("Para apps e assistentes", locale)}</p><h2 id="landing-mcp-title">#{t("Um MCP para vários serviços.", locale)}</h2><p>#{t("O servidor está disponível em HTTPS. Os plugins para Codex e Claude Code estão disponíveis em GitHub, com código aberto e ligação ao MCP público.", locale)}</p></div><div><code>https://ecidadao.pt/mcp/public</code><a class="official" href="/como-usar">#{t("Ver como ligar ↗", locale)}</a></div></section>
+      """,
+      locale
+    )
+  end
+
+  def services(locale \\ "pt") do
+    cards =
+      Enum.map_join(Ecidadao.ServiceDirectory.all(), "\n", fn service ->
+        action =
+          if service.official,
+            do: "Consultar no portal oficial ↗",
+            else: "Preparar ou consultar no eCidadão ↗"
+
+        """
+        <article class="card directory-card" data-service-id="#{t(service.id, locale)}" data-search="#{t(service.aliases, locale)}" aria-labelledby="#{service.id}-title">
+          <h2 id="#{service.id}-title">#{t(service.title, locale)}</h2>
+          <p>#{t(service.description, locale)}</p>
+          <a href="#{t(service.url, locale)}">#{t(action, locale)}</a>
+        </article>
+        """
+      end)
+
+    layout(
+      """
+      <section class="hero">
+        <p class="eyebrow">#{t("Catálogo selecionado · Sem pesquisa externa", locale)}</p>
+        <h1>#{t("De que precisa?", locale)}</h1>
+        <p class="lead">#{t("Encontre o próximo passo para tratar do seu assunto.", locale)}</p>
+        <p class="notice">#{t("O eCidadão é independente: ajuda a preparar e consultar. Os pedidos, marcações e submissões são concluídos nos portais oficiais. Confirme aí os requisitos atuais e a disponibilidade.", locale)}</p>
+      </section>
+      <section aria-label="#{t("Procurar serviços", locale)}">
+        <label for="service-search">#{t("O que pretende fazer?", locale)}</label>
+        <input id="service-search" type="search" autocomplete="off" spellcheck="false" aria-describedby="service-search-help" placeholder="#{t("Por exemplo: renovar cartão, alterar morada, reclamar", locale)}">
+        <p id="service-search-help" class="help-note">#{t("Filtra palavras e termos equivalentes em português e inglês neste catálogo. O que escreve fica apenas nesta página: não é enviado, guardado ou colocado no endereço.", locale)}</p>
+        <noscript><p class="notice">#{t("Sem JavaScript, pode consultar todos os serviços abaixo e abrir as ligações.", locale)}</p></noscript>
+        <p id="service-search-status" role="status" aria-live="polite" aria-atomic="true">#{length(Ecidadao.ServiceDirectory.all())} #{t("serviços encontrados", locale)}</p>
+        <p id="service-empty" class="notice" hidden>#{t("Não encontrámos serviços. Tente palavras como cartão, morada, finanças ou reclamar, ou apague a pesquisa para ver todos.", locale)}</p>
+        <div id="service-results" class="service-grid">#{cards}</div>
+      </section>
+      <script>
+      (() => {
+        const input = document.getElementById('service-search');
+        const cards = Array.from(document.querySelectorAll('#service-results [data-service-id]'));
+        const status = document.getElementById('service-search-status');
+        const empty = document.getElementById('service-empty');
+        const words = value => value.normalize('NFD').replace(/[\\u0300-\\u036f]/g, '').toLowerCase().match(/[a-z0-9]+/g) || [];
+        const ignored = new Set(['a', 'o', 'as', 'os', 'de', 'do', 'da', 'dos', 'das', 'um', 'uma', 'the', 'a', 'an', 'of', 'my', 'your', 'to']);
+        const index = cards.map(card => new Set(words(card.dataset.search + ' ' + card.querySelector('h2').textContent)));
+        function filter() {
+          const query = words(input.value).filter(word => !ignored.has(word));
+          let count = 0;
+          cards.forEach((card, i) => {
+            card.hidden = !query.every(word => index[i].has(word));
+            if (!card.hidden) count++;
+          });
+          status.textContent = count + ' ' + (count === 1 ? #{tj("serviço encontrado", locale)} : #{tj("serviços encontrados", locale)});
+          empty.hidden = count !== 0;
+        }
+        input.addEventListener('input', filter);
+        input.addEventListener('search', filter);
+        filter();
+      })();
+      </script>
       """,
       locale
     )
@@ -439,6 +502,14 @@ defmodule EcidadaoWeb.Page do
   defp theme_css do
     """
     :root{color-scheme:light dark}
+    [hidden]{display:none!important}
+    .directory-card{min-width:0;overflow-wrap:anywhere;margin-bottom:0}
+    .directory-card h2{font-size:25px;line-height:1.2;margin-top:0}
+    .directory-card p{line-height:1.6}
+    .directory-card a{font-weight:700}
+    #service-search{max-width:760px}
+    header .inner{height:auto;min-height:82px;flex-wrap:wrap;padding-top:16px;padding-bottom:16px}
+    header nav{flex-wrap:wrap}
     .language-switch{display:flex;gap:4px;flex-shrink:0}
     .language-switch a{padding:7px 9px;border-radius:6px;text-decoration:none;font-size:13px;font-weight:700}
     .language-switch a[aria-current=true]{background:#e8f3e8;color:#175f45}
@@ -485,7 +556,7 @@ defmodule EcidadaoWeb.Page do
       }
       return value;
     }
-    </script><meta name="color-scheme" content="light dark"><style>#{theme_css()}</style></head><body><header><div class="inner"><a class="brand" href="/" aria-label="#{t("eCidadão — início", locale)}"><img src="/marca/ecidadao-logo.svg" alt="eCidadão" width="1000" height="256"></a><nav><a href="/siga">SIGA / IRN</a><a href="/financas">#{t("Finanças", locale)}</a><a href="/a-minha-rua">A Minha Rua</a><a href="/reclamacoes">#{t("Reclamações", locale)}</a><a href="/livro-amarelo">Livro Amarelo</a><a href="/como-usar">#{t("Como usar", locale)}</a></nav><div class="language-switch" role="group" aria-label="#{t("Idioma", locale)}"><a href="?lang=pt" lang="pt" hreflang="pt" aria-current="#{if locale == "pt", do: "true", else: "false"}">PT</a><a href="?lang=en" lang="en" hreflang="en" aria-current="#{if locale == "en", do: "true", else: "false"}">EN</a></div></div></header><main>#{body}</main><footer><div class="inner"><span>#{t("eCidadão · Projeto independente e gratuito", locale)}</span><div class="footer-links"><a href="https://github.com/ecidadao/ecidadao">#{t("Código aberto", locale)}</a><a href="https://github.com/ecidadao/plugins">Plugins</a><a href="https://github.com/ecidadao/ecidadao/blob/main/CONTRIBUTING.md">#{t("Contribuir", locale)}</a><a href="/apoio">#{t("Apoio", locale)}</a><a href="/privacidade">#{t("Privacidade", locale)}</a><a href="/termos">#{t("Termos", locale)}</a></div></div></footer><script>
+    </script><meta name="color-scheme" content="light dark"><style>#{theme_css()}</style></head><body><header><div class="inner"><a class="brand" href="/" aria-label="#{t("eCidadão — início", locale)}"><img src="/marca/ecidadao-logo.svg" alt="eCidadão" width="1000" height="256"></a><nav><a href="/servicos">#{t("Procurar serviços", locale)}</a><a href="/siga">SIGA / IRN</a><a href="/financas">#{t("Finanças", locale)}</a><a href="/a-minha-rua">A Minha Rua</a><a href="/reclamacoes">#{t("Reclamações", locale)}</a><a href="/livro-amarelo">Livro Amarelo</a><a href="/como-usar">#{t("Como usar", locale)}</a></nav><div class="language-switch" role="group" aria-label="#{t("Idioma", locale)}"><a href="?lang=pt" lang="pt" hreflang="pt" aria-current="#{if locale == "pt", do: "true", else: "false"}">PT</a><a href="?lang=en" lang="en" hreflang="en" aria-current="#{if locale == "en", do: "true", else: "false"}">EN</a></div></div></header><main>#{body}</main><footer><div class="inner"><span>#{t("eCidadão · Projeto independente e gratuito", locale)}</span><div class="footer-links"><a href="https://github.com/ecidadao/ecidadao">#{t("Código aberto", locale)}</a><a href="https://github.com/ecidadao/plugins">Plugins</a><a href="https://github.com/ecidadao/ecidadao/blob/main/CONTRIBUTING.md">#{t("Contribuir", locale)}</a><a href="/apoio">#{t("Apoio", locale)}</a><a href="/privacidade">#{t("Privacidade", locale)}</a><a href="/termos">#{t("Termos", locale)}</a></div></div></footer><script>
     for (const link of document.querySelectorAll('.language-switch a')) {
       const url = new URL(location.href); url.searchParams.set('lang', link.lang); link.href = url.href;
     }
