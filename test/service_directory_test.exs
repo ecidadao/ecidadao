@@ -130,6 +130,10 @@ defmodule Ecidadao.ServiceDirectoryTest do
       search('quero uma certidão de não dívida', ['tax-certificates']);
       search('I want a tax certificate', ['tax-certificates']);
       search('taxi', []);
+      search('quero pedir exames perto de mim', ['health']);
+      search('marcar consulta centro saude', ['health']);
+      search('I need tests near me', ['health']);
+      search('renew my prescription', ['health']);
       search('<img src=x onerror=alert(1)>', []);
       search('', cards.map(c => c.id));
       search('  ', cards.map(c => c.id));

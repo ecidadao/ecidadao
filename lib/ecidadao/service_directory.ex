@@ -11,7 +11,7 @@ defmodule Ecidadao.ServiceDirectory do
       description:
         "Veja como pedir consultas, exames e renovação de medicação ou acompanhar referenciações. Os pedidos são feitos nos canais oficiais.",
       aliases:
-        "saude sns sns24 consulta consultas centro hospital exames exame analises medicamento medicamentos medicacao renovar renovacao receita receitas referencias referenciacoes health healthcare appointment appointments tests exams prescription prescriptions medication referral referrals",
+        "saude sns sns24 consulta consultas centro hospital hospitalar exames exame analises medicamento medicamentos medicacao habitual renovar renovacao receita receitas referencias referenciacoes marcar marcacao pedir pedido agendar agendamento perto mim acompanhar estado health healthcare appointment appointments tests exams prescription prescriptions medication referral referrals book booking request near me renew repeat regular track status",
       url: "/saude",
       official: false
     },
